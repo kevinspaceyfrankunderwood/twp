@@ -63,7 +63,7 @@ const TopTwoClipArt = TWPImage.extend`
 
 const TopTwoNumbers = TWPSectionHeader.extend`
   @media(max-width: 450px) {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 `
 
@@ -197,7 +197,6 @@ class Home extends Component {
             <TopTwoTopText 
               padding={'5% 2%'}
               color={TWPStyleGuide.color.darkGreen}
-              tabletFontSize={TWPStyleGuide.font.size.small}
             >
               Installing wildflower gardens in urban environments and underutilized or vacant spaces
             </TopTwoTopText>
@@ -209,17 +208,16 @@ class Home extends Component {
               borderRadius={'3px'}
               height={'40%'}
               alignItems={'center'}
-              justifyContent={'space-between'}
+              justifyContent={'space-around'}
             >
               <TopTwoClipArt
                 src={squares}
                 height={'unset'}
-                width={'30%'}
+                width={'25%'}
               />
               <TopTwoBottomLeftNumberText
                 alignItems={'flex-start'}
-                width={'90%'}
-                height={'40%'}
+                width={'fit-content'}
               >
                 <TopTwoNumbers 
                   color={TWPStyleGuide.color.brown} 
@@ -236,6 +234,7 @@ class Home extends Component {
                   color={TWPStyleGuide.color.brown} 
                   textAlign={'left'}
                   width={'fit-content'}
+                  tabletFontSize={TWPStyleGuide.font.size.smallTiny}
                 >
                   Square Footage Restored
                 </TWPParagraph>
@@ -255,7 +254,6 @@ class Home extends Component {
             <TopTwoTopText 
               padding={'5% 2%'}
               color={TWPStyleGuide.color.darkGreen}
-              tabletFontSize={TWPStyleGuide.font.size.small}
             >
               Bringing vibrant, natural beauty to urban communities
             </TopTwoTopText>
@@ -268,11 +266,6 @@ class Home extends Component {
               height={'40%'}
               alignItems={'center'}
             >
-              <TopTwoClipArt
-                src={Bouquet}
-                height={'unset'}
-                width={'30%'}
-              />
               <TopTwoNumbers 
                 color={TWPStyleGuide.color.brown} 
                 fontSize={TWPStyleGuide.font.size.mediumLarge}
@@ -285,9 +278,15 @@ class Home extends Component {
               <TWPParagraph 
                 color={TWPStyleGuide.color.brown} 
                 width={'fit-content'}
+                tabletFontSize={TWPStyleGuide.font.size.smallTiny}
               >
                 Gardens Planted<br/>in the Twin Cities
               </TWPParagraph>
+              <TopTwoClipArt
+                src={Bouquet}
+                height={'unset'}
+                width={'30%'}
+              />
             </TWPDiv>
           </TopTwoInfoBoxes>
         </TopWrapper>
@@ -412,7 +411,6 @@ class Home extends Component {
         flexDirection={'row'}
         height={'100%'}
         width={'100%'}
-        backgroundColor={TWPStyleGuide.color.lightGray}
         padding={'20px 2%'}
         justifyContent={'space-around'}
         flexWrap={'wrap'}
@@ -449,6 +447,7 @@ class Home extends Component {
                 color={TWPStyleGuide.color.white}
                 width={'fit-content'}
                 fontWeight={'100'}
+                tabletFontSize={TWPStyleGuide.font.size.mediumLarge}
               >
                 Quick Links
               </TWPHeader>
@@ -459,7 +458,7 @@ class Home extends Component {
               justifyContent={'space-around'}
             >
               <TWPDiv
-                width={'33%'}
+                width={'50%'}
               >
                 <TWPAnchor
                   textAlign={'left'}
@@ -487,7 +486,7 @@ class Home extends Component {
                 </TWPAnchor>
               </TWPDiv>
               <TWPDiv
-                width={'33%'}
+                width={'50%'}
               >
                 <TWPAnchor
                   textAlign={'left'}
