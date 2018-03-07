@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
+
 import { Header } from 'semantic-ui-react';
-import { TWPHeader, TWPDiv, TWPSectionHeader, TWPParagraph, TWPImage } from '../styles/GenericStyledComponents'
+import axios from 'axios'
+
+import { TWPHeader, TWPDiv, TWPSectionHeader, TWPParagraph, TWPImage, TWPAnchor } from '../styles/GenericStyledComponents'
+import TWPStyleGuide from '../styles/TWPStyleGuide';
+
 import Field from '../assets/images/FlowerField.jpg'
 import Monarch from '../assets/images/MonachBackSide.jpg'
 import squares from '../assets/images/Squares.png'
 import Bouquet from '../assets/images/BouquetOranges.png'
 import Dragon from '../assets/images/DragonflyBirdsEye.jpg'
-import TWPStyleGuide from '../styles/TWPStyleGuide';
+import whiteFlower from '../assets/images/basicWhiteFlower.png'
+import logo from '../assets/images/logoFullSize.png'
 
 const BoxTopText = TWPSectionHeader.extend`
   height: 70%;
@@ -21,9 +27,33 @@ const ThirdSectionTopText = TWPHeader.extend`
 `
 
 class Home extends Component {
+  state = { photos: [] }
+
+	// componentDidMount() {
+	// 	axios.get('api/instagram/home')
+	// 	.then( res => this.setState({ photos: res.data.data }) )
+	// }
+ 
+	// displayImages = () => {
+	// 	return this.state.photos.map( pic => 
+	// 		<Grid.Column computer={4} mobile={16} tablet={8} >
+	// 			<BLink href="https://www.instagram.com/fit_2recover/?hl=en" target="_blank" rel="noopener noreferrer" className="homeInsta">
+	// 				<div className="homeInstaTitle">
+	// 					Follow Us @fit_2recover
+	// 						<Icon name="instagram" />
+	// 				</div>
+	// 				<Image className="homeSingleInsta" src={pic.images.standard_resolution.url} />
+	// 	    </BLink>
+	// 		</Grid.Column>
+	// 	)
+  // }
+  
+
   render() {
     return(
-    <TWPDiv>
+    <TWPDiv 
+      padding={'0'}
+    >
       <TWPDiv
         background={`linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)), url(${Field})`}
         backgroundSize={'100%'}
@@ -171,10 +201,9 @@ class Home extends Component {
           </TWPHeader>            
         </TWPDiv>
       <TWPDiv
-          background={`linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)), url(${Dragon})`}
+          background={`linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0)), url(${Dragon})`}
           backgroundPosition={'center'}
           backgroundSize={'100%'}
-          backgroundPosition={'fixed'}
           height={'650px'}
           width={'100%'}
         >
@@ -186,6 +215,7 @@ class Home extends Component {
         >
           <ThirdSectionTopText
             fontSize={TWPStyleGuide.font.size.medium}
+            color={TWPStyleGuide.color.white}
           >
             By building habitat for pollinators, we can build a community of good neighbors and vibrant civil societies, supporting all members of our shared ecosystem.
           </ThirdSectionTopText>
@@ -267,6 +297,143 @@ class Home extends Component {
               </TWPHeader>
             </TWPDiv>
           </TWPDiv>
+          </TWPDiv>
+        </TWPDiv>
+      </TWPDiv>
+      <TWPDiv
+        height={'200px'}
+        width={'100%'}
+        flexDirection={'row'}
+        padding={'0'}
+      >
+        <TWPDiv
+          height={'100%'}
+          backgroundColor={TWPStyleGuide.color.darkGreen}
+          width={'50%'}
+          justifyContent={'space-around'}
+        >
+          <TWPDiv
+            width={'100%'}
+          >
+            <TWPHeader
+              color={TWPStyleGuide.color.white}
+              width={'fit-content'}
+              fontWeight={'100'}
+            >
+              Quick Links
+            </TWPHeader>
+          </TWPDiv>
+          <TWPDiv
+            flexDirection={'row'}
+            width={'100%'}
+            justifyContent={'space-around'}
+          >
+            <TWPDiv
+              width={'33%'}
+            >
+              <TWPAnchor
+                textAlign={'left'}
+                color={TWPStyleGuide.color.white}
+                width={'100%'}
+                href={'/aboutus'}
+              >
+                About Us
+              </TWPAnchor>
+              <TWPAnchor
+                textAlign={'left'}
+                color={TWPStyleGuide.color.white}
+                width={'100%'}
+                href={'/contact'}
+              >
+                Contact
+              </TWPAnchor>
+              <TWPAnchor
+                textAlign={'left'}
+                color={TWPStyleGuide.color.white}
+                width={'100%'}
+                href={'/volunteer'}
+              >
+                Volunteer
+              </TWPAnchor>
+            </TWPDiv>
+            <TWPDiv
+              width={'33%'}
+            >
+              <TWPAnchor
+                textAlign={'left'}
+                color={TWPStyleGuide.color.white}
+                width={'100%'}
+                href={'/partnerships'}
+              >
+                Partnerships
+              </TWPAnchor>
+              <TWPAnchor
+                textAlign={'left'}
+                color={TWPStyleGuide.color.white}
+                width={'100%'}
+                href={'/Donate'}
+              >
+                Donate
+              </TWPAnchor>
+              <TWPAnchor
+                textAlign={'left'}
+                color={TWPStyleGuide.color.white}
+                width={'100%'}
+                href={'/photogallery'}
+              >
+                Photo Gallery
+              </TWPAnchor>
+            </TWPDiv>
+            <TWPDiv
+              width={'33%'}
+            >
+              <TWPImage
+                width={'30%'}
+                src={whiteFlower}
+              />
+            </TWPDiv>
+          </TWPDiv>
+        </TWPDiv>
+        <TWPDiv
+          width={'50%'}   
+          height={'100%'}
+          justifyContent={'space-around'}     
+        >
+          <TWPDiv
+            flexDirection={'row'}
+          >
+            <TWPDiv
+              width={'50%'}
+            >
+              <TWPImage
+                width={'50%'}
+                src={logo}
+              />
+            </TWPDiv>
+            <TWPDiv
+              width={'50%'}
+            >
+              <TWPParagraph
+                color={TWPStyleGuide.color.darkGreen}
+                width={'fit-content'}
+              >
+                887 Raymond AVe.<br/>Saint Paul, MN 55114
+              </TWPParagraph>
+            </TWPDiv>
+          </TWPDiv>
+          <TWPDiv
+            width={'100%'}
+          >
+            <TWPParagraph
+              width={'fit-content'}
+            >
+              &copy; COPYRIGHT 2018. ALL RIGHTS RESERVED
+            </TWPParagraph>
+            <TWPParagraph
+              width={'fit-content'}
+            >
+              The WildflowerProject is a 501(c)(3)non-profit organization. Your gifts are tax deductible.
+            </TWPParagraph>
           </TWPDiv>
         </TWPDiv>
       </TWPDiv>
