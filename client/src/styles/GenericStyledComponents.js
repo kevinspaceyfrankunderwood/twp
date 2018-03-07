@@ -442,7 +442,7 @@ export const TWPImage = styled.img`
   width: ${props => props.width || '100%'};
   height: ${props => props.height || '100%'};
   border-radius: ${props => props.borderRadius ? props.borderRadius : '0px'};
-  box-shadow: ${props => props.boxShadow ? props.boxShadow : '1px 1px 28px 2px grey' }
+  box-shadow: ${props => props.boxShadow ? props.boxShadow : null }
 
   @media (max-width: 992px){
     height: ${props => props.tabletHeight};
@@ -826,7 +826,7 @@ export const BLImage = styled.img`
   width: ${props => props.width || '100%'};
   height: ${props => props.height || '100%'};
   border-radius: ${props => props.borderRadius ? props.borderRadius : '0px'};
-  box-shadow: ${props => props.boxShadow ? props.boxShadow : '1px 1px 28px 2px grey' }
+  box-shadow: ${props => props.boxShadow ? props.boxShadow : null }
 
   ${media.desktop`height: ${props => props.tabletHeight};`}
   ${media.tablet`height: ${props => props.smallTabletHeight};`}
