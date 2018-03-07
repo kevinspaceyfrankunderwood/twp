@@ -13,8 +13,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavBar />
-        <Flash />
         <FetchUser>
           <Switch>
             <Route exact path='/' component={Home} />

@@ -23,6 +23,7 @@ const TWPStyleGuide = {
       mediumSmall: '1.5em',
       medium: '2em',
       mediumLarge: '2.8em',
+      largeSmall: '3em',
       large: '3.5em', 
       massive: '4.5em'
     },

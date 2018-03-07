@@ -43,8 +43,8 @@ export const TWPDiv = styled.div.attrs({
   background: props => props.background,
   backgroundImage: props => props.desktopImage || null,
   backgroundRepeat: props => props.backgroundRepeat || 'no-repeat',
-  backgroundAttachment: props => props.backgroundAttachment || null,
   backgroundPosition: props => props.backgroundPosition || 'center center',
+  backgroundAttachment: props => props.backgroundAttachment || null,
   backgroundSize: props => props.backgroundSize || null,
   border: props => props.border || null,
   borderLeft: props => props.borderLeft || null,
@@ -69,8 +69,8 @@ export const TWPDiv = styled.div.attrs({
   background: ${props => props.background};
   background-image: ${props => props.desktopImage};
   background-repeat: ${props => props.backgroundRepeat}; 
-  background-attachment: ${props => props.backgroundAttachment}; 
   background-position: ${props => props.backgroundPosition};
+  background-attachment: ${props => props.backgroundAttachment}; 
   background-size: ${props => props.backgroundSize};
   border: ${props => props.border};
   border-top: ${props => props.borderTop};
@@ -108,7 +108,7 @@ export const TWPDiv = styled.div.attrs({
 `
 
 export const TWPHeader = styled.h1.attrs({
-  width: props => props.width || null,
+  width: props => props.width || '100%',
   textAlign: props => props.textAlign || 'center',
   margin: props => props.margin || '0px',
   color: props => props.color || TWPStyleGuide.color.black,
@@ -127,21 +127,21 @@ export const TWPHeader = styled.h1.attrs({
   font-weight: ${props => props.fontWeight};
 
   @media (max-width: 992px){
-    font-size: ${props => props.tabletFontSize || TWPStyleGuide.font.size.mediumLarge};
+    font-size: ${props => props.tabletFontSize || null};
   }
 
   @media (max-width: 768px) {
-    font-size: ${props => props.smallTabletSize || TWPStyleGuide.font.size.medium};
+    font-size: ${props => props.smallTabletSize || null};
   }
 
   @media (Max-width: 400px){
-    font-size: ${props => props.mobileFontSize || TWPStyleGuide.font.size.mediumSmall};
+    font-size: ${props => props.mobileFontSize || null};
     font-weight: 300;
   }
 `
 
 export const TWPSectionHeader = styled.h2.attrs({
-  width: props => props.width || null,
+  width: props => props.width || '100%',
   textAlign: props => props.textAlign || 'center',
   margin: props => props.margin || '0px',
   color: props => props.color || TWPStyleGuide.color.black,
@@ -160,24 +160,20 @@ export const TWPSectionHeader = styled.h2.attrs({
   font-weight: ${props => props.fontWeight};
 
   @media (max-width: 992px){
-    font-size: ${props => props.tabletFontSize || TWPStyleGuide.font.size.medium};
-  }
-  
-  @media (max-width: 850px){
-    text-align: center;
+    font-size: ${props => props.tabletFontSize || null};
   }
 
   @media (max-width: 768px) {
-    font-size: ${props => props.smallTabletFontSize || TWPStyleGuide.font.size.mediumSmall};
+    font-size: ${props => props.smallTabletFontSize || null};
   }
 
   @media (Max-width: 400px){
-    font-size: ${props => props.mobileFontSize || TWPStyleGuide.font.size.small};
+    font-size: ${props => props.mobileFontSize || null};
   }
 `;
 
 export const TWPParagraph = styled.h3.attrs({
-  width: props => props.width || null,
+  width: props => props.width || '100%',
   margin: props => props.margin || '0px',
   color: props => props.color || TWPStyleGuide.color.black,
   padding: props => props.padding || '0 2%',
@@ -199,15 +195,15 @@ export const TWPParagraph = styled.h3.attrs({
   text-align: ${props => props.textAlign};
 
   @media (max-width: 992px){
-    font-size: ${props => props.tabletFontSize || TWPStyleGuide.font.size.small}
+    font-size: ${props => props.tabletFontSize || null}
   }
 
   @media (max-width: 768px) {
-    font-size: ${props => props.smallTabletFontSize || TWPStyleGuide.font.size.smallTiny};
+    font-size: ${props => props.smallTabletFontSize || null};
   }
 
   @media (max-width: 400px){
-    font-size: ${props => props.mobileFontSize || TWPStyleGuide.font.size.tiny};
+    font-size: ${props => props.mobileFontSize || null};
   }
 `
 
