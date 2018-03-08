@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { BLDiv, BLButton, BLSectionHeader, media } from '../../styles/GenericStyledComponents';
 import { Form } from 'semantic-ui-react'
 import BLStyleGuide from '../../styles/TWPStyleGuide';
+import TWPStyleGuide from '../../styles/TWPStyleGuide';
 
 const ContactForm = styled(Form)`
   font-family: ${BLStyleGuide.font.family.monoFur};
@@ -17,8 +18,29 @@ const FormTextArea = styled(Form.TextArea)`
   font-size: ${BLStyleGuide.font.size.mediumSmall};
 `;
 
-const FormButton = BLButton.extend`
-  width: 20%
+const SubmitButton = BLButton.extend`
+  width: 20%;
+  background-color: ${TWPStyleGuide.color.darkGreen};
+  color: ${TWPStyleGuide.color.white};
+
+  &:hover {
+    background-color: ${TWPStyleGuide.color.white};
+    color: ${TWPStyleGuide.color.darkGreen}
+  }
+  ${media.tablet`
+    width: 75%
+  `}  
+`;
+
+const CancelButton = BLButton.extend`
+  width: 20%;
+  background-color: red;
+  color: ${TWPStyleGuide.color.white};
+
+  &:hover{
+    background-color: ${TWPStyleGuide.color.white};
+    color: red;
+  }
   ${media.tablet`
     width: 75%
   `}  
@@ -81,16 +103,16 @@ class CommentForm extends Component {
             />
           </ContactForm>
           <ButtonSection>
-            <FormButton 
+            <SubmitButton 
               onClick={this.props.commentSubmitFunction}
               >
               Submit
-            </FormButton>
-            <FormButton 
+            </SubmitButton>
+            <CancelButton 
               onClick={this.props.commentDisplay}
               >
               Cancel
-            </FormButton>
+            </CancelButton>
           </ButtonSection>
         </BLDiv>
     );

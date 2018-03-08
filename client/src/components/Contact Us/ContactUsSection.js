@@ -105,8 +105,7 @@ class ContactUsSection extends React.Component {
         <div>
           <WeWouldLoveWrap
             padding={'2%'}
-            backgroundColor={TWPStyleGuide.color.lightGreen}
-            color={TWPStyleGuide.color.white}
+            color={TWPStyleGuide.color.darkGreen}
             fontWeight={'100'}
             tabletFontSize={TWPStyleGuide.font.size.medium}
           >
