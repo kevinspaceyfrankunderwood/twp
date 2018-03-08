@@ -1,10 +1,11 @@
 import React from 'react';
 
-import { BLDiv } from '../../styles/GenericStyledComponents';
+import { BLDiv, TWPDiv, TWPHeader } from '../../styles/GenericStyledComponents';
 
 import CommunicationDoubleDivide from './CommunicationDoubleDivide';
 import CommentForm from './CommentForm';
 import SimpleTextBar from '../Generic/SimpleTextBar';
+import TWPStyleGuide from '../../styles/TWPStyleGuide';
 
 class ContactUsSection extends React.Component {
   state = {
@@ -96,6 +97,15 @@ class ContactUsSection extends React.Component {
       
       return (
         <div>
+          <TWPHeader
+            padding={'2%'}
+            backgroundColor={TWPStyleGuide.color.lightGreen}
+            color={TWPStyleGuide.color.white}
+            fontWeight={'100'}
+            tabletFontSize={TWPStyleGuide.font.size.medium}
+          >
+            We would love to hear from you
+          </TWPHeader>
           {ThisView}
         </div>
       )  }

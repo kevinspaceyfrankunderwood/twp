@@ -7,7 +7,6 @@ import AboveTheFold from './AboveTheFold'
 import EverySeed from './EverySeed'
 import Dragonfly from './DragonFly'
 import InstagramGoogle from './InstagramGoogle'
-import ContactUsSection from '../Contact Us/ContactUsSection'
 
 export const Index = () => {
   return (
@@ -16,7 +15,6 @@ export const Index = () => {
       <EverySeed />
       <Dragonfly />
       <InstagramGoogle />
-      <ContactUsSection />
     </div>
   )
 }

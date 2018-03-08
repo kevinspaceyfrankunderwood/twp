@@ -120,6 +120,7 @@ export const TWPHeader = styled.h1.attrs({
   width: ${props => props.width};
   text-align: ${props => props.textAlign};
   margin: ${props => props.margin};
+  background-color: ${props => props.backgroundColor || null };
   color: ${props => props.color};
   padding: ${props => props.padding};
   font-family: ${props => props.fontFamily};

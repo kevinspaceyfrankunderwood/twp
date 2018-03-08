@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
-import { Header } from 'semantic-ui-react';
-import axios from 'axios'
+import ContactUsSection from './Contact Us/ContactUsSection'
 
 import { TWPHeader, TWPDiv, TWPSectionHeader, TWPParagraph, TWPImage, TWPAnchor, media } from '../styles/GenericStyledComponents'
 import TWPStyleGuide from '../styles/TWPStyleGuide';
@@ -29,6 +28,8 @@ const QuicklinksWrap = TWPDiv.extend`
 
 const Footer = () => { 
     return(
+      <div>
+      <ContactUsSection />
       <FooterWrap
         height={'200px'}
         width={'100%'}
@@ -178,6 +179,7 @@ const Footer = () => {
           </TWPDiv>
         </FooterDuo>
       </FooterWrap>
+    </div>
   );
 }
 

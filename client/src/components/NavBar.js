@@ -31,7 +31,7 @@ class NavBar extends Component {
       <Navbar color="faded" light expand="md">
         <NavbarBrand href="/" >
           <a href="/">
-            <img style={{width: '35%'}} src={Logo} alt="The Wildflower Project Logo"/>
+            <img style={{width: '95px', height: '40px'}} src={Logo} alt="The Wildflower Project Logo"/>
           </a>
         </NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
