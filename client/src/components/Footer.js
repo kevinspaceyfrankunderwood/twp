@@ -72,7 +72,7 @@ const Footer = () => {
                   textAlign={'left'}
                   color={TWPStyleGuide.color.white}
                   width={'100%'}
-                  href={'/aboutus'}
+                  href={'/mission'}
                 >
                   About Us
                 </TWPAnchor>
