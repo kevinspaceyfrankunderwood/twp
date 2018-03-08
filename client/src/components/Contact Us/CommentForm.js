@@ -22,6 +22,8 @@ const SubmitButton = BLButton.extend`
   width: 20%;
   background-color: ${TWPStyleGuide.color.darkGreen};
   color: ${TWPStyleGuide.color.white};
+  border: none;
+  font-size: ${TWPStyleGuide.font.size.medium};
 
   &:hover {
     background-color: ${TWPStyleGuide.color.white};
@@ -36,6 +38,8 @@ const CancelButton = BLButton.extend`
   width: 20%;
   background-color: red;
   color: ${TWPStyleGuide.color.white};
+  border: none;
+  font-size: ${TWPStyleGuide.font.size.medium};
 
   &:hover{
     background-color: ${TWPStyleGuide.color.white};
@@ -63,6 +67,7 @@ class CommentForm extends Component {
         <BLDiv 
           display={'block'}
           padding={'4% 5%'}
+          backgroundColor={TWPStyleGuide.color.lightGray}
         >
           <BLSectionHeader 
             margin={'0 0 30px 0'}

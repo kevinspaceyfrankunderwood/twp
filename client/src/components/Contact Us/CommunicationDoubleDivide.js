@@ -40,7 +40,6 @@ const LeaveUsANoteButton = BLButton.extend`
   `}
   ${media.tablet`
     font-size: ${TWPStyleGuide.font.size.mediumSmall};
-    background-color: ${TWPStyleGuide.color.white}
   `}
   ${media.phone`
     font-size: ${TWPStyleGuide.font.size.small};

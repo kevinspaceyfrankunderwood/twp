@@ -179,24 +179,27 @@ class NavBar extends Component {
         justifyContent={'flex-start'}
         padding={'0'}
       >
-          <a href="https://twitter.com/TWPMN">
+          <a style={{margin: '5px'}} href="https://twitter.com/TWPMN">
             <SocialIcon
               //twitter
               width={'40px'}
+              height={'40px'}
               src={twitter}
             />
           </a>
-          <a href="https://www.instagram.com/wildflower_project/">
+          <a style={{margin: '5px'}} href="https://www.instagram.com/wildflower_project/">
             <SocialIcon
               //instagram
               width={'40px'}
+              height={'40px'}
               src={instagram}
             />
           </a>
-          <a href="https://www.facebook.com/wildflowerproj/">
+          <a style={{margin: '5px'}} href="https://www.facebook.com/wildflowerproj/">
             <SocialIcon
               //facebook
               width={'40px'}
+              height={'40px'}
               src={facebook}
             />
           </a>
