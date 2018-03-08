@@ -29,6 +29,8 @@ const SocialIcon = TWPImage.extend`
 `
 
 const SocialWrap = TWPDiv.extend`
+  z-index: 1000;
+
   ${media.tablet`
     flex-direction: row;
     width: 100%;
@@ -44,6 +46,7 @@ const TriColorNavTWP = TWPDiv.extend`
   height: 50px;
   align-items: center;
   position: fixed;
+  z-index: 1000;
   background-color: ${TWPStyleGuide.color.white};
 
   ${media.tablet`
