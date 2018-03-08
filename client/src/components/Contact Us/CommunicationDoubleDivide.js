@@ -100,7 +100,6 @@ class CommunicationDoubleDivide extends Component {
                 fontWeight={'300'}
                 fontSize={TWPStyleGuide.font.size.medium}
                 color={TWPStyleGuide.color.white}
-                hoverColor={TWPStyleGuide.color.black}
                 fontFamily={TWPStyleGuide.font.family.monoFur}
                 tabletFontSize={TWPStyleGuide.font.size.medium}
             >
