@@ -1,0 +1,57 @@
+.navbar {
+	border-bottom: 1px solid lightgray !important;
+	top: 0px !important;
+	width: 100% !important;
+	background-color: white !important;
+	z-index: 1000 !important;
+	margin-bottom: 0px !important;
+  position: fixed !important;
+	border-radius: 0;
+	padding: 0;
+}
+
+.navbar-brand {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	margin-right: 0 !important;
+	font-size: 0 !important;
+  height: 100%;
+  width: 25%;
+	margin: 0;
+}
+
+.dropdown-menu {
+	left: -50px
+}
+
+.paypalDonateButton {
+	background-color: #e96e10;
+	border-radius: 5px;
+}
+
+li.nav-item:hover {
+	background-color: #d3d3d3;
+	border-radius: 5px;
+}
+
+li.nav-item:first-child:hover {
+	background-color: #92d051;
+	border-radius: 5px;
+}
+
+.donateText {
+	color: white;
+}
+
+.donateText:hover {
+	color: white;
+}
+
+.nav-link {
+	color: black !important;
+	padding: 10px !important;
+}
+
+.donateNavLink:hover {
+	background-color: #C32C2C;
+}

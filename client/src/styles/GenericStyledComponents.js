@@ -576,6 +576,11 @@ export const BLHeader = styled.h1.attrs({
   font-size: ${props => props.fontSize || TWPStyleGuide.font.size.large};
   font-weight: ${props => props.fontWeight};
 
+  &:hover {
+      color: ${props => props.hoverColor || null};
+      cursor: ${props => props.cursorType || null};
+  }
+
   ${media.desktop`font-size: ${props => props.tabletFontSize || TWPStyleGuide.font.size.mediumLarge};`}
   ${media.tablet`font-size: ${props => props.smallTabletSize || null };`}
   ${media.phone`font-size: ${props => props.mobileFontSize || null };`}
@@ -600,9 +605,14 @@ export const BLSectionHeader = styled.h2.attrs({
   font-size: ${props => props.fontSize || TWPStyleGuide.font.size.medium};
   font-weight: ${props => props.fontWeight};
 
+  &:hover {
+    color: ${props => props.hoverColor || null};
+    cursor: ${props => props.cursorType || null};
+}
+
   ${media.desktop`font-size: ${props => props.tabletFontSize || TWPStyleGuide.font.size.mediumSmall};`}
-  ${media.tablet`font-size: ${props => props.smallTabletFontSize || TWPStyleGuide.font.size.small};`}
-  ${media.phone`font-size: ${props => props.mobileFontSize || TWPStyleGuide.font.size.smallTiny};`}
+  ${media.tablet`font-size: ${props => props.smallTabletFontSize || null};`}
+  ${media.phone`font-size: ${props => props.mobileFontSize || null};`}
 `;
 
 export const BLParagraph = styled.h3.attrs({
@@ -625,6 +635,11 @@ export const BLParagraph = styled.h3.attrs({
   font-size: ${props => props.fontSize};
   font-weight: ${props => props.fontWeight};
   text-align: ${props => props.textAlign};
+
+  &:hover {
+    color: ${props => props.hoverColor || null};
+    cursor: ${props => props.cursorType || null};
+}
 
   ${media.desktop`font-size: ${props => props.tabletFontSize || TWPStyleGuide.font.size.small};`}
   ${media.tablet`font-size: ${props => props.smallTabletFontSize || TWPStyleGuide.font.size.smallTiny};`}
@@ -669,7 +684,7 @@ export const BLAnchor = styled.a.attrs({
   border: ${props => props.border};
 
   &:hover {
-    color: ${props => props.hoverColor || 'white'};
+    color: ${props => props.hoverColor || TWPStyleGuide.color.background};
     background-color: ${props => props.hoverBackgroundColor};
     cursor: pointer;
   }
@@ -770,7 +785,6 @@ export const BLCard = styled.a.attrs({
     `}
 `
 
-
 export const BLFooterAnchor = styled.a.attrs({
   height: props => props.height,
   width: props => props.width,
@@ -808,7 +822,7 @@ export const BLFooterAnchor = styled.a.attrs({
   text-align: ${props => props.textAlign};
 
   &:hover {
-    color: ${props => props.hoverColor || 'white'};
+    color: ${props => props.hoverColor || TWPStyleGuide.color.background};
     background-color: ${props => props.hoverBackgroundColor};
     cursor: pointer;
   }
@@ -826,7 +840,7 @@ export const BLImage = styled.img`
   width: ${props => props.width || '100%'};
   height: ${props => props.height || '100%'};
   border-radius: ${props => props.borderRadius ? props.borderRadius : '0px'};
-  box-shadow: ${props => props.boxShadow ? props.boxShadow : null }
+  box-shadow: ${props => props.boxShadow ? props.boxShadow : '1px 1px 28px 2px grey' }
 
   ${media.desktop`height: ${props => props.tabletHeight};`}
   ${media.tablet`height: ${props => props.smallTabletHeight};`}
@@ -836,7 +850,7 @@ export const BLImage = styled.img`
 export const BLButton = styled.button`
   height: ${props => props.height};
   width: ${props => props.width};
-  background-color: ${props => props.backgroundColor || null};
+  background-color: ${props => props.backgroundColor || TWPStyleGuide.color.background};
   color: ${props => props.color || TWPStyleGuide.color.title};
   padding: ${props => props.padding};
   margin: ${props => props.margin};
@@ -852,6 +866,7 @@ export const BLButton = styled.button`
     cursor: pointer;
     background-color: ${props => props.hoverBackground || TWPStyleGuide.color.secondary};
   }
+
 `
 
 export const BigSectionDiv = BLDiv.extend`
