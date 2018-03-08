@@ -1,11 +1,17 @@
 import React from 'react';
 
-import { BLDiv, TWPDiv, TWPHeader } from '../../styles/GenericStyledComponents';
+import { BLDiv, TWPDiv, TWPHeader, media } from '../../styles/GenericStyledComponents';
 
 import CommunicationDoubleDivide from './CommunicationDoubleDivide';
 import CommentForm from './CommentForm';
 import SimpleTextBar from '../Generic/SimpleTextBar';
 import TWPStyleGuide from '../../styles/TWPStyleGuide';
+
+const WeWouldLoveWrap = TWPHeader.extend`
+  ${media.tablet`
+    padding: 6% 2%;
+  `}
+`
 
 class ContactUsSection extends React.Component {
   state = {
@@ -97,7 +103,7 @@ class ContactUsSection extends React.Component {
       
       return (
         <div>
-          <TWPHeader
+          <WeWouldLoveWrap
             padding={'2%'}
             backgroundColor={TWPStyleGuide.color.lightGreen}
             color={TWPStyleGuide.color.white}
@@ -105,7 +111,7 @@ class ContactUsSection extends React.Component {
             tabletFontSize={TWPStyleGuide.font.size.medium}
           >
             We would love to hear from you
-          </TWPHeader>
+          </WeWouldLoveWrap>
           {ThisView}
         </div>
       )  }

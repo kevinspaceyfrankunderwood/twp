@@ -9,7 +9,7 @@ import Bouquet from '../../assets/images/BouquetOranges.png'
 
 const AboveTheFoldWrap = TWPDiv.extend`
   ${media.tablet`
-    margin-top: 50px;
+    margin-top: 100px;
   `}
 `
 

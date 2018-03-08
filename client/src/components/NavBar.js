@@ -14,7 +14,7 @@ import {
 } from 'reactstrap';
 import './NavBar.css'
 import Logo from '../assets/images/logoFullSize.png';
-import { TWPDiv, TWPImage, media } from '../styles/GenericStyledComponents';
+import { TWPDiv, TWPImage, media, TWPParagraph } from '../styles/GenericStyledComponents';
 import instagram from '../assets/images/instagram.png'
 import facebook from '../assets/images/facebook.png'
 import twitter from '../assets/images/twitter.png'
@@ -34,6 +34,22 @@ const SocialWrap = TWPDiv.extend`
     width: 100%;
     background-color: ${TWPStyleGuide.color.white};
     justify-content: space-evenly;
+    margin-top: 50px;
+  `}
+`
+
+const TriColorNavTWP = TWPDiv.extend`
+  display: none;
+  font-size: 1.5em;
+  height: 50px;
+  align-items: center;
+  position: fixed;
+  background-color: ${TWPStyleGuide.color.white};
+
+  ${media.tablet`
+    display: flex;
+    width: 100%;
+    justify-content: center;
   `}
 `
 
@@ -148,6 +164,16 @@ class NavBar extends Component {
           </Nav>
         </Collapse>
       </Navbar>
+      <TriColorNavTWP>
+        <TWPParagraph
+          fontSize={TWPStyleGuide.font.size.smallTiny}
+          textAlign={'center'}
+        >
+          <span style={{color: TWPStyleGuide.color.yellow}}>the</span>
+          <span style={{color: TWPStyleGuide.color.brightOrange}}>wildflower</span>
+          <span style={{color: TWPStyleGuide.color.darkGreen}}>project</span>
+        </TWPParagraph>
+      </TriColorNavTWP>
       <SocialWrap
         position={'fixed'}
         justifyContent={'flex-start'}
