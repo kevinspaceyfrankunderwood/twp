@@ -14,8 +14,28 @@ import {
 } from 'reactstrap';
 import './NavBar.css'
 import Logo from '../assets/images/logoFullSize.png';
+import { TWPDiv, TWPImage, media } from '../styles/GenericStyledComponents';
+import instagram from '../assets/images/instagram.png'
+import facebook from '../assets/images/facebook.png'
+import twitter from '../assets/images/twitter.png'
+import TWPStyleGuide from '../styles/TWPStyleGuide';
 
+const NavSocialDivide = TWPDiv.extend`
+  margin-top: 50px;
+`
 
+const SocialIcon = TWPImage.extend`
+  margin: 5px;
+`
+
+const SocialWrap = TWPDiv.extend`
+  ${media.tablet`
+    flex-direction: row;
+    width: 100%;
+    background-color: ${TWPStyleGuide.color.white};
+    justify-content: space-evenly;
+  `}
+`
 
 class NavBar extends Component {
   state = { isOpen: false }
@@ -128,7 +148,34 @@ class NavBar extends Component {
           </Nav>
         </Collapse>
       </Navbar>
-      <div style={{marginTop: '50px'}} />
+      <SocialWrap
+        position={'fixed'}
+        justifyContent={'flex-start'}
+        padding={'0'}
+      >
+          <a href="https://twitter.com/TWPMN">
+            <SocialIcon
+              //twitter
+              width={'40px'}
+              src={twitter}
+            />
+          </a>
+          <a href="https://www.instagram.com/wildflower_project/">
+            <SocialIcon
+              //instagram
+              width={'40px'}
+              src={instagram}
+            />
+          </a>
+          <a href="https://www.facebook.com/wildflowerproj/">
+            <SocialIcon
+              //facebook
+              width={'40px'}
+              src={facebook}
+            />
+          </a>
+        </SocialWrap>
+        <NavSocialDivide />
       </div>
     )
   }

@@ -7,6 +7,12 @@ import Field from '../../assets/images/FlowerField.jpg'
 import squares from '../../assets/images/Squares.png'
 import Bouquet from '../../assets/images/BouquetOranges.png'
 
+const AboveTheFoldWrap = TWPDiv.extend`
+  ${media.tablet`
+    margin-top: 50px;
+  `}
+`
+
 const TopTwoInfoBoxes = TWPDiv.extend`
   ${media.desktop`
     height: 55%
@@ -52,7 +58,7 @@ const TopTwoBottomLeftNumberText = TWPDiv.extend`
 
 export const AboveTheFold = () => {
     return(
-    <TWPDiv 
+    <AboveTheFoldWrap 
       padding={'0'}
     >
       <TWPDiv
@@ -196,7 +202,7 @@ export const AboveTheFold = () => {
           </TopTwoInfoBoxes>
         </TopWrapper>
       </TWPDiv>
-    </TWPDiv>
+    </AboveTheFoldWrap>
   );
 }
 
