@@ -45,7 +45,6 @@ class MissionObjectives extends Component {
         >
           <TWPSectionHeader
             fontSize={TWPStyleGuide.font.size.medium}
-            tabletFontSize={TWPStyleGuide.font.size.mediumSmall}
             padding={'0 10%'}
           >
             {item.text}
