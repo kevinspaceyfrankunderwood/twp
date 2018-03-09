@@ -77,7 +77,7 @@ class NavBar extends Component {
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem className="paypalDonateButton">
-              <NavLink target="_blank" rel="noopener referrer" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=GJ2922U6S4SEN&lc=US&no_note=1&no_shipping=1&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=GJ2922U6S4SEN&lc=US&no_note=1&no_shipping=1&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" className="donateText" target="_blank" rel="noopener referrer">DONATE</a></NavLink>
+              <NavLink target="_blank" rel="noopener referrer" href={"https://thewildflowerprojectmn.org"}><a href="https://thewildflowerprojectmn.org" className="donateText" target="_blank" rel="noopener referrer">DONATE</a></NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
