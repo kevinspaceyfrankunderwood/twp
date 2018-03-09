@@ -10,6 +10,7 @@ const TWPStyleGuide = {
     lightGreen: '#92d051',
     darkGreen: '#366902',
     brown: '#866048',
+    darkBrown: '#542C13',
     white: '#FFFFFF',
     magenta: '#6B085A',
     sunburnt: "#DE102C"
