@@ -182,7 +182,7 @@ class NavBar extends Component {
         justifyContent={'flex-start'}
         padding={'0'}
       >
-          <a style={{margin: '5px'}} href="https://twitter.com/TWPMN">
+          <a style={{margin: '5px'}} target="_blank" rel="noopener noreferrer" href="https://twitter.com/TWPMN">
             <SocialIcon
               //twitter
               width={'40px'}
@@ -190,7 +190,7 @@ class NavBar extends Component {
               src={twitter}
             />
           </a>
-          <a style={{margin: '5px'}} href="https://www.instagram.com/wildflower_project/">
+          <a style={{margin: '5px'}} target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/wildflower_project/">
             <SocialIcon
               //instagram
               width={'40px'}
@@ -198,7 +198,7 @@ class NavBar extends Component {
               src={instagram}
             />
           </a>
-          <a style={{margin: '5px'}} href="https://www.facebook.com/wildflowerproj/">
+          <a style={{margin: '5px'}} target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/wildflowerproj/">
             <SocialIcon
               //facebook
               width={'40px'}

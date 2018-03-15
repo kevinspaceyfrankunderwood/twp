@@ -49,34 +49,34 @@ class InstagramGoogle extends Component {
 
   displayBlog = () => {
     const { blog } = this.state;
-    const dingle = this.state.blog.excerpt.replace(/\[(.*?)\]/gm, "").replace(/(\&([#8217]*?)\;)/gm, "'").replace(/(\&([#8230]*?)\;)/gm, ". ").replace(/\&([;\s\w\"\=\,\:\./\~\{\}\?\!\-\%\&\#\$\^\(\)]*?)\;/gm, "").replace(/<p[^>]*>/g, "").replace(/(<([^>]+)>)/gm, "")
+    const chopped = this.state.blog.excerpt.replace(/\[(.*?)\]/gm, "").replace(/(\&([#8217]*?)\;)/gm, "'").replace(/(\&([#8230]*?)\;)/gm, ". ").replace(/\&([;\s\w\"\=\,\:\./\~\{\}\?\!\-\%\&\#\$\^\(\)]*?)\;/gm, "").replace(/<p[^>]*>/g, "").replace(/(<([^>]+)>)/gm, "")
     return(
-      <TWPDiv
-        height={'100%'}
+      <TWPAnchor 
         width={'50%'}
-        backgroundColor={TWPStyleGuide.color.brightOrange}
-        justifyContent={'space-around'}
-        href={blog.url}
-        hoverBackgroundColor={TWPStyleGuide.color.darkOrange}
-        cursor={'pointer'}
+        height={'100%'}
+        target="_blank"
+        href={blog.URL}
       >
-        <TWPHeader
-          color={TWPStyleGuide.color.white}
-          fontSize={TWPStyleGuide.font.size.medium}
+      <TWPDiv
+          height={'100%'}
+          backgroundColor={TWPStyleGuide.color.brightOrange}
+          justifyContent={'space-around'}
+          hoverBackgroundColor={TWPStyleGuide.color.darkOrange}
+          cursor={'pointer'}
         >
-          Click here to read the TWP Garden Journal
-        </TWPHeader>
-        <TWPSectionHeader
-          color={TWPStyleGuide.color.white}
-        >
-          {blog.title}
-        </TWPSectionHeader>
-        <TWPParagraph
-          color={TWPStyleGuide.color.white}
-        >
-          {dingle}
-        </TWPParagraph>
-      </TWPDiv>
+          <TWPHeader
+            color={TWPStyleGuide.color.white}
+            fontSize={TWPStyleGuide.font.size.mediumSmall}
+          >
+            Click to read the latest from our Garden Journal
+          </TWPHeader>
+          <TWPParagraph
+            color={TWPStyleGuide.color.white}
+          >
+            {chopped}. . .
+          </TWPParagraph>
+        </TWPDiv>
+      </TWPAnchor>
     )
   }
   
