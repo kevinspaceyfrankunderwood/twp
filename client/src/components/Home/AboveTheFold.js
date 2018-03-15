@@ -89,7 +89,7 @@ export const AboveTheFold = () => {
             width={'100%'}
             tabletFontSize={TWPStyleGuide.font.size.small}
           >
-            planting with a purpose
+            plant with a purpose
           </TWPSectionHeader>
         </TWPDiv>
         <TopWrapper 
