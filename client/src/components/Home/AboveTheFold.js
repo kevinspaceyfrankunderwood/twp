@@ -6,6 +6,8 @@ import TWPStyleGuide from '../../styles/TWPStyleGuide';
 import Field from '../../assets/images/FlowerField.jpg'
 import squares from '../../assets/images/Squares.png'
 import Bouquet from '../../assets/images/BouquetOranges.png'
+import urban from '../../assets/images/urbanBoys.jpg'
+import sunrise from '../../assets/images/sunriseLiatris.jpg'
 
 const AboveTheFoldWrap = TWPDiv.extend`
   ${media.tablet`
@@ -62,9 +64,9 @@ export const AboveTheFold = () => {
       padding={'0'}
     >
       <TWPDiv
-        background={`linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)), url(${Field})`}
+        background={`linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)), url(${sunrise})`}
         backgroundSize={'cover'}
-        backgroundPosition={'bottom center'}
+        backgroundPosition={'top'}
         backgroundAttachment={'fixed'}
         height={'650px'}
         width={'100%'}
@@ -78,9 +80,9 @@ export const AboveTheFold = () => {
             width={'100%'}
             tabletFontSize={TWPStyleGuide.font.size.mediumLarge}
           >
-            <span style={{color: TWPStyleGuide.color.yellow}}>The </span>
-            <span style={{color: TWPStyleGuide.color.brightOrange}}>Wildflower </span>
-            <span style={{color: TWPStyleGuide.color.darkGreen}}>Project</span>
+            <span style={{color: TWPStyleGuide.color.yellow}}>the</span>
+            <span style={{color: TWPStyleGuide.color.brightOrange}}>wildflower</span>
+            <span style={{color: TWPStyleGuide.color.darkGreen}}>project</span>
           </TWPHeader>
           <TWPSectionHeader
             fontWeight={'300'}

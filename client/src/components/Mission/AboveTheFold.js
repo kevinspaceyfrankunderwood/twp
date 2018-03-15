@@ -4,16 +4,16 @@ import { TWPHeader, TWPDiv, TWPSectionHeader, TWPParagraph, TWPImage, TWPAnchor,
 import TWPStyleGuide from '../../styles/TWPStyleGuide';
 
 import Youngster from '../../assets/images/youngPlant.jpg'
+import Monarch from '../../assets/images/MonachBackSide.jpg'
 
 
 export const AboveTheFold = () => {
   return(
     <TWPDiv
-      background={`linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)), url(${Youngster})`}
+      background={`linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(${Monarch}) fixed`}
+      backgroundPosition={'center'}
       backgroundSize={'cover'}
-      backgroundPosition={'bottom center'}
-      backgroundAttachment={'fixed'}
-      height={'650px'}
+      height={'600px'}
       width={'100%'}
     >
       <TWPHeader>

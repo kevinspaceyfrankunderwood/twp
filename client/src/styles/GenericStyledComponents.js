@@ -440,6 +440,7 @@ export const TWPFooterAnchor = styled.a.attrs({
 
 export const TWPImage = styled.img`
   max-width: ${props => props.maxWidth || null};
+  max-height: ${props => props.maxHeight || null};
   width: ${props => props.width || '100%'};
   height: ${props => props.height || '100%'};
   border-radius: ${props => props.borderRadius ? props.borderRadius : '0px'};

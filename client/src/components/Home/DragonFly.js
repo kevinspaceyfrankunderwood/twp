@@ -54,7 +54,7 @@ export const DragonFly = () => {
       padding={'0'}
     >
       <DragonflySection
-          background={`linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0)), url(${Dragon})`}
+          background={`linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0)), url(${Dragon}) fixed`}
           backgroundSize={'cover'}
           backgroundPosition={'bottom center'}
           height={'650px'}

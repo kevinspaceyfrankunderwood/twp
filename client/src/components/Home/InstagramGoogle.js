@@ -3,17 +3,28 @@ import React, { Component } from 'react';
 import { Header } from 'semantic-ui-react';
 import axios from 'axios'
 
-import { TWPDiv, TWPImage, TWPAnchor, media } from '../../styles/GenericStyledComponents'
+import { TWPDiv, TWPImage, TWPAnchor, media, TWPSectionHeader, TWPHeader, TWPParagraph } from '../../styles/GenericStyledComponents'
 import TWPStyleGuide from '../../styles/TWPStyleGuide';
 
 
 class InstagramGoogle extends Component {
-  state = { photos: [], height: window.innerHeight, width: window.innerWidth }
+  state = { blog: [], photos: [], height: window.innerHeight, width: window.innerWidth }
 
 	componentDidMount() {
 		axios.get('api/instagram/index')
-		.then( res => this.setState({ photos: res.data.data }) )
-	}
+    .then( res => this.setState({ photos: res.data.data }) )
+    .then( res => axios.get('api/blogs/index')
+    .then( res => this.setState({blog: res.data}) )
+    .catch( res => console.log(res)))
+    .catch( res => console.log(res) )
+    // this.secondCall()
+  }
+  
+  secondCall(){
+    axios.get('api/blogs/index')
+    .then( res => this.setState({blog: res.data}) )
+    .catch( res => console.log(res))
+  }
  
 	displayImages = () => {
 		return this.state.photos.map( pic => 
@@ -35,22 +46,64 @@ class InstagramGoogle extends Component {
 			</TWPDiv>
 		)
   }
+
+  displayBlog = () => {
+    const { blog } = this.state;
+    const dingle = this.state.blog.excerpt.replace(/\[(.*?)\]/gm, "").replace(/(\&([#8217]*?)\;)/gm, "'").replace(/(\&([#8230]*?)\;)/gm, ". ").replace(/\&([;\s\w\"\=\,\:\./\~\{\}\?\!\-\%\&\#\$\^\(\)]*?)\;/gm, "").replace(/<p[^>]*>/g, "").replace(/(<([^>]+)>)/gm, "")
+    return(
+      <TWPDiv
+        height={'100%'}
+        width={'50%'}
+        backgroundColor={TWPStyleGuide.color.brightOrange}
+        justifyContent={'space-around'}
+        href={blog.url}
+        hoverBackgroundColor={TWPStyleGuide.color.darkOrange}
+        cursor={'pointer'}
+      >
+        <TWPHeader
+          color={TWPStyleGuide.color.white}
+          fontSize={TWPStyleGuide.font.size.medium}
+        >
+          Click here to read the TWP Garden Journal
+        </TWPHeader>
+        <TWPSectionHeader
+          color={TWPStyleGuide.color.white}
+        >
+          {blog.title}
+        </TWPSectionHeader>
+        <TWPParagraph
+          color={TWPStyleGuide.color.white}
+        >
+          {dingle}
+        </TWPParagraph>
+      </TWPDiv>
+    )
+  }
   
 
   render() {
+    if (this.state.blog.excerpt){
     return(
     <TWPDiv 
       padding={'0'}
     >
       <TWPDiv
         flexDirection={'row'}
-        height={'100%'}
-        width={'100%'}
-        padding={'20px 2%'}
-        justifyContent={'space-around'}
-        flexWrap={'wrap'}
+        padding={'0'}
+        height={'300px'}
       >
-        { this.displayImages() }
+        <TWPDiv
+          flexDirection={'row'}
+          height={'100%'}
+          width={'50%'}
+          padding={'20px 2%'}
+          justifyContent={'space-around'}
+          flexWrap={'wrap'}
+          backgroundColor={TWPStyleGuide.color.lightGreen}
+        >
+          { this.displayImages() }
+        </TWPDiv>
+          { this.displayBlog() }
       </TWPDiv>
       <iframe 
         src="https://www.google.com/maps/d/u/0/embed?mid=1X8vfQjjnxOLWqmTO6JJf4-Tr5uo" 
@@ -59,7 +112,10 @@ class InstagramGoogle extends Component {
       />
     </TWPDiv>
     );
+  } else {
+    return <div/>
   }
+}
 }
 
 export default InstagramGoogle;

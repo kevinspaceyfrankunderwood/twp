@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   namespace :api do
+    get 'blogs/index'
+  end
+
+  namespace :api do
     get 'instagram/index'
   end
 

@@ -21,7 +21,7 @@ export const WhoWeAre = () => {
             <span style={{color: TWPStyleGuide.color.brightOrange}}>Wildflower </span>
             <span style={{color: TWPStyleGuide.color.darkGreen}}>Project</span>
             <hr style={{backgroundColor: TWPStyleGuide.color.darkGray}}/>
-            An organization dedicated to planting wildflower gardens and pollinator habitats in urban environments
+            To create wildflower gardens through community partnerships that restore and enhance pollinator habitat in urban environments.
           </TWPHeader>
         </TWPDiv>
           );

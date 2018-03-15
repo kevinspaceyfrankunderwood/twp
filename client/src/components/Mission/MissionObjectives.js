@@ -11,19 +11,19 @@ import Member from '../../assets/images/CommunityMember.jpg'
 
 const points = [
   {
-    text: 'To revitalize and restore the health & wellness of pollinator habitats in urban environments',
+    text: 'We believe planting gardens is a means to collaboration with a variety of groups creating awareness, engagement and educational possibilities through pollinator garden installation',
     image: Bank
   },
   {
-    text: 'To bring vibrant, natural beauty to our urban communities',
+    text: 'We believe in providing easier access to nature for urban communities',
     image: sideboob
   },
   {
-    text: 'To foster education and awareness through volunteerism and partnerships, including nonprofit, commercial, private and civic',
+    text: 'We support healthy living, civic engagement and community pride',
     image: Member
   },
   {
-    text: 'To take spaces with no hope and give them a purpose',
+    text: 'We believe by building habitat for pollinators, we can build a community of good neighbors and vibrant civil societies, supporting all members of our shared ecosystem',
     image: Urban
   }
 ]
