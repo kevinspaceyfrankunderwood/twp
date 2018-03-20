@@ -92,7 +92,7 @@ class CommunicationDoubleDivide extends Component {
               hoverBackgroundColor={TWPStyleGuide.color.white}
               color={TWPStyleGuide.color.white}
             >
-              shoot us an email
+              Send us an email
             </EmailUsAnchor>
             <br/>
             <BLHeader
@@ -126,7 +126,7 @@ class CommunicationDoubleDivide extends Component {
               font-family={TWPStyleGuide.font.family.monoFur}
               border={`2px solid ${TWPStyleGuide.color.black}`}
               >
-              leave us a note
+              Submit a garden site
             </LeaveUsANoteButton>
             <br/>
             <BLHeader
@@ -136,7 +136,7 @@ class CommunicationDoubleDivide extends Component {
                 fontFamily={TWPStyleGuide.font.family.monoFur}
                 tabletFontSize={TWPStyleGuide.font.size.medium}
             >
-              we're listening...
+              more flowers the merrier...
             </BLHeader>
           </RightContactDiv> 
         </SectionDiv>

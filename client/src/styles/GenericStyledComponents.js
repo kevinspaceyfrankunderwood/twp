@@ -79,7 +79,8 @@ export const TWPDiv = styled.div.attrs({
   border-right: ${props => props.borderRight};
   border-radius: ${props => props.borderRadius};
   order: ${props => props.order};
-  
+  min-width: ${props => props.minWidth};
+
     &:hover {
       background: ${props => props.hoverBackgroundColor};
       background-size: ${props => props.hoverBackgroundSize};
@@ -154,6 +155,7 @@ export const TWPSectionHeader = styled.h2.attrs({
   width: ${props => props.width};
   text-align: ${props => props.textAlign};
   margin: ${props => props.margin};
+  background-color: ${props => props.backgroundColor};
   color: ${props => props.color};
   padding: ${props => props.padding};
   font-family: ${props => props.fontFamily};
@@ -443,6 +445,8 @@ export const TWPImage = styled.img`
   max-height: ${props => props.maxHeight || null};
   width: ${props => props.width || '100%'};
   height: ${props => props.height || '100%'};
+  margin: ${props => props.margin};
+  padding: ${props => props.padding};
   border-radius: ${props => props.borderRadius ? props.borderRadius : '0px'};
   box-shadow: ${props => props.boxShadow ? props.boxShadow : null }
 

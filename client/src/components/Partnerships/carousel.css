@@ -1,0 +1,22 @@
+.slider-control-bottomcenter {
+  display: none !important;
+}
+
+.slider-frame {
+  height: inherit !important;
+}
+
+.slider {
+  height: 100% !important;
+  overflow-x: hidden !important;
+}
+
+.slider-list {
+  height: 100% !important;
+}
+
+.slider-slide{
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+}

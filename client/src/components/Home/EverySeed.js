@@ -14,25 +14,26 @@ import TeamEffort from '../../assets/images/teamEffort.jpg'
 const EverySeed = () => {  
   return(
       <TWPDiv
-          height={'600px'}
           justifyContent={'space-evenly'}
           padding={'0'}
         >
           <TWPHeader
             fontSize={TWPStyleGuide.font.size.medium}
             color={TWPStyleGuide.color.darkOrange}
-            padding={'0 15%'}
+            padding={'20px 15%'}
           >
             The Wildflower Project is a 501(c)(3) non-profit dedicated to taking urban, neglected spaces, and giving them a purpose.
           </TWPHeader>
           <TWPDiv
             width={'90%'}
             flexDirection={'row'}
+            flexWrap={'wrap'}
           >
             <TWPDiv
               width={'250px'}
               height={'250px'}
-              margin={'0 5px'}
+              minWidth={'250px'}
+              margin={'5px'}
               padding={'0'}
             >
               <TWPImage
@@ -42,7 +43,8 @@ const EverySeed = () => {
             <TWPDiv
               width={'250px'}
               height={'250px'}
-              margin={'0 5px'}
+              minWidth={'250px'}
+              margin={'5px'}
               padding={'0'}
             >
               <TWPImage
@@ -52,7 +54,8 @@ const EverySeed = () => {
             <TWPDiv
               width={'250px'}
               height={'250px'}
-              margin={'0 5px'}
+              minWidth={'250px'}
+              margin={'5px'}
               padding={'0'}
             >
               <TWPImage
@@ -62,7 +65,8 @@ const EverySeed = () => {
             <TWPDiv
               width={'250px'}
               height={'250px'}
-              margin={'0 5px'}
+              minWidth={'250px'}
+              margin={'5px'}
               padding={'0'}
             >
               <TWPImage
@@ -73,6 +77,7 @@ const EverySeed = () => {
           <TWPHeader
             fontSize={TWPStyleGuide.font.size.mediumSmall}
             color={TWPStyleGuide.color.darkOrange}
+            padding={'2%'}
           >
             Wildflowers | Urban | Community
           </TWPHeader>
