@@ -9,7 +9,7 @@ import Des from '../images/staffDes.png'
 export const employees = [
   {
     fullName: 'Matt Wildenauer',
-    title: 'Founder & Director',
+    title: 'Founder & Landscape Architect',
     longBio: 'Matt is a professional landscape designer and photographer. He received a B.S. in Horticulture and B.D.S. in Landscape Design from the University of Minnesota. An avid gardener with an eye for design, Matt is driven by an instinct to leave the world in better shape than he found it.',
     photo: Wildenauer 
   },
