@@ -55,3 +55,9 @@ li.nav-item:first-child:hover {
 .donateNavLink:hover {
 	background-color: #C32C2C;
 }
+
+@media (max-width: 768px) {
+	.navbar {
+		border-bottom: none !important;
+	}
+}

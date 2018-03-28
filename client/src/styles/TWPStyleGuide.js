@@ -29,7 +29,8 @@ const TWPStyleGuide = {
       massive: '4.5em'
     },
     family: {
-      helveticaNeue: 'helvetica neue'
+      helveticaNeue: 'helvetica neue',
+      plex: 'Plex'
     },
     weight: {
       oneHundred: '100',

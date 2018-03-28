@@ -11,6 +11,7 @@ import ProtectedRoute from './ProtectedRoute';
 import { Switch, Route } from 'react-router-dom';
 import FetchUser from './FetchUser';
 import Partnerships from './Partnerships/Index'
+import Team from './Team/Index'
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
             <Route exact path='/' component={Home} />
             <Route exact path='/mission' component={Mission} />
             <Route exact path="/partnerships" component={Partnerships} />
+            <Route exact path="/ourteam" component={Team} />
             <Route exact path='/login' component={Login} />
             <Route exact path='/register' component={Register} />
             <Route component={NoMatch} />

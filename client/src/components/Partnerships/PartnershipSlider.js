@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Carousel from 'nuka-carousel';
 import './carousel.css'
-import MSCG from '../../assets/images/MSCG.png'
+import MSCG from '../../assets/images/mscg.jpg'
+import awesome from '../../assets/images/the-awesome-foundation.png'
 import PPCG from '../../assets/images/PPCG.png'
 import Propel from '../../assets/images/propel.png'
 import Sunrise from '../../assets/images/sunrise.png'
@@ -22,6 +23,10 @@ const Partnerships = [
   {
     image: Propel,
     href: "https://www.propelnonprofits.org"
+  },
+  {
+    image: awesome,
+    href: "https://www.awesomefoundation.org/en"
   },
   {
     image: MSCG,
@@ -46,6 +51,10 @@ const Partnerships = [
   {
     image: Propel,
     href: "https://www.propelnonprofits.org"
+  },
+  {
+    image: awesome,
+    href: "https://www.awesomefoundation.org/en"
   },
   {
     image: MSCG,

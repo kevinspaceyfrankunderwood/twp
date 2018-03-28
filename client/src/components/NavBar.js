@@ -37,6 +37,7 @@ const SocialWrap = TWPDiv.extend`
     background-color: ${TWPStyleGuide.color.white};
     justify-content: space-evenly;
     margin-top: 50px;
+    border-bottom: 1px solid ${TWPStyleGuide.color.lightGreen}
   `}
 `
 
@@ -88,16 +89,10 @@ class NavBar extends Component {
                  <NavLink href="/mission">Mission</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/history">Our History</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/Our Team">Our Team</NavLink>
+                  <NavLink href="/ourteam">Our Team</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="/journal">Garden Journal</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/contact">Contact Us</NavLink>
                 </NavItem>
               </DropdownMenu>
             </UncontrolledDropdown>
@@ -107,22 +102,7 @@ class NavBar extends Component {
               </DropdownToggle>
               <DropdownMenu >
                 <NavItem>
-                 <NavLink href="/pollinators">Pollinators</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/permaculturegardens">Permaculture Gardens</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/bythenumbers">By The Numbers</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/gardenmap">Garden Map</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/photogallery">Photo Gallery</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/inthenews">In The News</NavLink>
+                  <NavLink href="/gardenmap">Garden Sites</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="/resources">Resources</NavLink>
@@ -138,10 +118,7 @@ class NavBar extends Component {
                  <NavLink href="/partnerships">Partnerships</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/communityeducation">Community Education</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/wildflowerfestival">The Wildflower Festival</NavLink>
+                  <NavLink href="/wildflowerfestival">Events</NavLink>
                 </NavItem>
               </DropdownMenu>
             </UncontrolledDropdown>
@@ -154,13 +131,7 @@ class NavBar extends Component {
                  <NavLink href="/donate">Donate</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/volunteer">Volunteer</NavLink>
-                </NavItem>
-                <NavItem>
                   <NavLink href="/submitasite">Submit A Site</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/jointheteam">Join the Team</NavLink>
                 </NavItem>
               </DropdownMenu>
             </UncontrolledDropdown>

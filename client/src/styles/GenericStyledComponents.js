@@ -114,7 +114,7 @@ export const TWPHeader = styled.h1.attrs({
   margin: props => props.margin || '0px',
   color: props => props.color || TWPStyleGuide.color.black,
   padding: props => props.padding || '0 2%',
-  fontFamily: props => props.fontFamily || TWPStyleGuide.font.family.helveticaNeue,
+  fontFamily: props => props.fontFamily || TWPStyleGuide.font.family.plex,
   fontSize: props => props.fontSize || TWPStyleGuide.font.size.large,
   fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.threeHundred,
 })`
@@ -148,7 +148,7 @@ export const TWPSectionHeader = styled.h2.attrs({
   margin: props => props.margin || '0px',
   color: props => props.color || TWPStyleGuide.color.black,
   padding: props => props.padding || '0 2%',
-  fontFamily: props => props.fontFamily || TWPStyleGuide.font.family.helveticaNeue,
+  fontFamily: props => props.fontFamily || TWPStyleGuide.font.family.plex,
   fontSize: props => props.fontSize || TWPStyleGuide.font.size.mediumSmall,
   fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.threeHundred  
 })`
@@ -180,11 +180,12 @@ export const TWPParagraph = styled.h3.attrs({
   margin: props => props.margin || '0px',
   color: props => props.color || TWPStyleGuide.color.black,
   padding: props => props.padding || '0 2%',
-  fontFamily: props => props.fontFamily || TWPStyleGuide.font.family.helveticaNeue,
+  fontFamily: props => props.fontFamily || TWPStyleGuide.font.family.plex,
   fontSize: props => props.fontSize || TWPStyleGuide.font.size.small,
   fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.threeHundred,
   textAlign: props => props.textAlign || 'left',
   border: props => props.botder || null,
+  whiteSpace: props => props.whiteSpace || 'pre-line',
 })`
   border: ${props => props.border};
   width: ${props => props.width};
@@ -196,7 +197,8 @@ export const TWPParagraph = styled.h3.attrs({
   font-size: ${props => props.fontSize};
   font-weight: ${props => props.fontWeight};
   text-align: ${props => props.textAlign};
-
+  white-space: ${props => props.whiteSpace};
+  
   @media (max-width: 992px){
     font-size: ${props => props.tabletFontSize || null}
   }
@@ -223,7 +225,7 @@ export const TWPAnchor = styled.a.attrs({
   margin: props => props.margin || '0px',
   color: props => props.color || TWPStyleGuide.color.black,
   padding: props => props.padding || null,
-  fontFamily: props => props.fontFamily || TWPStyleGuide.font.family.helveticaNeue,
+  fontFamily: props => props.fontFamily || TWPStyleGuide.font.family.plex,
   fontSize: props => props.fontSize || TWPStyleGuide.font.size.small,
   fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.threeHundred,  
   textDecoration: props => props.textDecoration || 'none',
@@ -257,7 +259,7 @@ export const TWPAnchorHomeNav = styled.a.attrs({
   margin: props => props.margin || '0px',
   color: props => props.color || TWPStyleGuide.color.black,
   padding: props => props.padding || null,
-  fontFamily: props => props.fontFamily || TWPStyleGuide.font.family.helveticaNeue,
+  fontFamily: props => props.fontFamily || TWPStyleGuide.font.family.plex,
   fontSize: props => props.fontSize || TWPStyleGuide.font.size.small,
   fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.threeHundred,  
   textDecoration: props => props.textDecoration || 'none',
@@ -348,7 +350,7 @@ export const FooterGridLink = styled.a.attrs({
   margin: props => props.margin || '0px',
   color: props => props.color || TWPStyleGuide.color.white,
   padding: props => props.padding || '1% 2%',
-  fontFamily: props => props.fontFamily || TWPStyleGuide.font.family.helveticaNeue,
+  fontFamily: props => props.fontFamily || TWPStyleGuide.font.family.plex,
   fontSize: props => props.fontSize || TWPStyleGuide.font.size.small,
   fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.threeHundred,
   textAlign: props => props.textAlign || 'left',
@@ -398,7 +400,7 @@ export const TWPFooterAnchor = styled.a.attrs({
   margin: props => props.margin || '0px',
   color: props => props.color || TWPStyleGuide.color.black,
   padding: props => props.padding || null,
-  fontFamily: props => props.fontFamily || TWPStyleGuide.font.family.helveticaNeue,
+  fontFamily: props => props.fontFamily || TWPStyleGuide.font.family.plex,
   fontSize: props => props.fontSize || TWPStyleGuide.font.size.small,
   fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.threeHundred,  
   textDecoration: props => props.textDecoration || 'none',

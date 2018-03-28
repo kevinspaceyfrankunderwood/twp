@@ -1,0 +1,18 @@
+var _user$project$Repl$under70 = function (_p0) {
+	var _p1 = _p0;
+	return _elm_lang$core$Native_Utils.cmp(_p1.age, 70) < 0;
+};
+var _user$project$Repl$t_s_o_l = {ctor: '_Tuple0'};
+var _user$project$Repl$point = {x: 3, y: 4};
+var _user$project$Repl$name3 = function (_p2) {
+	var _p3 = _p2;
+	return _elm_lang$core$Native_Utils.cmp(_p3.name.length, 3) < 0;
+};
+var _user$project$Repl$mark = {name: 'Peterson', age: 234};
+var _user$project$Repl$goodName = function (name) {
+	return (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$String$length(name),
+		20) < 1) ? {ctor: '_Tuple2', _0: true, _1: 'name accepted!'} : {ctor: '_Tuple2', _0: false, _1: 'name was asdfasdfasdf'};
+};
+var _user$project$Repl$d_e_l_t_r_o_n_3_0_3_0 = _user$project$Repl$name3;
+var _user$project$Repl$bill = {name: 'Gates', age: 34};
