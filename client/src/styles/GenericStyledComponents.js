@@ -93,6 +93,7 @@ export const TWPDiv = styled.div.attrs({
 
     @media (max-width: 768px){
       height: ${props => props.tabletHeight};
+      width: ${props => props.tabletWidth};
       background: ${props => props.backgroundColor}, 
         url(${props => props.mobileBackground})
         ${props => props.backgroundRepeat}

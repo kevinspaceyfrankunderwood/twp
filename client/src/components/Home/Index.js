@@ -7,6 +7,7 @@ import AboveTheFold from './AboveTheFold'
 import EverySeed from './EverySeed'
 import Dragonfly from './DragonFly'
 import InstagramGoogle from './InstagramGoogle'
+import { TWPDiv } from '../../styles/GenericStyledComponents';
 
 export const Index = () => {
   return (
@@ -15,6 +16,13 @@ export const Index = () => {
       <EverySeed />
       <Dragonfly />
       <InstagramGoogle />
+      <TWPDiv>
+        <iframe 
+          src="https://www.google.com/maps/d/u/0/embed?mid=1X8vfQjjnxOLWqmTO6JJf4-Tr5uo" 
+          width={window.innerWidth} 
+          height={window.innerHeight}
+        />
+      </TWPDiv>
     </div>
   )
 }
