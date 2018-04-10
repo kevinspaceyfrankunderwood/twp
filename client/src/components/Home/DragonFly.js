@@ -7,6 +7,7 @@ import { TWPHeader, TWPDiv, TWPSectionHeader, TWPParagraph, TWPImage, TWPAnchor,
 import TWPStyleGuide from '../../styles/TWPStyleGuide';
 
 import Dragon from '../../assets/images/DragonflyBirdsEye.jpg'
+import styled from 'styled-components';
 
 
 const BoxTopText = TWPSectionHeader.extend`
@@ -46,6 +47,26 @@ const BottomTwoInfoBoxes = TWPDiv.extend`
   @media(max-width: 500px){
     width: 90%
   }
+
+  &:hover {
+    background-color: white;
+    cursor: pointer;
+  }
+`
+
+const BoxAnchorWrap = styled.a`
+  width: 45%;
+
+  ${media.desktop`
+    width: 50%;
+  `}
+
+  ${media.tablet`
+    width: 95%;
+    margin: 10px;
+    display: flex;
+  `}
+
 `
 
 export const DragonFly = () => {  
@@ -75,84 +96,93 @@ export const DragonFly = () => {
           </ThirdSectionTopText>
           <BottomWrapper
             flexDirection={'row'}
+            justifyContent={'space-around'}
             height={'60%'}
           >
-          <BottomTwoInfoBoxes 
-            background={'linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7))'}
-            backgroundColor={'linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7))'}
-            desktopImage={null}
-            borderRadius={'5px'}
-            justifyContent={'space-between'}
-            flex={'1 1 50%'}
-            margin={'0 2%'}
-            padding={'unset'}
-            height={'60%'}
-            width={'unset'}
-          >
-            <BoxTopText 
-              padding={'5% 5%'}
-              color={TWPStyleGuide.color.darkGreen}
-            >
-              Revitalizing the health &amp; wellness of pollinator habitats
-            </BoxTopText>
-            <TWPDiv 
-              flexDirection={'row'} 
-              width={'100%'} 
-              backgroundColor={TWPStyleGuide.color.lightGreen}
-              margin={'unset'}
-              alignItems={'center'}
-              height={'30%'}
-              borderRadius={'5px'}
-            >
-              <TWPHeader
-                padding={'0'} 
-                color={TWPStyleGuide.color.white} 
-                textAlign={'left'}
-                width={'fit-content'}
-                tabletFontSize={TWPStyleGuide.font.size.medium}
+            <BoxAnchorWrap href="https://www.instagram.com/explore/tags/savethebees/">
+              <BottomTwoInfoBoxes 
+                background={'linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9))'}
+                backgroundColor={'linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9))'}
+                desktopImage={null}
+                borderRadius={'5px'}
+                justifyContent={'space-between'}
+                flex={'1 1 50%'}
+                margin={'0 2%'}
+                padding={'unset'}
+                height={'200px'}
+                width={'unset'}
               >
-                #savethebees
-              </TWPHeader>
-            </TWPDiv>
-          </BottomTwoInfoBoxes>
-          <BottomTwoInfoBoxes 
-            background={'linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7))'}
-            backgroundColor={'linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7))'}
-            desktopImage={null}
-            borderRadius={'5px'}
-            justifyContent={'space-between'}
-            flex={'1 1 50%'}
-            margin={'0 2%'}
-            padding={'unset'}
-            height={'60%'}
-            width={'unset'}
-          >
-            <BoxTopText 
-              padding={'5% 5%'}
-              color={TWPStyleGuide.color.darkGreen}
-            >
-              Fostering education and community development through volunteerism and partnerships
-            </BoxTopText>
-            <TWPDiv 
-              flexDirection={'row'} 
-              width={'100%'} 
-              backgroundColor={TWPStyleGuide.color.mustardYelow}
-              margin={'unset'}
-              alignItems={'center'}
-              height={'30%'}
-              borderRadius={'5px'}
-            >
-              <TWPHeader 
-                color={TWPStyleGuide.color.white} 
-                fontSize={TWPStyleGuide.font.size.mediumLarge}
-                textAlign={'right'}
-                width={'fit-content'}
-                tabletFontSize={TWPStyleGuide.font.size.medium}
+                <BoxTopText 
+                  padding={'5% 5%'}
+                  color={TWPStyleGuide.color.darkGreen}
+                >
+                  Revitalizing the health &amp; wellness of pollinator habitats
+                </BoxTopText>
+                <TWPDiv 
+                  flexDirection={'row'} 
+                  width={'100%'} 
+                  backgroundColor={TWPStyleGuide.color.lightGreen}
+                  margin={'unset'}
+                  alignItems={'center'}
+                  height={'30%'}
+                  borderRadius={'5px'}
+                >
+                  <TWPHeader
+                    padding={'0'} 
+                    color={TWPStyleGuide.color.white} 
+                    textAlign={'left'}
+                    width={'fit-content'}
+                    fontSize={TWPStyleGuide.font.size.medium}
+                    tabletFontSize={TWPStyleGuide.font.size.medium}
+                    mobileFontSize={TWPStyleGuide.font.size.mediumSmall}
+                  >
+                    #savethebees
+                  </TWPHeader>
+                </TWPDiv>
+              </BottomTwoInfoBoxes>
+            </BoxAnchorWrap>
+            <BoxAnchorWrap href="https://www.instagram.com/wildflower_project/">
+              <BottomTwoInfoBoxes 
+                background={'linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9))'}
+                backgroundColor={'linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9))'}
+                desktopImage={null}
+                borderRadius={'5px'}
+                justifyContent={'space-between'}
+                flex={'1 1 50%'}
+                margin={'0 2%'}
+                padding={'unset'}
+                height={'200px'}
+                width={'unset'}
               >
-                IG @wildflower_project
-              </TWPHeader>
-            </TWPDiv>
-          </BottomTwoInfoBoxes>
+                <BoxTopText 
+                  padding={'5% 5%'}
+                  color={TWPStyleGuide.color.darkGreen}
+                >
+                  Fostering education and community development through volunteerism and partnerships
+                </BoxTopText>
+                <TWPDiv 
+                  flexDirection={'row'} 
+                  width={'100%'} 
+                  backgroundColor={TWPStyleGuide.color.mustardYelow}
+                  margin={'unset'}
+                  alignItems={'center'}
+                  height={'30%'}
+                  borderRadius={'5px'}
+                >
+                  <TWPHeader 
+                    color={TWPStyleGuide.color.white} 
+                    fontSize={TWPStyleGuide.font.size.mediumLarge}
+                    textAlign={'right'}
+                    width={'fit-content'}
+                    tabletFontSize={TWPStyleGuide.font.size.medium}
+                    fontSize={TWPStyleGuide.font.size.medium}
+                    mobileFontSize={TWPStyleGuide.font.size.mediumSmall}
+                  >
+                    IG @wildflower_project
+                  </TWPHeader>
+                </TWPDiv>
+              </BottomTwoInfoBoxes>
+            </BoxAnchorWrap>
           </BottomWrapper>
         </TWPDiv>
       </DragonflySection>

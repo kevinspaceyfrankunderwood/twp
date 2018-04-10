@@ -13,10 +13,37 @@ import Ground from '../../assets/images/groundCover.jpg'
 import TeamEffort from '../../assets/images/teamEffort.jpg'
 
 const ResponsiveHeader = TWPHeader.extend`
+  width: 75%;
+
+  ${media.desktop`
+    width: 80%;
+  `}
   ${media.tablet`
     font-size: ${TWPStyleGuide.font.size.small};
+    width: 90%;
     padding: 30px 10px;
   `}
+  ${media.phone`
+    width: 95%;
+  `}
+`
+
+const BottomResponsiveHeader = TWPHeader.extend`
+  ${media.tablet`
+    padding: 30px 10px;
+  `}
+`
+
+const DisappearingDiv = TWPDiv.extend`
+  ${media.tablet`
+    display: none;
+  `}
+`
+
+const SixHundredFiveDiv = TWPDiv.extend`
+  @media (max-width: 605px){
+    display: none;
+  }
 `
 
 const EverySeed = () => {  
@@ -28,7 +55,7 @@ const EverySeed = () => {
           <ResponsiveHeader
             fontSize={TWPStyleGuide.font.size.medium}
             color={TWPStyleGuide.color.darkOrange}
-            padding={'20px 10px'}
+            padding={'30px 10px'}
           >
             The Wildflower Project is a 501(c)(3) non-profit dedicated to taking urban, neglected spaces, and giving them a purpose.
           </ResponsiveHeader>
@@ -37,7 +64,7 @@ const EverySeed = () => {
             flexDirection={'row'}
             flexWrap={'wrap'}
           >
-            <TWPDiv
+            <DisappearingDiv
               width={'250px'}
               height={'250px'}
               minWidth={'250px'}
@@ -47,8 +74,8 @@ const EverySeed = () => {
               <TWPImage
                 src={BeeBlue}
               />
-            </TWPDiv>
-            <TWPDiv
+            </DisappearingDiv>
+            <DisappearingDiv
               width={'250px'}
               height={'250px'}
               minWidth={'250px'}
@@ -58,8 +85,8 @@ const EverySeed = () => {
               <TWPImage
                 src={TeamEffort}
               />
-            </TWPDiv>
-            <TWPDiv
+            </DisappearingDiv>
+            <SixHundredFiveDiv
               width={'250px'}
               height={'250px'}
               minWidth={'250px'}
@@ -69,7 +96,7 @@ const EverySeed = () => {
               <TWPImage
                 src={Ground}
               />
-            </TWPDiv>
+            </SixHundredFiveDiv>
             <TWPDiv
               width={'250px'}
               height={'250px'}
@@ -82,13 +109,13 @@ const EverySeed = () => {
               />
             </TWPDiv>
           </TWPDiv>
-          <TWPHeader
+          <BottomResponsiveHeader
             fontSize={TWPStyleGuide.font.size.mediumSmall}
             color={TWPStyleGuide.color.darkOrange}
-            padding={'2%'}
+            padding={'30px 2%'}
           >
             Wildflowers | Urban | Community
-          </TWPHeader>
+          </BottomResponsiveHeader>
         </TWPDiv>
   );
 }

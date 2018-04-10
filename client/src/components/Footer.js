@@ -173,6 +173,7 @@ const Footer = () => {
             <TWPParagraph
               width={'fit-content'}
               tabletFontSize={TWPStyleGuide.font.size.tiny}
+              padding={'2%'}
             >
               &copy; COPYRIGHT 2018. ALL RIGHTS RESERVED
             </TWPParagraph>
