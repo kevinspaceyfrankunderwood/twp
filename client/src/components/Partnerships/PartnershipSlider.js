@@ -93,6 +93,7 @@ class PartnershipSlider extends Component {
         autoplay={true}
         wrapAround={true}
         autoplayInterval={2000}
+        dragging={true}
         cellSpacing={100}
         width={'80%'}
         renderCenterLeftControls={({ previousSlide }) => (

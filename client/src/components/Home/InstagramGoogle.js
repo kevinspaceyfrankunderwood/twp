@@ -89,7 +89,7 @@ class InstagramGoogle extends Component {
           <TWPParagraph
             color={TWPStyleGuide.color.white}
             fontSize={TWPStyleGuide.font.size.smallTiny}
-            smallTabletSize={TWPStyleGuide.font.size.tiny}
+            smallTabletFontSize={TWPStyleGuide.font.size.tiny}
             textAlign={'center'}
           >
             {moment(blog.date).format("MMMM, Do YYYY")}
@@ -97,7 +97,7 @@ class InstagramGoogle extends Component {
           <TWPParagraph
             color={TWPStyleGuide.color.white}
             fontSize={TWPStyleGuide.font.size.smallTiny}
-            smallTabletSize={TWPStyleGuide.font.size.tiny}
+            smallTabletFontSize={TWPStyleGuide.font.size.tiny}
           >
             {chopped}. . .
           </TWPParagraph>

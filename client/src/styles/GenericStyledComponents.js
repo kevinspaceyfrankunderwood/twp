@@ -12,7 +12,7 @@ const sizes = {
   giant: 1170,
   desktop: 992,
   tablet: 768,
-  phone: 376
+  phone: 400
 }
 
 export const media = Object.keys(sizes).reduce((accumulator, label) => {
@@ -134,12 +134,11 @@ export const TWPHeader = styled.h1.attrs({
   }
 
   @media (max-width: 768px) {
-    font-size: ${props => props.smallTabletSize || null};
+    font-size: ${props => props.smallTabletFontSize || null};
   }
 
   @media (Max-width: 400px){
     font-size: ${props => props.mobileFontSize || null};
-    font-weight: 300;
   }
 `
 
@@ -591,7 +590,7 @@ export const BLHeader = styled.h1.attrs({
   }
 
   ${media.desktop`font-size: ${props => props.tabletFontSize || TWPStyleGuide.font.size.mediumLarge};`}
-  ${media.tablet`font-size: ${props => props.smallTabletSize || null };`}
+  ${media.tablet`font-size: ${props => props.smallTabletFontSize || null };`}
   ${media.phone`font-size: ${props => props.mobileFontSize || null };`}
 `
 

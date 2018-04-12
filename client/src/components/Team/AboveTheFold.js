@@ -20,7 +20,7 @@ export const AboveTheFold = () => {
         color={TWPStyleGuide.color.darkGreen}
         fontSize={TWPStyleGuide.font.size.massive}
         tabletFontSize={TWPStyleGuide.font.size.Large}
-        smallTabletSize={TWPStyleGuide.font.size.medium}
+        smallTabletFontSize={TWPStyleGuide.font.size.medium}
         mobileFontSize={TWPStyleGuide.font.size.mediumSmall}
       >
         Meet the Team

@@ -41,6 +41,8 @@ const TopTwoTopText = TWPSectionHeader.extend`
 `
 
 const TopTwoClipArt = TWPImage.extend`
+  max-height: 72px;
+  
   ${media.tablet`
     width: 25%
   `}

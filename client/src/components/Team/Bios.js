@@ -46,7 +46,7 @@ class Bios extends Component {
           <TeamHeaderText
             padding={'5%'}
             fontSize={TWPStyleGuide.font.size.mediumLarge}
-            smallTabletSize={TWPStyleGuide.font.size.medium}
+            smallTabletFontSize={TWPStyleGuide.font.size.medium}
             mobileFontSize={TWPStyleGuide.font.size.mediumSmall}
           >
             Founders
@@ -59,7 +59,7 @@ class Bios extends Component {
           <TeamHeaderText
             padding={'5%'}
             fontSize={TWPStyleGuide.font.size.mediumLarge}
-            smallTabletSize={TWPStyleGuide.font.size.medium}
+            smallTabletFontSize={TWPStyleGuide.font.size.medium}
             mobileFontSize={TWPStyleGuide.font.size.mediumSmall}
           >
             Board of Directors

@@ -108,6 +108,7 @@ class ContactUsSection extends React.Component {
             color={TWPStyleGuide.color.darkGreen}
             fontWeight={'100'}
             tabletFontSize={TWPStyleGuide.font.size.medium}
+            mobileFontSize={TWPStyleGuide.font.size.small}
           >
             We would love to hear from you
           </WeWouldLoveWrap>
