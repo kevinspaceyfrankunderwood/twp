@@ -66,6 +66,7 @@ class CommentForm extends Component {
       return (
         <BLDiv 
           display={'block'}
+          position={'relative'}
           padding={'4% 5%'}
           backgroundColor={TWPStyleGuide.color.lightGray}
         >
