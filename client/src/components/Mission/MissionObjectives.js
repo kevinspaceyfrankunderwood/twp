@@ -28,6 +28,12 @@ const points = [
   },
 ]
 
+const ResponsiveSectionHeader = TWPSectionHeader.extend`
+  ${media.tablet`
+    padding: 45px;
+  `}
+`
+
 class MissionObjectives extends Component {
 
 
@@ -45,13 +51,14 @@ class MissionObjectives extends Component {
             width={'100%'}
           >
           </TWPDiv>
-          <TWPSectionHeader
+          <ResponsiveSectionHeader
             fontSize={TWPStyleGuide.font.size.medium}
             color={TWPStyleGuide.color.darkGreen}
+            smallTabletFontSize={TWPStyleGuide.font.size.small}
             padding={'3% 10%'}
           >
             {item.text}
-          </TWPSectionHeader>
+          </ResponsiveSectionHeader>
         </div>
       )  
     })
