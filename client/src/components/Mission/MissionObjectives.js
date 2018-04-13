@@ -12,19 +12,19 @@ import PollinatorFriendly from '../../assets/images/pollinatorFriendly.jpg'
 
 const points = [
   {
-    text: 'We believe in providing easier access to nature for urban communities',
+    text: 'We believe in providing easier access to nature for urban communities.',
     image: sideboob
   },
   {
-    text: 'We support healthy living, civic engagement and community pride',
+    text: 'We support healthy living, civic engagement and community pride.',
     image: Member
   },
   {
-    text: 'We believe planting gardens is a means to collaboration with a variety of groups creating awareness, engagement and educational possibilities through pollinator garden installation',
+    text: 'We believe planting gardens is a means to collaboration with a variety of groups creating awareness, engagement and educational possibilities through pollinator garden installation.',
     image: TeamBuilding
   },
   {
-    text: 'We believe by building habitat for pollinators, we can build a community of good neighbors and vibrant civil societies, supporting all members of our shared ecosystem',
+    text: 'We believe by building habitat for pollinators, we can build a community of good neighbors and vibrant civil societies, supporting all members of our shared ecosystem.',
     image: OrangePurple
   },
 ]
