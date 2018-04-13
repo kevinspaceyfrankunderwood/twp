@@ -4,10 +4,11 @@ import { TWPHeader, TWPDiv, TWPSectionHeader, TWPParagraph, TWPImage, TWPAnchor,
 import TWPStyleGuide from '../../styles/TWPStyleGuide';
 
 import Youngster from '../../assets/images/youngPlant.jpg'
-import Bank from '../../assets/images/BankFlower.jpg'
-import Urban from '../../assets/images/UrbanGrowlerConstruction.jpg'
+import TeamBuilding from '../../assets/images/teamBuilding.jpg'
+import OrangePurple from '../../assets/images/beeOrangePurpleFlower.jpg'
 import sideboob from '../../assets/images/SideBoobMonarch.jpg'
 import Member from '../../assets/images/CommunityMember.jpg'
+import PollinatorFriendly from '../../assets/images/pollinatorFriendly.jpg'
 
 const points = [
   {
@@ -19,12 +20,12 @@ const points = [
     image: Member
   },
   {
-    text: 'We believe by building habitat for pollinators, we can build a community of good neighbors and vibrant civil societies, supporting all members of our shared ecosystem',
-    image: Urban
+    text: 'We believe planting gardens is a means to collaboration with a variety of groups creating awareness, engagement and educational possibilities through pollinator garden installation',
+    image: TeamBuilding
   },
   {
-    text: 'We believe planting gardens is a means to collaboration with a variety of groups creating awareness, engagement and educational possibilities through pollinator garden installation',
-    image: Bank
+    text: 'We believe by building habitat for pollinators, we can build a community of good neighbors and vibrant civil societies, supporting all members of our shared ecosystem',
+    image: OrangePurple
   },
 ]
 
@@ -49,8 +50,7 @@ class MissionObjectives extends Component {
             backgroundAttachment={'fixed'}
             height={'400px'}
             width={'100%'}
-          >
-          </TWPDiv>
+          />
           <ResponsiveSectionHeader
             fontSize={TWPStyleGuide.font.size.medium}
             color={TWPStyleGuide.color.darkGreen}
@@ -69,8 +69,13 @@ class MissionObjectives extends Component {
       <div>
         { this.objectives() }
         <TWPDiv
-            border={`1px solid ${TWPStyleGuide.color.brown}`}
-        />
+            background={`linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(${PollinatorFriendly})`}
+            backgroundSize={'cover'}
+            backgroundPosition={'bottom center'}
+            backgroundAttachment={'fixed'}
+            height={'400px'}
+            width={'100%'}
+          />
       </div>
     );  
   }
