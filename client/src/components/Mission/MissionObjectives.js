@@ -11,10 +11,6 @@ import Member from '../../assets/images/CommunityMember.jpg'
 
 const points = [
   {
-    text: 'We believe planting gardens is a means to collaboration with a variety of groups creating awareness, engagement and educational possibilities through pollinator garden installation',
-    image: Bank
-  },
-  {
     text: 'We believe in providing easier access to nature for urban communities',
     image: sideboob
   },
@@ -25,7 +21,11 @@ const points = [
   {
     text: 'We believe by building habitat for pollinators, we can build a community of good neighbors and vibrant civil societies, supporting all members of our shared ecosystem',
     image: Urban
-  }
+  },
+  {
+    text: 'We believe planting gardens is a means to collaboration with a variety of groups creating awareness, engagement and educational possibilities through pollinator garden installation',
+    image: Bank
+  },
 ]
 
 class MissionObjectives extends Component {
@@ -35,21 +35,24 @@ class MissionObjectives extends Component {
   objectives = () =>{
     return points.map( item => {
       return (
-        <TWPDiv
-          background={`linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(${item.image})`}
-          backgroundSize={'cover'}
-          backgroundPosition={'bottom center'}
-          backgroundAttachment={'fixed'}
-          height={'400px'}
-          width={'100%'}
-        >
+        <div>
+          <TWPDiv
+            background={`linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(${item.image})`}
+            backgroundSize={'cover'}
+            backgroundPosition={'bottom center'}
+            backgroundAttachment={'fixed'}
+            height={'400px'}
+            width={'100%'}
+          >
+          </TWPDiv>
           <TWPSectionHeader
             fontSize={TWPStyleGuide.font.size.medium}
-            padding={'0 10%'}
+            color={TWPStyleGuide.color.darkGreen}
+            padding={'3% 10%'}
           >
             {item.text}
           </TWPSectionHeader>
-        </TWPDiv>
+        </div>
       )  
     })
   }
@@ -58,6 +61,9 @@ class MissionObjectives extends Component {
     return(
       <div>
         { this.objectives() }
+        <TWPDiv
+            border={`1px solid ${TWPStyleGuide.color.brown}`}
+        />
       </div>
     );  
   }
