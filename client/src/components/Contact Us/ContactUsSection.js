@@ -8,6 +8,7 @@ import SimpleTextBar from '../Generic/SimpleTextBar';
 import TWPStyleGuide from '../../styles/TWPStyleGuide';
 
 const WeWouldLoveWrap = TWPHeader.extend`
+  background-color: white;
   ${media.tablet`
     padding: 6% 2%;
   `}
@@ -103,6 +104,10 @@ class ContactUsSection extends React.Component {
       
       return (
         <div>
+        <TWPDiv
+          backgroundColor={TWPStyleGuide.color.white}
+          padding={'0'}
+        >
           <WeWouldLoveWrap
             padding={'2%'}
             color={TWPStyleGuide.color.darkGreen}
@@ -112,8 +117,9 @@ class ContactUsSection extends React.Component {
           >
             We would love to hear from you
           </WeWouldLoveWrap>
+        </TWPDiv>
           {ThisView}
-        </div>
+          </div>
       )  }
 }
 

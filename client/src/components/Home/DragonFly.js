@@ -129,7 +129,6 @@ export const DragonFly = () => {
                 >
                   <TWPHeader
                     padding={'0'} 
-                    color={TWPStyleGuide.color.white} 
                     textAlign={'left'}
                     width={'fit-content'}
                     fontSize={TWPStyleGuide.font.size.medium}
@@ -163,14 +162,13 @@ export const DragonFly = () => {
                 <TWPDiv 
                   flexDirection={'row'} 
                   width={'100%'} 
-                  backgroundColor={TWPStyleGuide.color.mustardYelow}
+                  backgroundColor={TWPStyleGuide.color.yellow}
                   margin={'unset'}
                   alignItems={'center'}
                   height={'30%'}
                   borderRadius={'5px'}
                 >
                   <TWPHeader 
-                    color={TWPStyleGuide.color.white} 
                     fontSize={TWPStyleGuide.font.size.mediumLarge}
                     textAlign={'right'}
                     width={'fit-content'}

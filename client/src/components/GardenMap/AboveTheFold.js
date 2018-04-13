@@ -55,7 +55,7 @@ export const AboveTheFold = () => {
       Garden Sites
     </TWPHeader>
     <TWPDiv
-      borderTop={`1px solid ${TWPStyleGuide.color.black}`}
+      borderTop={`1px solid ${TWPStyleGuide.color.brown}`}
       width={'50%'}
       margin={'auto'}
       />

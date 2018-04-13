@@ -73,7 +73,7 @@ class CommentForm extends Component {
             margin={'0 0 30px 0'}
             fontSize={BLStyleGuide.font.size.mediumLarge}
           >
-            Please leave a message after the beep . . . 
+            Whether a busy intersection or neglected alley,<br/>we plant everywhere. . . 
           </BLSectionHeader>
           <ContactForm>
             <Form.Group 
@@ -98,13 +98,13 @@ class CommentForm extends Component {
                 onChange={this.props.handleChange}
                 id="email"
               label='Email' 
-              placeholder='me@myDomain.com' 
+              placeholder='me@email.com' 
             />
             <FormTextArea 
                 onChange={this.props.handleChange}
                 id="message"
               label="Type Message Below" 
-              placeholder="My amazing app idea is . . ." 
+              placeholder="I have this plot of grass..." 
             />
           </ContactForm>
           <ButtonSection>

@@ -13,6 +13,7 @@ import FetchUser from './FetchUser';
 import Partnerships from './Partnerships/Index'
 import Team from './Team/Index'
 import GardenMap from './GardenMap/Index'
+import Submit from './Submit/Index'
 
 class App extends Component {
   render() {
@@ -27,6 +28,7 @@ class App extends Component {
             <Route exact path="/ourteam" component={Team} />
             <Route exact path='/gardenmap' component={GardenMap} />
             <Route exact path='/login' component={Login} />
+            <Route exact path="/submitasite" component={Submit} />
             <Route exact path='/register' component={Register} />
             <Route component={NoMatch} />
           </Switch>
