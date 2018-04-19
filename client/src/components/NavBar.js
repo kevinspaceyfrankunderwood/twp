@@ -19,6 +19,7 @@ import instagram from '../assets/images/instagram.png'
 import facebook from '../assets/images/facebook.png'
 import twitter from '../assets/images/twitter.png'
 import TWPStyleGuide from '../styles/TWPStyleGuide';
+import Flores from '../assets/images/FloresDeMayo.jpeg'
 
 const NavSocialDivide = TWPDiv.extend`
   margin-top: 50px;
@@ -118,7 +119,7 @@ class NavBar extends Component {
                  <NavLink href="/partnerships">Partnerships</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/wildflowerfestival">Events</NavLink>
+                  <NavLink href={Flores}>Events</NavLink>
                 </NavItem>
               </DropdownMenu>
             </UncontrolledDropdown>
