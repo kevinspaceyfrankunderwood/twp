@@ -74,7 +74,7 @@ class CommentForm extends Component {
             margin={'0 0 30px 0'}
             fontSize={BLStyleGuide.font.size.mediumLarge}
           >
-            Whether a busy intersection or neglected alley,<br/>we plant everywhere. . . 
+            Backyards, Front Lawn, or Alley Way<br/>- Submit a Site -<br/>Support your community and it's ecosystem. . . 
           </BLSectionHeader>
           <ContactForm>
             <Form.Group 
