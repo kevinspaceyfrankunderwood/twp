@@ -9,7 +9,7 @@ export const Index = () => {
       <TWPDiv
         marginTop={'100px'}
         padding={'0'}
-        height={'28vh'}
+        height={'300px'}
       >
         <TWPImage
           height={'initial'}
