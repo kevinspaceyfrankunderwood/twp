@@ -119,7 +119,7 @@ class NavBar extends Component {
                  <NavLink href="/partnerships">Partnerships</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href={Flores}>Events</NavLink>
+                  <NavLink href={Flores} target="_blank">Events</NavLink>
                 </NavItem>
               </DropdownMenu>
             </UncontrolledDropdown>
