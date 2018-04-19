@@ -78,7 +78,7 @@ class NavBar extends Component {
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem className="paypalDonateButton">
-              <NavLink target="_blank" rel="noopener referrer" href={"https://thewildflowerprojectmn.org"}><a href="https://thewildflowerprojectmn.org" className="donateText" target="_blank" rel="noopener referrer">DONATE</a></NavLink>
+              <NavLink target="_blank" rel="noopener referrer" href={"https://givemn.org/fundraiser/the-wildflower-project5a5ce684bd312"}><a href="https://givemn.org/fundraiser/the-wildflower-project5a5ce684bd312" className="donateText" target="_blank" rel="noopener referrer">DONATE</a></NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
@@ -92,7 +92,7 @@ class NavBar extends Component {
                   <NavLink href="/ourteam">Our Team</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/journal">Garden Journal</NavLink>
+                  <NavLink href="https://thewildflowerprojectmn.org/category/garden-journal/" target="_blank">Garden Journal</NavLink>
                 </NavItem>
               </DropdownMenu>
             </UncontrolledDropdown>
@@ -128,7 +128,7 @@ class NavBar extends Component {
               </DropdownToggle>
               <DropdownMenu >
                 <NavItem>
-                 <NavLink href="/donate">Donate</NavLink>
+                 <NavLink href="https://givemn.org/fundraiser/the-wildflower-project5a5ce684bd312" target="_blank">Donate</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="/submitasite">Submit A Site</NavLink>
