@@ -121,12 +121,19 @@ class InstagramGoogle extends Component {
           flexDirection={'row'}
           height={'100%'}
           width={'50%'}
-          padding={'20px 2%'}
+          padding={'5px 2%'}
           justifyContent={'space-around'}
           flexWrap={'wrap'}
           backgroundColor={TWPStyleGuide.color.lightGreen}
           tabletWidth={'100%'}
         >
+          <TWPAnchor
+            href="https://www.instagram.com/wildflower_project/"
+            fontSize={TWPStyleGuide.font.size.mediumSmall}
+            width={'100%'}
+          >
+            Follow TWP on Instagram
+          </TWPAnchor>
           { this.displayImages() }
         </TWPDiv>
           { this.displayBlog() }

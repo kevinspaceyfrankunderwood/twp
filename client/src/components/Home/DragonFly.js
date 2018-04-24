@@ -115,6 +115,7 @@ export const DragonFly = () => {
                 <BoxTopText 
                   padding={'5% 5%'}
                   color={TWPStyleGuide.color.darkGreen}
+                  mobileFontSize={TWPStyleGuide.font.size.small}
                 >
                   Revitalizing the health &amp; wellness of pollinator habitats
                 </BoxTopText>
@@ -156,6 +157,7 @@ export const DragonFly = () => {
                 <BoxTopText 
                   padding={'5% 5%'}
                   color={TWPStyleGuide.color.darkGreen}
+                  mobileFontSize={TWPStyleGuide.font.size.small}
                 >
                   Fostering education and community development through volunteerism and partnerships
                 </BoxTopText>

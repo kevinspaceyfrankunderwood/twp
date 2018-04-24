@@ -12,12 +12,13 @@ export const AboveTheFold = () => {
     <TWPDiv
       background={`linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url(${Monarch}) fixed`}
       backgroundPosition={'center'}
+      mobileBackgroundPosition={'top right'}
       backgroundSize={'cover'}
       height={'600px'}
       width={'100%'}
     >
       <TWPHeader>
-        Our Mission
+        Mission
       </TWPHeader>
     </TWPDiv>
   );

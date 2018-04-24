@@ -44,7 +44,7 @@ export const AboveTheFold = () => {
     background={`linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, .3), rgba(255, 255, 255, 0)), url(${sunrise})`}
     backgroundPosition={'top'}
     backgroundAttachment={'fixed'}
-    height={'300px'}
+    height={'400px'}
     width={'100%'}
     />
     <TWPHeader

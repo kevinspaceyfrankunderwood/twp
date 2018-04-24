@@ -38,6 +38,10 @@ const TopTwoTopText = TWPSectionHeader.extend`
   height: 60%;
   display: flex;
   align-items: center;
+
+  ${media.phone`
+    font-size: ${TWPStyleGuide.font.size.small};
+  `}
 `
 
 const TopTwoClipArt = TWPImage.extend`
@@ -66,7 +70,7 @@ export const AboveTheFold = () => {
       padding={'0'}
     >
       <TWPDiv
-        background={`linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, .8), rgba(255, 255, 255, 0)), url(${sunrise})`}
+        background={`linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, .8), rgba(255, 255, 255, 0)), url(${sunrise})`}
         backgroundSize={'cover'}
         backgroundPosition={'top'}
         backgroundAttachment={'fixed'}
@@ -81,6 +85,8 @@ export const AboveTheFold = () => {
             fontWeight={'300'}
             width={'100%'}
             tabletFontSize={TWPStyleGuide.font.size.mediumLarge}
+            mobileFontSize={TWPStyleGuide.font.size.medium
+            }
           >
             <span style={{color: TWPStyleGuide.color.yellow}}>the</span>
             <span style={{color: TWPStyleGuide.color.brightOrange}}>wildflower</span>
@@ -91,7 +97,7 @@ export const AboveTheFold = () => {
             width={'100%'}
             tabletFontSize={TWPStyleGuide.font.size.small}
           >
-            plant with a purpose
+            planting with a purpose
           </TWPSectionHeader>
         </TWPDiv>
         <TopWrapper 

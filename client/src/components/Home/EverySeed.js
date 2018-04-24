@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Header } from 'semantic-ui-react';
 import styled from 'styled-components'
 
-import { TWPHeader, TWPDiv, TWPImage, media } from '../../styles/GenericStyledComponents'
+import { TWPHeader, TWPDiv, TWPImage, media, TWPSectionHeader } from '../../styles/GenericStyledComponents'
 import TWPStyleGuide from '../../styles/TWPStyleGuide';
 
 import Monarch from '../../assets/images/MonachBackSide.jpg'
@@ -12,7 +12,7 @@ import Dragonfly from '../../assets/images/dragonflySideView.jpg'
 import Ground from '../../assets/images/groundCover.jpg'
 import TeamEffort from '../../assets/images/teamEffort.jpg'
 
-const ResponsiveHeader = TWPHeader.extend`
+const ResponsiveHeader = TWPSectionHeader.extend`
   width: 75%;
 
   ${media.desktop`
@@ -35,9 +35,15 @@ const BottomResponsiveHeader = TWPHeader.extend`
 `
 
 const DisappearingDiv = TWPDiv.extend`
-  ${media.tablet`
+@media(max-width: 605px){
+  display: none;
+}
+`
+
+const DisappearingFirstDiv = TWPDiv.extend`
+  @media(max-width: 907px){
     display: none;
-  `}
+  }
 `
 
 const SixHundredFiveDiv = TWPDiv.extend`
@@ -53,11 +59,10 @@ const EverySeed = () => {
           padding={'0'}
         >
           <ResponsiveHeader
-            fontSize={TWPStyleGuide.font.size.medium}
             color={TWPStyleGuide.color.darkOrange}
             padding={'30px 10px'}
           >
-            The Wildflower Project is a 501(c)(3) non-profit dedicated to taking urban, neglected spaces, and giving them a purpose.
+            The Wildflower Projects focus is to serve as environmental and community stewards, fulfilling our promise of planting with a purpose.
           </ResponsiveHeader>
           <TWPDiv
             width={'90%'}
@@ -75,7 +80,7 @@ const EverySeed = () => {
                 src={BeeBlue}
               />
             </DisappearingDiv>
-            <DisappearingDiv
+            <DisappearingFirstDiv
               width={'250px'}
               height={'250px'}
               minWidth={'250px'}
@@ -85,18 +90,7 @@ const EverySeed = () => {
               <TWPImage
                 src={TeamEffort}
               />
-            </DisappearingDiv>
-            <SixHundredFiveDiv
-              width={'250px'}
-              height={'250px'}
-              minWidth={'250px'}
-              margin={'5px'}
-              padding={'0'}
-            >
-              <TWPImage
-                src={Ground}
-              />
-            </SixHundredFiveDiv>
+            </DisappearingFirstDiv>
             <TWPDiv
               width={'250px'}
               height={'250px'}

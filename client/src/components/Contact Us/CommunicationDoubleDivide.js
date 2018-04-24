@@ -7,13 +7,12 @@ const SectionDiv = BLDiv.extend`
   height: 200px;
   flex-direction: row;
   ${media.tablet`
-    height: 500px;
+    height: 400px;
     flex-direction: column;
   `}
 `
 
 const LeftContactDiv = BLDiv.extend`
-
   ${media.desktop`
     width: 50%;
   `}
@@ -101,6 +100,7 @@ class CommunicationDoubleDivide extends Component {
                 color={TWPStyleGuide.color.white}
                 fontFamily={TWPStyleGuide.font.family.monoFur}
                 tabletFontSize={TWPStyleGuide.font.size.medium}
+                mobileFontSize={TWPStyleGuide.font.size.mediumSmall}
             >
               buzz.twp@gmail.com
             </BLHeader>
@@ -135,6 +135,7 @@ class CommunicationDoubleDivide extends Component {
                 color={TWPStyleGuide.color.title}
                 fontFamily={TWPStyleGuide.font.family.monoFur}
                 tabletFontSize={TWPStyleGuide.font.size.medium}
+                mobileFontSize={TWPStyleGuide.font.size.mediumSmall}
             >
               more flowers the merrier...
             </BLHeader>

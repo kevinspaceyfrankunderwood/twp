@@ -5,9 +5,10 @@
 	background-color: white !important;
 	z-index: 10000 !important;
 	margin-bottom: 0px !important;
-  position: fixed !important;
+  	position: fixed !important;
 	border-radius: 0;
 	padding: 0;
+	height: 60px;
 }
 
 .navbar-brand {
@@ -15,9 +16,13 @@
 	padding-bottom: 0 !important;
 	margin-right: 0 !important;
 	font-size: 0 !important;
-  height: 100%;
-  width: 25%;
+  	height: 45px;
+  	width: 25%;
 	margin: 0;
+}
+
+.navbar-nav {
+	background-color: white;
 }
 
 .dropdown-menu {
@@ -34,7 +39,7 @@ li.nav-item:hover {
 	border-radius: 5px;
 }
 
-li.nav-item:first-child:hover {
+li.nav-item:hover {
 	background-color: #92d051;
 	border-radius: 5px;
 }

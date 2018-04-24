@@ -16,6 +16,7 @@ import './NavBar.css'
 import Logo from '../assets/images/logoFullSize.png';
 import { TWPDiv, TWPImage, media, TWPParagraph } from '../styles/GenericStyledComponents';
 import instagram from '../assets/images/instagram.png'
+import rss from '../assets/images/rss.png'
 import facebook from '../assets/images/facebook.png'
 import twitter from '../assets/images/twitter.png'
 import TWPStyleGuide from '../styles/TWPStyleGuide';
@@ -31,12 +32,14 @@ const SocialIcon = TWPImage.extend`
 
 const SocialWrap = TWPDiv.extend`
   z-index: 1000;
+  margin: 10px 0;
 
   ${media.tablet`
     flex-direction: row;
     width: 100%;
     background-color: ${TWPStyleGuide.color.white};
     justify-content: space-evenly;
+    margin: 0;
     margin-top: 50px;
     border-bottom: 1px solid ${TWPStyleGuide.color.lightGreen}
   `}
@@ -78,9 +81,6 @@ class NavBar extends Component {
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
-            <NavItem className="paypalDonateButton">
-              <NavLink target="_blank" rel="noopener referrer" href={"https://givemn.org/fundraiser/the-wildflower-project5a5ce684bd312"}><a href="https://givemn.org/fundraiser/the-wildflower-project5a5ce684bd312" className="donateText" target="_blank" rel="noopener referrer">DONATE</a></NavLink>
-            </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 About Us
@@ -136,6 +136,9 @@ class NavBar extends Component {
                 </NavItem>
               </DropdownMenu>
             </UncontrolledDropdown>
+            <NavItem className="paypalDonateButton">
+              <NavLink target="_blank" rel="noopener referrer" href={"https://givemn.org/fundraiser/the-wildflower-project5a5ce684bd312"}><a href="https://givemn.org/fundraiser/the-wildflower-project5a5ce684bd312" className="donateText" target="_blank" rel="noopener referrer">DONATE</a></NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
@@ -176,6 +179,14 @@ class NavBar extends Component {
               width={'40px'}
               height={'40px'}
               src={facebook}
+            />
+          </a>
+          <a style={{margin: '5px'}} target="_blank" rel="noopener noreferrer" href="https://thewildflowerprojectmn.org/category/garden-journal/">
+            <SocialIcon
+              //facebook
+              width={'40px'}
+              height={'40px'}
+              src={rss}
             />
           </a>
         </SocialWrap>

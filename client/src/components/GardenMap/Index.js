@@ -20,7 +20,7 @@ export const Index = () => {
       </TWPDiv>
       <PostMapText />
       <ProjectSlider />
-      <StatsArea />
+      {/* <StatsArea /> */}
     </div>
   )
 }

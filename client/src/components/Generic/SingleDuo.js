@@ -71,7 +71,7 @@ const AnchorDiv = styled.div`
   display: block; 
   position: relative;
   visibility: hidden;
-  top: -240px;
+  top: -260px;
 
   ${media.tablet`
     top: -150px;

@@ -104,7 +104,7 @@ export const TWPDiv = styled.div.attrs({
 
     @media (max-width: 400px){
       height: ${props => props.mobileHeight};
-      background-position: top center;
+      background-position: ${props => props.mobileBackgroundPosition || 'top center'};
     }
 
 `

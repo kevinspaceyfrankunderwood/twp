@@ -31,7 +31,7 @@ const points = [
 
 const ResponsiveSectionHeader = TWPSectionHeader.extend`
   ${media.tablet`
-    padding: 45px;
+    padding: 45px 20px;
   `}
 `
 

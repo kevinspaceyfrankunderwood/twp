@@ -18,7 +18,7 @@ const FooterWrap = TWPDiv.extend`
 const FooterDuo = TWPDiv.extend`
   ${media.tablet`
     width: 100%;
-    height: 150px;
+    height: 200px;
   `}
 `
 
@@ -168,7 +168,7 @@ const Footer = () => {
               width={'fit-content'}
               tabletFontSize={TWPStyleGuide.font.size.smallTiny}
             >
-              The WildflowerProject is a 501(c)(3)non-profit organization. Your gifts are tax deductible.
+              Propel Nonprofits is the 501(c)(3) fiscal sponsor for The Wildflower Project.
             </TWPParagraph>
             <TWPParagraph
               width={'fit-content'}

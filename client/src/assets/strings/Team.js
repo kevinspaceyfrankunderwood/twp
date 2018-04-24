@@ -49,7 +49,7 @@ export const board = [
   {
     fullName: 'Matthew Peterson',
     title: 'Co-Founder',
-    longBio: 'Upon graduating with degrees in Social Justice and Entrepreneurship, Matthew worked in various capacities with social service organizations throughout the Twin Cities of Minnesota. Formative experiences as a teacher for Native American high school students, volunteer coordinator with Nice Ride MN, and employment counseling with Ramsey County steered his character and approach as empathetic and personable. As a co-founder of TWP, he focused on network building, partnership development, and garden installations.\n\nMatthew shifted careers upon moving to Utah, and completed a University of Utah boot-camp in, both, front & back-end web development. Following the boot-camp, he was offered opportunities as teaching assistant for computer science students, web developer with a recent start-up, and lead developer for a fitness & community center.',
+    longBio: "A good friend of Ean Koerner and Matt Wildenauer's, Matthew joined TWP in 2015 as business developer and brought to fruition TWP's first few partnership gardens. Having moved to Utah, his role has changed to Web Developer (he built this website!), board member, and long-distance support.",
     photo: Peterson 
   },
 ]
