@@ -80,6 +80,7 @@ export const TWPDiv = styled.div.attrs({
   border-radius: ${props => props.borderRadius};
   order: ${props => props.order};
   min-width: ${props => props.minWidth};
+  box-shadow ${props => props.boxShadow};
 
     &:hover {
       background: ${props => props.hoverBackgroundColor};

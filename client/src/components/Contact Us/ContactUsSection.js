@@ -16,7 +16,7 @@ const WeWouldLoveWrap = TWPHeader.extend`
 
 class ContactUsSection extends React.Component {
   state = {
-    formDisplayed:  window.location.href === "https://www.thewildflowerproject.herokuapp.com/submitasite" || window.location.href === "http://localhost:3000/submitasite" ? true : false,
+    formDisplayed:  window.location.href === "https://thewildflowerproject.herokuapp.com/submitasite" || window.location.href === "http://localhost:3000/submitasite" ? true : false,
     thanksBarDisplayed: false,
     errorBarDisplayed: false
   }

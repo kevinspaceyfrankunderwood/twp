@@ -14,12 +14,13 @@ import Partnerships from './Partnerships/Index'
 import Team from './Team/Index'
 import GardenMap from './GardenMap/Index'
 import Submit from './Submit/Index'
+import Resources from './Resources/Index'
+
 
 class App extends Component {
   render() {
     return (
       <div>
-        <FetchUser>
           <NavBar />
           <Switch>
             <Route exact path='/' component={Home} />
@@ -29,11 +30,11 @@ class App extends Component {
             <Route exact path='/gardenmap' component={GardenMap} />
             <Route exact path='/login' component={Login} />
             <Route exact path="/submitasite" component={Submit} />
+            <Route exact path="/resources" component={Resources} />
             <Route exact path='/register' component={Register} />
             <Route component={NoMatch} />
           </Switch>
           <Footer />
-        </FetchUser>
       </div>
     );
   }

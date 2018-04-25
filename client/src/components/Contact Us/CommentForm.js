@@ -72,7 +72,8 @@ class CommentForm extends Component {
         >
           <BLSectionHeader 
             margin={'0 0 30px 0'}
-            fontSize={BLStyleGuide.font.size.mediumLarge}
+            fontSize={TWPStyleGuide.font.size.medium}
+            tabletFontSize={TWPStyleGuide.font.size.mediumSmall}
           >
             Backyards, Front Lawn, or Alley Way<br/>- Submit a Site -<br/>Support your community and it's ecosystem. . . 
           </BLSectionHeader>
