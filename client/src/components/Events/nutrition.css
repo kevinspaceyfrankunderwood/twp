@@ -150,10 +150,15 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #92d051;
+	background-color: #366902;
 	color: white;
 	font-size: 20px;
 	text-align: center;
+}
+
+.nutritionBottomEmailWords:hover {
+  background-color: #92d051 !important;
+  color: black !important;
 }
 
 .commentGroup {

@@ -121,7 +121,7 @@ class Events extends Component {
 				</div>
 				<a href="mailto:buzz@thewildflowerproject.org" className="nutritionBottomEmailWords">
 					<Icon name="mail outline" color="white" style={{fontSize: '20px'}}  />
-					Contact Ean Koerner to get involved with The Wildflower Project
+					&nbsp;&nbsp;Contact Ean Koerner to get involved with The Wildflower Project&nbsp;&nbsp;
 					<Icon name="mail outline" color="white" style={{fontSize: '20px'}}  />
 				</a>
 			</div>
