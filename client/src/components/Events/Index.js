@@ -52,7 +52,7 @@ class Events extends Component {
 				<Grid stackable className="eventsGridEntire">
 				<Grid.Row>
 					<Grid.Column className="cardsColumn" computer={11} tablet={10} mobile={16} >
-						<Card color="orange" raised centered className="classCard" as="a" href={FloresPDF}>
+						<Card color="orange" raised centered className="classCard" as="a" href={FloresPDF} target="_blank">
 					    <Image className="nutritionCardPhoto" src={Flores} />
 					    <Card.Content style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
 					      <Card.Header style={{textAlign: 'center', fontSize: '1.18em'}}>
