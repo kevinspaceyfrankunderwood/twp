@@ -8,6 +8,7 @@ import Festival from '../../assets/images/FestivalBand.jpg'
 import Comm from '../../assets/images/CommEd.jpg'
 import Placeholder from '../../assets/images/basicWhiteFlower.png'
 import Mug from '../../assets/images/DeneenMug.jpg'
+import FloresPDF from '../../assets/images/FloresDeMayoPDF.pdf'
 
 import moment from 'moment';
 
@@ -48,17 +49,17 @@ class Events extends Component {
           <div className="programWordsh2">Explore TWP Events and Blog Below</div>
         </div>
 
-				<Grid stackable style={{margin: '0 30px'}}>
+				<Grid stackable className="eventsGridEntire">
 				<Grid.Row>
-					<Grid.Column className="cardsColumn" computer={12} tablet={10} mobile={16} >
-						<Card color="orange" raised centered className="classCard">
+					<Grid.Column className="cardsColumn" computer={11} tablet={10} mobile={16} >
+						<Card color="orange" raised centered className="classCard" as="a" href={FloresPDF}>
 					    <Image className="nutritionCardPhoto" src={Flores} />
 					    <Card.Content style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
 					      <Card.Header style={{textAlign: 'center', fontSize: '1.18em'}}>
 					        Flores de Mayo
 					      </Card.Header>
 					      <Card.Description
-                  style={{padding: '10px'}}
+                  style={{padding: '10px 0', textAlign: 'center', fontStyle: "oblique", fontWeight: 700}}
                 >
 					        May 5, 12p-5p, Urban Growler
 					      </Card.Description>
@@ -86,7 +87,7 @@ class Events extends Component {
 					    <Image className="nutritionCardPhoto" src={Comm} />
 					    <Card.Content style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-around'}}>
 					      <Card.Header style={{textAlign: 'center', fontSize: '1.18em'}}>
-					        Community Education: Planting with a Purpose
+					        Community Education:<br/>Planting with a Purpose
 					      </Card.Header>
 					      <Card.Description
                   style={{padding: '10px'}}
@@ -100,7 +101,7 @@ class Events extends Component {
 					  </Card>
 					 </Grid.Column>
 
-					 <Grid.Column computer={4} tablet={6} mobile={16}> 
+					 <Grid.Column computer={5} tablet={6} mobile={16}> 
 							<div className="blogTitle">
 								<a style={{color: 'black', fontSize: '20px'}} href="http://food2recover.blogspot.com/">
 									<Icon style={{marginTop: '10px', color: "#366902"}} name="feed" /> TWP Garden Journal Blog
