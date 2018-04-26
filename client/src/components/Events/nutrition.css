@@ -1,0 +1,312 @@
+.nutritionTopPhoto {
+  background: url('../../assets/images/DeneenMug.jpg') center no-repeat;
+  background-size: 100%;
+	height: 440px;
+	display: flex;
+	width: 100%;
+	margin-top: 4px;
+}
+
+.nourishingRecovery {
+	height: 150px;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-around;
+	align-items: center;
+	padding-bottom: 10px;
+	text-align: center;
+	background: #e96e10;
+	color: #FAFAFA;
+}
+
+.program {
+	height: 325px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid red;
+	margin: 5px 0;
+	padding: 0 20px;
+}
+
+.programWordsh2,.programWordsh3 {
+	width: 85%;
+	font-weight: 300;
+	text-align: center;
+}
+
+.programWordsh2 {
+	font-size: 30px;
+	line-height: 1;
+}
+
+.programWordsh3 {
+	font-size: 24px;
+}
+
+.blogTitle {
+	text-align: center;
+	font-size: 24px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.singlePostEntire {
+	padding: 15px 0 !important;
+  display: flex !important;
+  height: auto;
+}
+
+.singlePostEntire:hover {
+	cursor: pointer;
+	background-color: #366902 !important;
+	border-radius: 5px !important;
+}
+
+.blogPic{
+	flex: 1 1 25% !important;
+}
+.blogContent {
+	flex: 1 1 75% !important;
+	align-self: center;
+	color: white;
+}
+
+.bottomWords {
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.bottomWords {
+	font-size: 16px;
+	text-align: center;
+	padding: 0 30px;
+}
+
+.classCard {
+	height: 400px !important;
+	width: 45% !important;
+	display: inline-flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	margin: 20px !important;
+}
+
+.cardsColumn {
+	width: 80%;
+}
+
+.nutritionClassLink {
+	height: 60px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #00A65E;
+	background-color: white;
+	color: #00A65E !important;
+	text-align: center;
+	font-size: 24px;
+}
+
+.nutritionClassLink:hover {
+	color: white !important;
+	background-color: #00A65E;
+	cursor: pointer;
+	border-top: 2px solid white;
+}
+
+.nutritionBottom {
+	display: flex;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+	background-color: #866048;
+}
+
+.nutritionBottomWords{
+	color: white;
+	font-size: 20px;
+	width: 80%;
+	text-align: center;
+}
+
+.nutritionBottomEmail {
+	
+}
+
+.nutritionBottomEmailWords {
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #92d051;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
+
+.commentGroup {
+	border-radius: 5px;
+	background-color: #92d051; 
+	padding: 14px; 
+	height: auto;
+	margin: 5px;
+	width: 105%;
+}
+
+.postAlignCenter {
+  color: black !important;
+  width: 100%;
+}
+
+@media (max-width: 1165px) {
+	.classCard {
+		margin: 20px 2% !important;
+		display: inline-flex !important;
+	}
+	.nutritionCardPhoto {
+		width: 80% !important;
+	}
+	.commentGroup {
+		border-radius: 20px;
+		background-color: #92d051; 
+		padding: 14px; 
+		margin: 5px !important;
+		width: 105% !important;
+	}
+}
+
+@media (max-width: 1050px) {
+	.nutritionTopPhoto {
+  	height: 370px;
+	}
+}
+
+@media (max-width: 992px) {
+	.classCard {
+		width: 96% !important;
+	}
+	.commentGroup {
+		height: 85% !important;
+	}
+}
+
+@media (max-width: 960px) {
+	.programWordsh2,.programWordsh3 {
+		width: 90%;
+		font-weight: 300;
+		text-align: center;
+	}
+}
+
+@media (max-width: 950px) {
+	.nutritionTopPhoto {
+	  height: 310px;
+	}
+	.commentGroup {
+		height: 57%;
+		margin: 5px;
+		width: 105%;
+	}
+}
+
+@media (max-width: 800px) {
+	.nutritionTopPhoto {
+	height: 260px;
+	}
+}
+
+@media (max-width: 785px) {
+	.programWordsh2 {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 768px) {
+  .nutritionTopPhoto {
+    margin-top: 100px;
+  }
+	.nourishingRecovery {
+		height: 80px !important;
+	}
+	.programWordsh2 {
+		font-size: 18px;
+  }
+  .blogPic img {
+    height: 100px !important;
+  }
+	.programWordsh3 {
+		display: none;
+	}
+	.cardsColumn {
+		width: 100%;
+	}
+	.commentGroup {
+		height: 98% !important;
+		margin: 5px auto !important;
+		width: 70% !important;
+	}
+	.nutritionBottomWords {
+		font-size: 16px
+	}
+}
+
+@media (max-width: 705px) {
+	.nutritionBottomEmailWords {
+		font-size: 14px !important;
+	}
+}
+
+@media (max-width: 670px) {
+	.nutritionTopPhoto {
+	height: 210px;
+	}
+}
+
+@media (max-width: 530px) {
+	.nutritionTopPhoto {
+	height: 160px;
+	}
+	.nutritionBottomEmailWords {
+		font-size: 12px !important;
+	}
+	.postAlignCenter{
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media (max-width: 470px) {
+	.commentGroup {
+		width: 95% !important;
+	}
+}
+
+@media (max-width: 450px) {
+	.nutritionBottomWords {
+		font-size: 13px !important;
+	}
+	.nutritionBottom {
+		height: 100px !important;
+	}
+}
+
+@media (max-width: 400px) {
+	.nutritionTopPhoto {
+	height: 130px;
+	}
+	.nutritionBottomWords {
+		font-size: 11px !important;
+	}
+}
+
+
+
+
+

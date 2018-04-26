@@ -15,7 +15,7 @@ import Team from './Team/Index'
 import GardenMap from './GardenMap/Index'
 import Submit from './Submit/Index'
 import Resources from './Resources/Index'
-
+import Events from './Events/Index'
 
 class App extends Component {
   render() {
@@ -29,6 +29,7 @@ class App extends Component {
             <Route exact path="/ourteam" component={Team} />
             <Route exact path='/gardenmap' component={GardenMap} />
             <Route exact path='/login' component={Login} />
+            <Route exact path='/events' component={Events} />
             <Route exact path="/submitasite" component={Submit} />
             <Route exact path="/resources" component={Resources} />
             <Route exact path='/register' component={Register} />

@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   end
 
   namespace :api do
+    get 'blogs/events'
+  end
+
+  namespace :api do
     get 'instagram/index'
   end
 
