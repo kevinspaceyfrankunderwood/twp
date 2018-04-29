@@ -8,6 +8,7 @@ import PPCG from '../../assets/images/PPCG.png'
 import Propel from '../../assets/images/propel.png'
 import Sunrise from '../../assets/images/sunrise.png'
 import JOTP from '../../assets/images/JOTP.jpg'
+import Dunning from '../../assets/images/Dunning.jpg'
 import Urban from '../../assets/images/urbanGrowlerLogo.png'
 import { TWPDiv, TWPImage, TWPAnchor } from '../../styles/GenericStyledComponents';
 
@@ -33,6 +34,10 @@ const Partnerships = [
     href: "http://www.merriamstation.org"
   },
   {
+    image: Dunning,
+    href: ""
+  },
+  {
     image: JOTP,
     href: 'http://joytothepeople.org'
   },
@@ -55,6 +60,10 @@ const Partnerships = [
   {
     image: awesome,
     href: "https://www.awesomefoundation.org/en"
+  },
+  {
+    image: Dunning,
+    href: ""
   },
   {
     image: MSCG,

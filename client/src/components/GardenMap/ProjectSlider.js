@@ -5,15 +5,31 @@ import TWPStyleGuide from '../../styles/TWPStyleGuide';
 
 const InfoBoxWrap = TWPDiv.extend`
   ${media.tablet`
-    width: 80%;
-  `}
-  ${media.phone`
     width: 95%;
+    flex-direction: column;
+    height: 500px;
   `}
 `
 
 const SliderParagraph = TWPParagraph.extend`
   line-height: 1.5;
+`
+
+const ResponsiveFeaturedImage = TWPDiv.extend`
+  ${media.tablet`
+    border-right: 1px solid ${TWPStyleGuide.color.darkGreen};
+    border-radius: 10px 10px 0 0;
+    width: 90%;
+    height: 60%;
+  `}
+`
+
+const ResponsiveFeaturedText = TWPDiv.extend`
+  ${media.tablet`
+    border-radius: 0 0 10px 10px;
+    width: 90%;
+    height: 40%;
+  `}
 `
 
 class ProjectSlider extends Component {
@@ -174,12 +190,12 @@ class ProjectSlider extends Component {
     return(
       <InfoBoxWrap
         flexDirection={'row'}
-        width={'65%'}
+        width={'75%'}
         borderRadius={'20px'}
         padding={'0'}
-        height={'280px'}
+        height={'350px'}
       >
-        <TWPDiv
+        <ResponsiveFeaturedImage
           borderLeft={`1px solid ${TWPStyleGuide.color.darkGreen}`}
           borderTop={`1px solid ${TWPStyleGuide.color.darkGreen}`}
           borderRadius={'10px 0 0 10px'}
@@ -192,7 +208,7 @@ class ProjectSlider extends Component {
             width={'100%'} 
             height={'75%'}
             borderRadius={'5px'}
-            smallTabletHeight={'125px'}
+            smallTabletHeight={'60%'}
             smallTabletWidth={'125px'}
             mobileHeight={'100px'}
             mobileWidth={'100px'}
@@ -202,12 +218,13 @@ class ProjectSlider extends Component {
           >
             {info.title}
           </TWPSectionHeader>
-        </TWPDiv>
-        <TWPDiv
+        </ResponsiveFeaturedImage>
+        <ResponsiveFeaturedText
           borderRadius={'0 10px 10px 0'}
-          backgroundColor={TWPStyleGuide.color.lightGray}
+          backgroundColor={TWPStyleGuide.color.white}
           borderTop={`1px solid ${TWPStyleGuide.color.darkGreen}`}
           borderRight={`1px solid ${TWPStyleGuide.color.darkGreen}`}
+          borderLeft={`1px solid ${TWPStyleGuide.color.darkGreen}`}
           height={'100%'}
           width={'50%'}
         >
@@ -218,7 +235,7 @@ class ProjectSlider extends Component {
           >
             {info.text}
           </SliderParagraph>
-        </TWPDiv>
+        </ResponsiveFeaturedText>
       </InfoBoxWrap>      
     )
   }

@@ -194,7 +194,7 @@ export const AboveTheFold = () => {
                 width={'fit-content'}
                 tabletFontSize={TWPStyleGuide.font.size.medium}
               >
-                17
+                20
               </TopTwoNumbers>
               <TWPParagraph 
                 color={TWPStyleGuide.color.brown} 

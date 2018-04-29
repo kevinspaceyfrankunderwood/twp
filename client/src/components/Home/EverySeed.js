@@ -28,11 +28,7 @@ const ResponsiveHeader = TWPSectionHeader.extend`
   `}
 `
 
-const BottomResponsiveHeader = TWPHeader.extend`
-  ${media.tablet`
-    padding: 30px 10px;
-  `}
-`
+
 
 const DisappearingDiv = TWPDiv.extend`
 @media(max-width: 605px){
@@ -62,12 +58,13 @@ const EverySeed = () => {
             color={TWPStyleGuide.color.darkOrange}
             padding={'30px 10px'}
           >
-            The Wildflower Projects focus is to serve as environmental and community stewards, fulfilling our promise of planting with a purpose.
+            The Wildflower Project's focus is to serve as environmental and community stewards, fulfilling our promise of planting with a purpose.
           </ResponsiveHeader>
           <TWPDiv
             width={'90%'}
             flexDirection={'row'}
             flexWrap={'wrap'}
+            padding={'4% 2%'}
           >
             <DisappearingDiv
               width={'250px'}
@@ -103,13 +100,7 @@ const EverySeed = () => {
               />
             </TWPDiv>
           </TWPDiv>
-          <BottomResponsiveHeader
-            fontSize={TWPStyleGuide.font.size.mediumSmall}
-            color={TWPStyleGuide.color.darkOrange}
-            padding={'30px 2%'}
-          >
-            Wildflowers | Urban | Community
-          </BottomResponsiveHeader>
+          
         </TWPDiv>
   );
 }

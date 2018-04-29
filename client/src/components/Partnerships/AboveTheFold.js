@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
+import Slider from "react-slick";
+import "../../../node_modules/slick-carousel/slick/slick.css" ;
+import "../../../node_modules/slick-carousel/slick/slick-theme.css";
+import './AboveTheFold.css'
+import styled from 'styled-components'
+
 
 import { TWPHeader, TWPDiv, TWPSectionHeader, TWPParagraph, TWPImage, TWPAnchor, media } from '../../styles/GenericStyledComponents'
 import TWPStyleGuide from '../../styles/TWPStyleGuide';
 
 import Volunteers from '../../assets/images/volunteers.jpeg'
+import slider1 from '../../assets/images/PartnershipSlider1.jpg'
+import slider2 from '../../assets/images/PartnershipSlider2.jpg'
+import slider3 from '../../assets/images/PartnershipSlider3.jpg'
 
 const ResponsiveDiv = TWPDiv.extend`
   ${media.tablet`
@@ -19,20 +28,42 @@ const GreenSectionHeader = TWPSectionHeader.extend`
   `}
 `
 
+const StyledDiv = styled.div`
+  ${media.tablet`
+    margin-top: 100px;
+  `}
+`
+
 export const AboveTheFold = () => {
-  return(
-    <div>
-      <ResponsiveDiv
-        background={`linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(${Volunteers})`}
-        backgroundPosition={'top center'}
-        backgroundSize={'cover'}
-        height={'400px'}
-        width={'100%'}
-      >
-        <TWPHeader lineHeight={'.5'}>
-          Partnerships<br/><span style={{fontSize: `14px`}}>(placeholder image)</span>
-        </TWPHeader>
-      </ResponsiveDiv>
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    autoplaySpeed: 4000,
+    autoplay: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    className: "PartnershipsSlider",
+    adaptiveHeight: true,
+    dotsClass: "DotClass",
+    dots: false,
+  };
+  return (
+    <StyledDiv>
+      <Slider {...settings}>
+        <div>
+          <TWPImage src={slider1} height={'400px'} width={'80%'} margin={'0 auto'}/>
+        </div>
+        <div>
+          <TWPImage src={slider2} height={'400px'} width={'80%'} margin={'0 auto'}/>
+        </div>
+        <div>
+          <TWPImage src={slider3} height={'400px'} width={'80%'} margin={'0 auto'}/>
+        </div>
+      </Slider>
+      <TWPHeader>
+        Partnerships
+      </TWPHeader>
       <TWPDiv
         height={'100%'}
         width={'100%'}
@@ -47,10 +78,10 @@ export const AboveTheFold = () => {
           mobileFontFontSize={TWPStyleGuide.font.size.small}
           fontWeight={'100'}
         >
-          Strong partnerships translate to healthy communities,<br/>Healthy communities translate to happy lives. 
+          Strong partnerships support to healthy communities,<br/>Healthy communities support to happy lives. 
         </GreenSectionHeader>
       </TWPDiv>
-    </div>
+    </StyledDiv>
   );
 }
 

@@ -69,21 +69,7 @@ class Events extends Component {
 					    </Card.Content>
 					  </Card>
 
-						<Card color="teal" raised centered className="classCard">
-					    <Image className="nutritionCardPhoto" src={Festival} />
-					    <Card.Content style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-around'}}>
-					      <Card.Header style={{textAlign: 'center', fontSize: '1.18em'}}>
-					        The Wildflower Festival
-					      </Card.Header>
-					      <Card.Description>
-					        Meet us at JOTP for family fun with live music, local environmental organizations, delicious food, face paint, and More!
-					      </Card.Description>
-					    </Card.Content>
-					  </Card>
-
-
-
-						<Card color="green" raised centered className="classCard">
+						<Card color="green" raised centered className="classCard" as="a" target="_blank" href="https://stpaul.ce.eleyo.com/search?redirected_yet=true&sf[category]=71">
 					    <Image className="nutritionCardPhoto" src={Comm} />
 					    <Card.Content style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-around'}}>
 					      <Card.Header style={{textAlign: 'center', fontSize: '1.18em'}}>
@@ -92,10 +78,27 @@ class Events extends Component {
 					      <Card.Description
                   style={{padding: '10px'}}
                 >
-					        Some School in St. Paul - Some Day in June
+					        June 13 - Dunning Community Garden
+									<br/>
+									June 20 - Merriam Station Community Garden
 					      </Card.Description>
                 <Card.Description>
 					        TWP Founders - Ean Koerner and Matt Wildenauer - are putting on an environmentally based Community Ed. course. 
+					      </Card.Description>
+					    </Card.Content>
+					  </Card>
+
+						<Card color="teal" raised centered className="classCard">
+					    <Image className="nutritionCardPhoto" src={Festival} />
+					    <Card.Content style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-around'}}>
+					      <Card.Header style={{textAlign: 'center', fontSize: '1.18em'}}>
+					        The Wildflower Festival
+					      </Card.Header>
+					      <Card.Description>
+					        Date - Coming Soon!!
+					      </Card.Description>
+								<Card.Description>
+					        Meet us at JOTP for family fun with live music, local environmental organizations, delicious food, face paint, and More!
 					      </Card.Description>
 					    </Card.Content>
 					  </Card>
@@ -117,7 +120,7 @@ class Events extends Component {
 				</Grid>
 
 				<div className="nutritionBottom">
-					<p className="nutritionBottomWords">With vibrant, urban wildflower gardens, we hope to bring a little nature back – one seed, one flower, and one pollinator at a time.</p>
+					<p className="nutritionBottomWords">Discover pollinator-friendly gardening practices from local landscapers and master gardeners! Learn how to prep a garden bed, discover native species and build habitat in your own backyard!</p>
 				</div>
 				<a href="mailto:buzz@thewildflowerproject.org" className="nutritionBottomEmailWords">
 					<Icon name="mail outline" color="white" style={{fontSize: '20px'}}  />

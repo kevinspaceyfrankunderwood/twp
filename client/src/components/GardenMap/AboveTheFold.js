@@ -64,7 +64,7 @@ export const AboveTheFold = () => {
       color={TWPStyleGuide.color.darkGreen}
       smallTabletFontSize={TWPStyleGuide.font.size.small}
     >
-      From Downtown St. Paul to Seward Neighborhood,<br/>we're installing wildflower gardens across the Twin Cities.
+      From Frogtown to Uptown and all the neighborhoods in between,<br/>TWP is building a network of urban gardens to restore pollinator habitat across the Twin Cities metro.
     </SectionHeaderAdjustablePadding>
   </div>
   );

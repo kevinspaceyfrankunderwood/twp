@@ -8,10 +8,10 @@ import TWPStyleGuide from '../../styles/TWPStyleGuide';
 
 import Dragon from '../../assets/images/DragonflyBirdsEye.jpg'
 import styled from 'styled-components';
+import FeaturedEvent from '../../assets/images/FeaturedEvent.jpg'
 
 
 const BoxTopText = TWPSectionHeader.extend`
-  height: 70%;
   display: flex;
   align-items: center;
   ${media.tablet`
@@ -19,15 +19,15 @@ const BoxTopText = TWPSectionHeader.extend`
   `}
 `
 
-const ThirdSectionTopText = TWPHeader.extend`
-  height: 40%;
+const DragonFlySubHeader = TWPSectionHeader.extend`
   display: flex;
   align-items: center;
+  padding: 50px 2%;
 `
 
 const DragonflySection = TWPDiv.extend`
   ${media.tablet`
-    height: 750px
+    height: 100%;
   `}
 `
 
@@ -62,132 +62,223 @@ const BoxAnchorWrap = styled.a`
   `}
 
   ${media.tablet`
-    width: 95%;
+    width: 70%;
     margin: 10px;
     display: flex;
   `}
 
+  @media(max-width: 500px){
+    width: 90%
+  }
 `
 
-export const DragonFly = () => {  
-  return(
-    <TWPDiv 
-      padding={'0'}
-    >
-      <DragonflySection
-          background={`linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0)), url(${Dragon}) fixed`}
-          backgroundSize={'cover'}
-          backgroundPosition={'bottom center'}
-          height={'650px'}
-          width={'100%'}
-        >
-        <TWPDiv
-          flexDirection={'column'}
-          width={'100%'}
-          height={'100%'}
-          alignItems={'center'}
-        >
-          <ThirdSectionTopText
-            fontSize={TWPStyleGuide.font.size.medium}
-            color={TWPStyleGuide.color.white}
-            tabletFontSize={TWPStyleGuide.font.size.mediumSmall}
+const DragonFlyHeader = TWPHeader.extend`
+  ${media.tablet`
+    padding: 30px 10px;
+  `}
+`
+
+class DragonFly extends Component {
+
+  state = { photos: undefined }
+
+  componentDidMount() {
+		axios.get('api/instagram/index')
+    .then( res => this.setState({ photos: res.data.data }) )
+    .catch( res => console.log(res))
+  }
+
+  displayImages = () => {
+		return this.state.photos.map( pic => 
+			<TWPDiv
+        width={'225px'}
+        height={'225px'}
+        padding={'0'}
+      >
+				<TWPAnchor href={pic.link} target="_blank" rel="noopener noreferrer" >
+          <TWPImage 
+            width={'225px'}
+            borderRadius={'5px'}
+            height={'-webkit-fill-available'}
+            className="homeSingleInsta" 
+            src={pic.images.standard_resolution.url} 
+          />
+		    </TWPAnchor>
+			</TWPDiv>
+		)
+  }
+
+  displayFeatured = () => {
+    
+  }
+  
+  render() {
+    return(
+      <TWPDiv 
+        padding={'0'}
+      >
+        <DragonflySection
+            background={`linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0)), url(${Dragon}) fixed`}
+            backgroundSize={'cover'}
+            backgroundPosition={'bottom center'}
+            height={'850px'}
+            width={'100%'}
           >
-            By building habitat for pollinators, we can build a community of good neighbors and vibrant civil societies, supporting all members of our shared ecosystem.
-          </ThirdSectionTopText>
-          <BottomWrapper
-            flexDirection={'row'}
-            justifyContent={'space-around'}
-            height={'60%'}
+          <TWPDiv
+            flexDirection={'column'}
+            width={'100%'}
+            justifyContent={'space-between'}
+            height={'100%'}
+            alignItems={'center'}
           >
-            <BoxAnchorWrap href="https://www.instagram.com/explore/tags/savethebees/">
-              <BottomTwoInfoBoxes 
-                background={'linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9))'}
-                backgroundColor={'linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9))'}
-                desktopImage={null}
-                borderRadius={'5px'}
-                justifyContent={'space-between'}
-                flex={'1 1 50%'}
-                margin={'0 2%'}
-                padding={'unset'}
-                height={'200px'}
-                width={'unset'}
-              >
-                <BoxTopText 
-                  padding={'5% 5%'}
-                  color={TWPStyleGuide.color.darkGreen}
-                  mobileFontSize={TWPStyleGuide.font.size.small}
-                >
-                  Revitalizing the health &amp; wellness of pollinator habitats
-                </BoxTopText>
-                <TWPDiv 
-                  flexDirection={'row'} 
-                  width={'100%'} 
-                  backgroundColor={TWPStyleGuide.color.lightGreen}
-                  margin={'unset'}
-                  alignItems={'center'}
-                  height={'30%'}
+            <DragonFlyHeader
+              fontSize={TWPStyleGuide.font.size.medium}
+              tabletFontSize={TWPStyleGuide.font.size.mediumSmall}
+              color={TWPStyleGuide.color.white}
+              padding={'30px 2%'}
+            >
+              Wildflowers | Urban | Community
+            </DragonFlyHeader>
+            <DragonFlySubHeader
+              fontSize={TWPStyleGuide.font.size.mediumSmall}
+              tabletFontSize={TWPStyleGuide.font.size.small}
+              color={TWPStyleGuide.color.white}
+            >
+              By building habitat for pollinators, we can build a community of good neighbors and vibrant civil societies, supporting all members of our shared ecosystem.
+            </DragonFlySubHeader>
+            <BottomWrapper
+              flexDirection={'row'}
+              justifyContent={'space-around'}
+              height={'60%'}
+            >
+              <BoxAnchorWrap target="_blank" href="https://www.instagram.com/wildflower_project/">
+                <BottomTwoInfoBoxes 
+                  background={'linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9))'}
+                  backgroundColor={'linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9))'}
+                  desktopImage={null}
                   borderRadius={'5px'}
+                  justifyContent={'space-between'}
+                  flex={'1 1 50%'}
+                  margin={'0 2%'}
+                  padding={'unset'}
+                  height={'450px'}
+                  width={'unset'}
                 >
-                  <TWPHeader
-                    padding={'0'} 
-                    textAlign={'left'}
-                    width={'fit-content'}
-                    fontSize={TWPStyleGuide.font.size.medium}
-                    tabletFontSize={TWPStyleGuide.font.size.medium}
-                    mobileFontSize={TWPStyleGuide.font.size.mediumSmall}
+                  <TWPDiv
+                    height={'85%'}
+                    justifyContent={'space-around'}
                   >
-                    #savethebees
-                  </TWPHeader>
-                </TWPDiv>
-              </BottomTwoInfoBoxes>
-            </BoxAnchorWrap>
-            <BoxAnchorWrap href="https://www.instagram.com/wildflower_project/">
-              <BottomTwoInfoBoxes 
-                background={'linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9))'}
-                backgroundColor={'linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9))'}
-                desktopImage={null}
-                borderRadius={'5px'}
-                justifyContent={'space-between'}
-                flex={'1 1 50%'}
-                margin={'0 2%'}
-                padding={'unset'}
-                height={'200px'}
-                width={'unset'}
-              >
-                <BoxTopText 
-                  padding={'5% 5%'}
-                  color={TWPStyleGuide.color.darkGreen}
-                  mobileFontSize={TWPStyleGuide.font.size.small}
-                >
-                  Fostering education and community development through volunteerism and partnerships
-                </BoxTopText>
-                <TWPDiv 
-                  flexDirection={'row'} 
-                  width={'100%'} 
-                  backgroundColor={TWPStyleGuide.color.yellow}
-                  margin={'unset'}
-                  alignItems={'center'}
-                  height={'30%'}
+                    <BoxTopText 
+                      padding={'3%'}
+                      color={TWPStyleGuide.color.darkGreen}
+                      tabletFontSize={TWPStyleGuide.font.size.small}
+                    >
+                      Revitalizing the health &amp; wellness of pollinator habitats
+                    </BoxTopText>
+                      { this.state.photos !== undefined && this.displayImages() }
+                    <TWPSectionHeader
+                      fontSize={TWPStyleGuide.font.size.mediumSmall}
+                      width={'100%'}
+                      tabletFontSize={TWPStyleGuide.font.size.small}
+                    >
+                      Follow Us on Instagram
+                    </TWPSectionHeader>
+                  </TWPDiv>
+                  <TWPDiv 
+                    flexDirection={'row'} 
+                    width={'100%'} 
+                    backgroundColor={TWPStyleGuide.color.lightGreen}
+                    margin={'unset'}
+                    alignItems={'center'}
+                    height={'15%'}
+                    borderRadius={'0 0 5px 5px'}
+                  >
+                    <TWPHeader
+                      padding={'0'} 
+                      textAlign={'left'}
+                      width={'fit-content'}
+                      fontSize={TWPStyleGuide.font.size.medium}
+                      tabletFontSize={TWPStyleGuide.font.size.medium}
+                      mobileFontSize={TWPStyleGuide.font.size.mediumSmall}
+                    >
+                      #plantingwithapurpose
+                    </TWPHeader>
+                  </TWPDiv>
+                </BottomTwoInfoBoxes>
+              </BoxAnchorWrap>
+              <BoxAnchorWrap target="_blank" href="https://stpaul.ce.eleyo.com/search?redirected_yet=true&sf[category]=71">
+                <BottomTwoInfoBoxes 
+                  background={'linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9))'}
+                  backgroundColor={'linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9))'}
+                  desktopImage={null}
                   borderRadius={'5px'}
+                  justifyContent={'space-between'}
+                  flex={'1 1 50%'}
+                  margin={'0 2%'}
+                  padding={'unset'}
+                  height={'450px'}
+                  width={'unset'}
                 >
-                  <TWPHeader 
-                    fontSize={TWPStyleGuide.font.size.mediumLarge}
-                    textAlign={'right'}
-                    width={'fit-content'}
-                    tabletFontSize={TWPStyleGuide.font.size.medium}
-                    fontSize={TWPStyleGuide.font.size.medium}
-                    mobileFontSize={TWPStyleGuide.font.size.mediumSmall}
+                  <TWPDiv
+                    height={'85%'}
+                    justifyContent={'space-around'}
                   >
-                    IG @wildflower_project
-                  </TWPHeader>
-                </TWPDiv>
-              </BottomTwoInfoBoxes>
-            </BoxAnchorWrap>
-          </BottomWrapper>
-        </TWPDiv>
-      </DragonflySection>
-    </TWPDiv>
-  );
+                    <BoxTopText 
+                      padding={'3%'}
+                      color={TWPStyleGuide.color.darkGreen}
+                      tabletFontSize={TWPStyleGuide.font.size.small}
+                    >
+                      Fostering education and community development through volunteerism and partnerships
+                    </BoxTopText>
+                    <TWPDiv
+                      width={'225px'}
+                      height={'225px'}
+                      padding={'0'}
+                    >
+                      <TWPImage 
+                        width={'225px'}
+                        borderRadius={'5px'}
+                        height={'-webkit-fill-available'}
+                        className="homeSingleInsta" 
+                        src={FeaturedEvent} 
+                      />
+                    </TWPDiv>
+                    <TWPSectionHeader
+                      fontSize={TWPStyleGuide.font.size.mediumSmall}
+                      width={'100%'}
+                      tabletFontSize={TWPStyleGuide.font.size.small}
+                    >
+                      Sign Up for our Gardening Class!!
+                    </TWPSectionHeader>
+                  </TWPDiv>
+                  <TWPDiv 
+                    flexDirection={'row'} 
+                    width={'100%'} 
+                    backgroundColor={TWPStyleGuide.color.yellow}
+                    margin={'unset'}
+                    alignItems={'center'}
+                    height={'15%'}
+                    borderRadius={'0 0 5px 5px'}
+                  >
+                    <TWPHeader 
+                      fontSize={TWPStyleGuide.font.size.mediumLarge}
+                      textAlign={'right'}
+                      width={'fit-content'}
+                      tabletFontSize={TWPStyleGuide.font.size.medium}
+                      fontSize={TWPStyleGuide.font.size.medium}
+                      mobileFontSize={TWPStyleGuide.font.size.mediumSmall}
+                    >
+                      Featured Event
+                    </TWPHeader>
+                  </TWPDiv>
+                </BottomTwoInfoBoxes>
+              </BoxAnchorWrap>
+            </BottomWrapper>
+          </TWPDiv>
+        </DragonflySection>
+      </TWPDiv>
+    );
+  }
 }
 
 export default DragonFly;
