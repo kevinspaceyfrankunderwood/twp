@@ -455,14 +455,17 @@ export const TWPImage = styled.img`
 
   @media (max-width: 992px){
     height: ${props => props.tabletHeight};
+    width: ${props => props.tabletWidth};
   }
 
   @media (max-width: 768px){
     height: ${props => props.smallTabletHeight};
+    width: ${props => props.smallTabletWidth};
   }
 
   @media (max-width: 400px){
     height: ${props => props.mobileHeight};
+    width: ${props => props.mobileWidth};
   }
 `
 

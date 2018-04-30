@@ -10,9 +10,7 @@ import { TWPHeader, TWPDiv, TWPSectionHeader, TWPParagraph, TWPImage, TWPAnchor,
 import TWPStyleGuide from '../../styles/TWPStyleGuide';
 
 import Volunteers from '../../assets/images/volunteers.jpeg'
-import slider1 from '../../assets/images/PartnershipSlider1.jpg'
-import slider2 from '../../assets/images/PartnershipSlider2.jpg'
-import slider3 from '../../assets/images/PartnershipSlider3.jpg'
+import Partner from '../../assets/images/PartnerPic.jpg'
 
 const ResponsiveDiv = TWPDiv.extend`
   ${media.tablet`
@@ -35,32 +33,18 @@ const StyledDiv = styled.div`
 `
 
 export const AboveTheFold = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    autoplaySpeed: 4000,
-    autoplay: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    className: "PartnershipsSlider",
-    adaptiveHeight: true,
-    dotsClass: "DotClass",
-    dots: false,
-  };
+
   return (
     <StyledDiv>
-      <Slider {...settings}>
-        <div>
-          <TWPImage src={slider1} height={'400px'} width={'80%'} margin={'0 auto'}/>
-        </div>
-        <div>
-          <TWPImage src={slider2} height={'400px'} width={'80%'} margin={'0 auto'}/>
-        </div>
-        <div>
-          <TWPImage src={slider3} height={'400px'} width={'80%'} margin={'0 auto'}/>
-        </div>
-      </Slider>
+      <ResponsiveDiv
+        background={` url(${Partner}) `}
+        backgroundPosition={'center'}
+        mobileBackgroundPosition={'top right'}
+        backgroundSize={'cover'}
+        height={'450px'}
+        width={'100%'}
+        justifyContent={'flex-start'}
+      />
       <TWPHeader>
         Partnerships
       </TWPHeader>

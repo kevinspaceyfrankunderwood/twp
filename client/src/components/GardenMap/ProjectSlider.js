@@ -208,10 +208,8 @@ class ProjectSlider extends Component {
             width={'100%'} 
             height={'75%'}
             borderRadius={'5px'}
-            smallTabletHeight={'60%'}
-            smallTabletWidth={'125px'}
-            mobileHeight={'100px'}
-            mobileWidth={'100px'}
+            smallTabletHeight={'70%'}
+            smallTabletWidth={'90%'}
           />
           <TWPSectionHeader
             margin={'20px 0 0 0'}

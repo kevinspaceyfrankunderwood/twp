@@ -1,12 +1,12 @@
 import person from '../images/BankFlower.jpg'
-import medical from '../images/beeBlueFlower.jpg'
-import property from '../images/groundCover.jpg'
+import ppcg from '../images/FeaturedPPCG.jpg'
+import urban from '../images/FeaturedUrban.jpg'
 
 export const ProjectInfo = [
   {
     title: "Urban Growler, May 17",
     text: "Converted 2,000 square feet of turf to wildflower garden for local brewery in the industrial area of South St. Anthony Park. Features 80 native grasses, a winding path and more than likely, one or two TWP members enjoying a delicious beverage from our friends at UG.",
-    image: property
+    image: urban
   },
   {
     title: "Sunrise Bank, June '17",
@@ -16,6 +16,6 @@ export const ProjectInfo = [
   {
     title: "Prospect Park Community Garden, September ‘16",
     text: "Restored a 2,100 square foot hillside adjacent to an urban community garden in Minneapolis. The surrounding neighborhood is experiencing rapid mixed-use development. Plans to enhance install are underway, including dozens of new native plants and educational signage for pedestrians.",
-    image: medical
+    image: ppcg
   },
 ]

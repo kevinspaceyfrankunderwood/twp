@@ -118,9 +118,6 @@ class NavBar extends Component {
                 <NavItem>
                  <NavLink href="/partnerships">Partnerships</NavLink>
                 </NavItem>
-                {/* <NavItem>
-                  <NavLink href={Flores} target="_blank">Events</NavLink>
-                </NavItem> */}
                 <NavItem>
                   <NavLink href="/events">Events</NavLink>
                 </NavItem>

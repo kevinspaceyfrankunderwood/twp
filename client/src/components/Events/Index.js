@@ -12,8 +12,6 @@ import FloresPDF from '../../assets/images/FloresDeMayoPDF.pdf'
 
 import moment from 'moment';
 
-
-
 class Events extends Component {
 	state = { posts: [], loaded: false }
 
