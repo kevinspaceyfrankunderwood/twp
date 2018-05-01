@@ -48,7 +48,7 @@ export const board = [
   },
   {
     fullName: 'Matthew Peterson',
-    title: 'Co-Founder',
+    title: 'Co-Founder & Web Development',
     longBio: "A good friend of Ean Koerner and Matt Wildenauer's, Matthew joined TWP in 2015 as business developer and brought to fruition TWP's first few partnership gardens. Having moved to Utah, his role has changed to Web Developer (he built this website!), board member, and long-distance support.",
     photo: Peterson 
   },

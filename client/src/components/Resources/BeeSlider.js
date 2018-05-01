@@ -195,7 +195,7 @@ class BeeSlider extends Component {
           slideWidth="200px"
           autoplay={true}
           wrapAround={true}
-          autoplayInterval={3500}
+          autoplayInterval={3000}
           cellSpacing={100}
           width={window.innerWidth < 590 ? '60%' : '90%'}
           renderCenterLeftControls={({ previousSlide }) => (
