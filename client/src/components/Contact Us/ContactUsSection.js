@@ -24,8 +24,7 @@ class ContactUsSection extends React.Component {
   handleFormSubmit = event => {
     console.log("here")
     event.preventDefault()
-    // const emailjs = require('https://cdn.emailjs.com/dist/email.min.js');
-    window.emailjs.send("default_service","wildflower_contactus",
+    window.emailjs.send("matthew_peterson","wildflower_contactus",
       {from_name: this.state.firstName+" "+this.state.lastName,
       message_html: this.state.message, reply_to: this.state.email})
       .then(response => {
@@ -35,12 +34,6 @@ class ContactUsSection extends React.Component {
           console.log("FAILED. error=", err);
           this.setState({errorBarDisplayed: true});
       });
-     
-    // axios.post("api/contacts/create", this.state)
-    //   .then( res =>
-    //     res.status === 200 ? this.setState({thanksBarDisplayed: true}) : this.setState({errorBarDisplayed: true}) )
-    //   .then( res => this.setState({name: '', email: '', message: ''}) )
-    //   .catch( res => {this.setState({errorBarDisplayed: true}); console.log(res)})
   }
 
   switchToNormal = () => {
