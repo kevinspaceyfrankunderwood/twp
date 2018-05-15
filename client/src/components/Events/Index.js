@@ -50,24 +50,8 @@ class Events extends Component {
 				<Grid stackable className="eventsGridEntire">
 				<Grid.Row>
 					<Grid.Column className="cardsColumn" computer={11} tablet={10} mobile={16} >
-						<Card color="orange" raised centered className="classCard" as="a" href={FloresPDF} target="_blank">
-					    <Image className="nutritionCardPhoto" src={Flores} />
-					    <Card.Content style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
-					      <Card.Header style={{textAlign: 'center', fontSize: '1.18em'}}>
-					        Flores de Mayo
-					      </Card.Header>
-					      <Card.Description
-                  style={{padding: '10px 0', textAlign: 'center', fontStyle: "oblique", fontWeight: 700}}
-                >
-					        May 5, 12p-5p, Urban Growler
-					      </Card.Description>
-					      <Card.Description>
-					        Join your neighbors in celebrating the Twin Cities' pollinators, the local beer scene, and learn a little about how local organizations are making positive change. 
-					      </Card.Description>
-					    </Card.Content>
-					  </Card>
 
-						<Card color="green" raised centered className="classCard" as="a" target="_blank" href="https://stpaul.ce.eleyo.com/search?redirected_yet=true&sf[category]=71">
+						<Card color="green" raised centered className="classCard" as="a" target="_blank" href="https://stpaul.ce.eleyo.com/course/6520/summer-2018-adult/planting-with-a-purpose">
 					    <Image className="nutritionCardPhoto" src={Comm} />
 					    <Card.Content style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-around'}}>
 					      <Card.Header style={{textAlign: 'center', fontSize: '1.18em'}}>
