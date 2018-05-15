@@ -107,7 +107,6 @@ export const TWPDiv = styled.div.attrs({
       height: ${props => props.mobileHeight};
       background-position: ${props => props.mobileBackgroundPosition || 'top center'};
     }
-
 `
 
 export const TWPHeader = styled.h1.attrs({
