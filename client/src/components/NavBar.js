@@ -93,7 +93,7 @@ class NavBar extends Component {
                   <NavLink href="/ourteam">Our Team</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="https://thewildflowerprojectmn.org/category/garden-journal/" target="_blank">Garden Journal</NavLink>
+                  <NavLink href="https://wildflowerproject.wordpress.com/category/garden-journal/" target="_blank">Garden Journal</NavLink>
                 </NavItem>
               </DropdownMenu>
             </UncontrolledDropdown>
