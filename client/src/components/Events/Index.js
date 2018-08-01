@@ -88,7 +88,7 @@ class Events extends Component {
 
 					 <Grid.Column computer={5} tablet={6} mobile={16}> 
 							<div className="blogTitle">
-								<a style={{color: 'black', fontSize: '20px'}} href="http://food2recover.blogspot.com/">
+								<a style={{color: 'black', fontSize: '20px'}} href="https://wildflowerproject.wordpress.com/">
 									<Icon style={{marginTop: '10px', color: "#366902"}} name="feed" /> TWP Garden Journal Blog
 								</a>
 							</div>
