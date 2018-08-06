@@ -100,7 +100,8 @@ class Events extends Component {
             </Card.Meta>
 						<Card.Meta 
               as="a" 
-              href={single.link}
+							href={single.link}
+							target="_blank"
             >
               {single.link_text}
             </Card.Meta>

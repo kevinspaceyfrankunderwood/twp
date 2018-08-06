@@ -37,6 +37,7 @@ class SingleEvent extends React.Component {
             <Card.Header 
               as="a" 
               href={single.link}
+              target="_blank"
             >
               {single.link_text}
             </Card.Header>

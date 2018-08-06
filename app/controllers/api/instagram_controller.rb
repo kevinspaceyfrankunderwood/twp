@@ -5,6 +5,7 @@ class Api::InstagramController < ApplicationController
       {access_token: ENV['INSTAGRAM_ACCESS_TOKEN'],
             count: 	'1'}
           })
+          binding.pry
       render json: instagram
   end
 end

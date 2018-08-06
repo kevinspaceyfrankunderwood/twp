@@ -83,7 +83,7 @@ class DragonFly extends Component {
   state = { photos: undefined }
 
   componentDidMount() {
-		axios.get('api/instagram/index')
+		axios.get('/api/instagram/index')
     .then( res => this.setState({ photos: res.data.data }) )
     .catch( res => console.log(res))
   }
