@@ -34,7 +34,7 @@ class App extends Component {
             <Route exact path='/events' component={Events} />
             <Route exact path="/submitasite" component={Submit} />
             <Route exact path="/resources" component={Resources} />
-            <Route exact path='/register' component={Register} />
+            {/* <Route exact path='/register' component={Register} /> */}
             <Route exact path='/login' component={Login} />
             <ProtectedRoute exact path='/admin' component={Admin} />
             <Route component={NoMatch} />

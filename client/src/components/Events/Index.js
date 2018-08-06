@@ -17,6 +17,7 @@ const SectionWrap = styled.div`
 	height: 100%;
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 
 	@media (max-width: 768px) {
 		flex-direction: column;
@@ -120,12 +121,12 @@ class Events extends Component {
 
 					<SectionWrap>
 						<EventWrap
-							width={this.state.events.length === 0 ? '0%' : '75%'}
+							width={this.state.events.length === 0 ? '0%' : '60%'}
 						>
 							{this.displayEvents()}
 						</EventWrap>
 						<BlogWrap
-							width={this.state.events.length === 0 ? '100%' : '25%'}
+							width={this.state.events.length === 0 ? '75%' : '40%'}
 						>
 							<div className="blogTitle">
 								<a style={{color: 'black', fontSize: '20px'}} href="https://wildflowerproject.wordpress.com/">
