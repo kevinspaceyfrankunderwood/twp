@@ -8,6 +8,7 @@ class Api::BlogsController < ApplicationController
   def events
     blogs = HTTParty.get('https://public-api.wordpress.com/rest/v1.1/sites/wildflowerproject.wordpress.com/posts/')
     all = blogs["posts"][0...5]
-      render json: all
+    events = Event.all
+    render json: {blogs: all, events: events}
   end
 end

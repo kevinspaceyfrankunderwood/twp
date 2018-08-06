@@ -9,15 +9,54 @@ import Comm from '../../assets/images/CommEd.jpg'
 import Placeholder from '../../assets/images/basicWhiteFlower.png'
 import Mug from '../../assets/images/DeneenMug.jpg'
 import FloresPDF from '../../assets/images/FloresDeMayoPDF.pdf'
-
+import styled from 'styled-components'
 import moment from 'moment';
 
+const SectionWrap = styled.div`
+	width: ${props => props.width};
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
+`
+
+const EventWrap = styled.div`
+	height: 100%;
+	width: ${props => props.width};
+	margin: auto 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
+`
+
+const BlogWrap = styled.div`
+	width: ${props => props.width};
+	margin: 20px 0;
+	padding: 0 10px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
+
+`
+
 class Events extends Component {
-	state = { posts: [], loaded: false }
+	state = { posts: [], events: [], loaded: false }
 
 	componentDidMount() {
 		axios.get('api/blogs/events')
-		.then( res => this.setState({ posts: res.data, loaded: true }) )
+		.then( res => this.setState({ posts: res.data.blogs, events: res.data.events, loaded: true }) )
 	}
  
 	displayPosts = () => {
@@ -37,9 +76,41 @@ class Events extends Component {
       )
     })
 	}
+	
+	displayEvents = () => {
+
+		return this.state.events.map( single => {
+			return(
+				<Card
+					style={{
+						minHeight: '300px',
+						height: 'fit-content',
+						width: '300px',
+						minWidth: '300px'
+					}}
+				>
+          <Image src={single.link} />
+          <Card.Content
+						style={{display: "flex", justifyContent: 'space-around', flexDirection: 'column'}}
+					>
+            <Card.Header>{single.title}</Card.Header>
+            <Card.Meta>
+              {single.sub_title}
+            </Card.Meta>
+						<Card.Meta 
+              as="a" 
+              href={single.link}
+            >
+              {single.link_text}
+            </Card.Meta>
+          </Card.Content>
+        </Card>
+			)
+		})
+	}
 
 	render() {
-		if(this.state.loaded){
+		if(this.state.loaded=1){
 			return (
 			<div>          
         <div className="nutritionTopPhoto"></div>
@@ -47,59 +118,27 @@ class Events extends Component {
           <div className="programWordsh2">Explore TWP Events and Blog Below</div>
         </div>
 
-				<Grid stackable className="eventsGridEntire">
-				<Grid.Row>
-					<Grid.Column className="cardsColumn" computer={11} tablet={10} mobile={16} >
-
-						<Card color="green" raised centered className="classCard" as="a" target="_blank" href="https://stpaul.ce.eleyo.com/course/6520/summer-2018-adult/planting-with-a-purpose">
-					    <Image className="nutritionCardPhoto" src={Comm} />
-					    <Card.Content style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-around'}}>
-					      <Card.Header style={{textAlign: 'center', fontSize: '1.18em'}}>
-					        Community Education:<br/>Planting with a Purpose
-					      </Card.Header>
-					      <Card.Description
-                  style={{padding: '10px'}}
-                >
-					        June 13 - Dunning Community Garden
-									<br/>
-									June 20 - Merriam Station Community Garden
-					      </Card.Description>
-                <Card.Description>
-					        TWP Founders - Ean Koerner and Matt Wildenauer - are putting on an environmentally based Community Ed. course. 
-					      </Card.Description>
-					    </Card.Content>
-					  </Card>
-
-						<Card color="teal" raised centered className="classCard">
-					    <Image className="nutritionCardPhoto" src={Festival} />
-					    <Card.Content style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-around'}}>
-					      <Card.Header style={{textAlign: 'center', fontSize: '1.18em'}}>
-					        The Wildflower Festival
-					      </Card.Header>
-					      <Card.Description>
-					        Date - Coming Soon!!
-					      </Card.Description>
-								<Card.Description>
-					        Meet us at JOTP for family fun with live music, local environmental organizations, delicious food, face paint, and More!
-					      </Card.Description>
-					    </Card.Content>
-					  </Card>
-					 </Grid.Column>
-
-					 <Grid.Column computer={5} tablet={6} mobile={16}> 
+					<SectionWrap>
+						<EventWrap
+							width={this.state.events.length === 0 ? '0%' : '75%'}
+						>
+							{this.displayEvents()}
+						</EventWrap>
+						<BlogWrap
+							width={this.state.events.length === 0 ? '100%' : '25%'}
+						>
 							<div className="blogTitle">
 								<a style={{color: 'black', fontSize: '20px'}} href="https://wildflowerproject.wordpress.com/">
 									<Icon style={{marginTop: '10px', color: "#366902"}} name="feed" /> TWP Garden Journal Blog
 								</a>
 							</div>
-						<Item.Group className="commentGroup" style={styles.commentGroup}>
-							{ this.displayPosts() }	
-					  </Item.Group>
+							<Item.Group className="commentGroup" style={styles.commentGroup}>
+								{ this.displayPosts() }	
+							</Item.Group>
+						</BlogWrap>
 
-					</Grid.Column>
-
-				</Grid.Row>
-				</Grid>
+					</SectionWrap>
+					
 
 				<div className="nutritionBottom">
 					<p className="nutritionBottomWords">Discover pollinator-friendly gardening practices from local landscapers and master gardeners! Learn how to prep a garden bed, discover native species and build habitat in your own backyard!</p>

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  mount_devise_token_auth_for 'User', at: 'api/auth'
   namespace :api do
     get 'blogs/index'
+    resources 'events'
   end
 
   namespace :api do
@@ -11,7 +13,6 @@ Rails.application.routes.draw do
     get 'instagram/index'
   end
 
-  mount_devise_token_auth_for 'User', at: 'api/auth'
   namespace :api do
     #API ROUTES SHOULD GO HERE
   end

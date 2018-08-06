@@ -16,6 +16,8 @@ import GardenMap from './GardenMap/Index'
 import Submit from './Submit/Index'
 import Resources from './Resources/Index'
 import Events from './Events/Index'
+import {Admin} from './Admin/Index'
+import AuthRoute from './AuthRoute'
 
 class App extends Component {
   render() {
@@ -33,6 +35,8 @@ class App extends Component {
             <Route exact path="/submitasite" component={Submit} />
             <Route exact path="/resources" component={Resources} />
             <Route exact path='/register' component={Register} />
+            <Route exact path='/login' component={Login} />
+            <ProtectedRoute exact path='/admin' component={Admin} />
             <Route component={NoMatch} />
           </Switch>
           <Footer />

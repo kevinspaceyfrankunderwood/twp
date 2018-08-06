@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Header, Segment, Form, Button } from 'semantic-ui-react';
 import { connect } from 'react-redux';
-import { handleLogin } from '../actions/auth';
+import { handleLogin } from '../reducers/user';
 
 class Login extends Component {
   state = { email: '', password: '' };
@@ -16,7 +16,7 @@ class Login extends Component {
     const { dispatch, history } = this.props;
     const { email, password } = this.state;
 
-    dispatch(handleLogin(email, password, history));
+    dispatch(handleLogin({email, password}, history));
   }
 
   render() {
