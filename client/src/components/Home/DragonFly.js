@@ -80,28 +80,28 @@ const DragonFlyHeader = TWPHeader.extend`
 
 class DragonFly extends Component {
 
-  state = { photos: undefined }
+  state = { photos: [] }
 
   componentDidMount() {
-		axios.get('/api/instagram/index')
+		axios.get('/api/instagram/single')
     .then( res => this.setState({ photos: res.data.data }) )
     .catch( res => console.log(res))
   }
 
   displayImages = () => {
-		return this.state.photos.map( pic => 
+		return (
 			<TWPDiv
         width={'225px'}
         height={'225px'}
         padding={'0'}
       >
-				<TWPAnchor href={pic.link} target="_blank" rel="noopener noreferrer" >
+				<TWPAnchor href={this.state.photos.link} target="_blank" rel="noopener noreferrer" >
           <TWPImage 
             width={'225px'}
             borderRadius={'5px'}
             height={'-webkit-fill-available'}
             className="homeSingleInsta" 
-            src={pic.images.standard_resolution.url} 
+            src={this.state.photos[0].images.standard_resolution.url} 
           />
 		    </TWPAnchor>
 			</TWPDiv>
@@ -118,7 +118,9 @@ class DragonFly extends Component {
         padding={'0'}
       >
         <DragonflySection
-            background={`linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0)), url(${Dragon}) fixed`}
+            backgroundColor={`linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0))`}
+            desktopImage={`url(${Dragon})`}
+            mobileBackground={`url(${Dragon})`}
             backgroundSize={'cover'}
             backgroundPosition={'bottom center'}
             height={'850px'}
@@ -175,7 +177,7 @@ class DragonFly extends Component {
                     >
                       Revitalizing the health &amp; wellness of pollinator habitats
                     </BoxTopText>
-                      { this.state.photos !== undefined && this.displayImages() }
+                      { this.state.photos.length && this.displayImages() }
                     <TWPSectionHeader
                       fontSize={TWPStyleGuide.font.size.mediumSmall}
                       width={'100%'}

@@ -36,7 +36,7 @@ class InstagramGoogle extends Component {
   state = { blog: [] }
   
   componentWillMount(){
-    axios.get('api/blogs/index')
+    axios.get('api/blogs')
     .then( res => this.setState({blog: res.data}) )
     .catch( res => console.log(res))
   }
