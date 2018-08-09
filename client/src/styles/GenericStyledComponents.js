@@ -143,7 +143,7 @@ export const TWPHeader = styled.h1.attrs({
 `
 
 export const TWPSectionHeader = styled.h2.attrs({
-  width: props => props.width || '100%',
+  width: props => props.width || null,
   textAlign: props => props.textAlign || 'center',
   margin: props => props.margin || '0px',
   color: props => props.color || TWPStyleGuide.color.black,

@@ -26,6 +26,10 @@ const DragonFlySubHeader = TWPSectionHeader.extend`
 `
 
 const DragonflySection = TWPDiv.extend`
+
+&:before {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0))
+}
   ${media.tablet`
     height: 100%;
   `}
@@ -118,9 +122,9 @@ class DragonFly extends Component {
         padding={'0'}
       >
         <DragonflySection
-            backgroundColor={`linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0))`}
-            desktopImage={`url(${Dragon})`}
-            mobileBackground={`url(${Dragon})`}
+            background={`linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${Dragon})`}
+            // desktopImage={`url(${Dragon})`}
+            // mobileBackground={`url(${Dragon})`}
             backgroundSize={'cover'}
             backgroundPosition={'bottom center'}
             height={'850px'}

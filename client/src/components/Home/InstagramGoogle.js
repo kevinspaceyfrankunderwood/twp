@@ -17,12 +17,14 @@ const BlogDivWrap = TWPDiv.extend`
 `
 
 const BlogAnchorWrap = TWPAnchor.extend`
+  
   ${media.tablet`
     width: 100%;
   `}
 `
 
 const BlogImageWrap = TWPDiv.extend`
+  max-width: 400px;
   &:hover {
     background-color: ${TWPStyleGuide.color.brightOrange}
   }
