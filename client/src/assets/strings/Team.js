@@ -41,12 +41,6 @@ export const board = [
     photo: Megan 
   },
   {
-    fullName: 'Desiree Mueller',
-    title: 'Treasurer',
-    longBio: 'Des’s love of plants sparked her desire to become a Ramsey County Master Gardener in 2013. With a desire to share her passion for the planet with others, the Master Gardener program has provided an opportunity to engage with the public, spreading best practice research. Upon meeting the founder of The Wildflower Project, she knew it was another great opportunity to increase public awareness for the plight of pollinators and a way to spark public interest in caring for the land. As a Project Coordinator by trade, Desiree shares her organizational and financial management skills as TWP’s Treasurer.',
-    photo: Des
-  },
-  {
     fullName: 'Matthew Peterson',
     title: 'Co-Founder & Web Development',
     longBio: "A good friend of Ean Koerner and Matt Wildenauer's, Matthew joined TWP in 2015 as business developer and brought to fruition TWP's first few partnership gardens. Having moved to Utah, his role has changed to Web Developer (he built this website!), board member, and long-distance support.",
