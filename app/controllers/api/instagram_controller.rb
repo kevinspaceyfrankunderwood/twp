@@ -8,7 +8,7 @@ class Api::InstagramController < ApplicationController
       render json: instagram
   end
 
-  def bundle
+  def tenGroup
     instagram = HTTParty.get("https://api.instagram.com/v1/users/self/media/recent/?access_token=",
   	{query:
       {access_token: ENV['INSTAGRAM_ACCESS_TOKEN'],

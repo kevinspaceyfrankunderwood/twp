@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   namespace :api do
     get 'blogs/events'
     get 'instagram/single'
-    get 'instagram/bundle'
+    get 'instagram/tenGroup'
     resources 'blogs'
     resources 'events'
+    # resources 'instagram'
   end
 
   #Do not place any routes below this one
