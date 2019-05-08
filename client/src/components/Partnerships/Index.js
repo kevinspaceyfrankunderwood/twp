@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import AboveTheFold from './AboveTheFold'
-import RestoreEducate from './RestoreEducate'
-import PartnershipSlider from './PartnershipSlider';
+import AboveTheFold from "./AboveTheFold";
+import RestoreEducate from "./RestoreEducate";
+import PartnershipSlider from "./PartnershipSlider";
 
 const Index = () => {
   return (
@@ -11,7 +11,7 @@ const Index = () => {
       <RestoreEducate />
       <PartnershipSlider />
     </div>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;

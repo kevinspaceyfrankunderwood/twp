@@ -1,50 +1,61 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import { employees, board } from '../../assets/strings/Team';
+import { employees, board } from "../../assets/strings/Team";
 
-import TWPStyleGuide from '../../styles/TWPStyleGuide';
+import TWPStyleGuide from "../../styles/TWPStyleGuide";
 
-import SingleDuo from '../Generic/SingleDuo';
-import { TWPSectionHeader, TWPDiv } from '../../styles/GenericStyledComponents';
+import SingleDuo from "../Generic/SingleDuo";
+import { TWPSectionHeader, TWPDiv } from "../../styles/GenericStyledComponents";
 
 const TeamHeaderText = TWPSectionHeader.extend`
   border-bottom: 1px solid ${TWPStyleGuide.color.darkGreen};
-`
+`;
 
 class Bios extends Component {
-
   employees = () => {
-    return employees.map( (person, i) => {    
+    return employees.map((person, i) => {
       const item = {
         title: person.fullName,
         description: person.title,
         picture: person.photo,
         longerDescription: person.longBio
-      }
-      return <SingleDuo item={item} index={i} widthSetting={'100%'} textAlignSetting={'center'}/>
-    })
-  }
+      };
+      return (
+        <SingleDuo
+          item={item}
+          index={i}
+          widthSetting={"100%"}
+          textAlignSetting={"center"}
+        />
+      );
+    });
+  };
 
   board = () => {
-    return board.map( (person, i) => {    
+    return board.map((person, i) => {
       const item = {
         title: person.fullName,
         description: person.title,
         picture: person.photo,
         longerDescription: person.longBio
-      }
-      return <SingleDuo item={item} index={i+2} widthSetting={'100%'} textAlignSetting={'center'}/>
-    })
-  }
+      };
+      return (
+        <SingleDuo
+          item={item}
+          index={i + 2}
+          widthSetting={"100%"}
+          textAlignSetting={"center"}
+        />
+      );
+    });
+  };
 
   render() {
     return (
       <div>
-        <TWPDiv
-          padding={'0'}
-        >
+        <TWPDiv padding={"0"}>
           <TeamHeaderText
-            padding={'5%'}
+            padding={"5%"}
             fontSize={TWPStyleGuide.font.size.mediumLarge}
             smallTabletFontSize={TWPStyleGuide.font.size.medium}
             mobileFontSize={TWPStyleGuide.font.size.mediumSmall}
@@ -53,16 +64,14 @@ class Bios extends Component {
           </TeamHeaderText>
           {this.employees()}
         </TWPDiv>
-        <TWPDiv
-          padding={'0'}
-        >
+        <TWPDiv padding={"0"}>
           <TeamHeaderText
-            padding={'5%'}
+            padding={"5%"}
             fontSize={TWPStyleGuide.font.size.mediumLarge}
             smallTabletFontSize={TWPStyleGuide.font.size.medium}
             mobileFontSize={TWPStyleGuide.font.size.mediumSmall}
           >
-            Board of Directors
+            Strategic Advisors
           </TeamHeaderText>
           {this.board()}
         </TWPDiv>

@@ -1,31 +1,42 @@
-import React, { Component } from 'react';
-import { Header, Form, Button, Segment } from 'semantic-ui-react';
-import { connect } from 'react-redux';
-import { registerUser } from '../reducers/user';
+import React, { Component } from "react";
+import { Header, Form, Button, Segment } from "semantic-ui-react";
+import { connect } from "react-redux";
+import { registerUser } from "../reducers/user";
 
 class Register extends Component {
-  state = { email: '', password: '', password_confirmation: '' };
+  state = { email: "", password: "", password_confirmation: "" };
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault();
     const { email, password, password_confirmation } = this.state;
     const { dispatch, history } = this.props;
     if (password === password_confirmation) {
-      dispatch(registerUser({ email, password, password_confirmation }, history));
-    } 
-  }
+      dispatch(
+        registerUser(
+          {
+            email: email,
+            password: password,
+            password_confirmation: password_confirmation
+          },
+          history
+        )
+      );
+    }
+  };
 
-  handleChange = (e) => {
+  handleChange = e => {
     const { id, value } = e.target;
     this.setState({ [id]: value });
-  }
+  };
 
   render() {
     const { email, password, password_confirmation } = this.state;
 
     return (
       <Segment basic>
-        <Header as='h1' textAlign='center'>Register Component</Header>
+        <Header as='h1' textAlign='center'>
+          Register Component
+        </Header>
         <Form onSubmit={this.handleSubmit}>
           <Form.Field>
             <label htmlFor='email'>Email</label>
