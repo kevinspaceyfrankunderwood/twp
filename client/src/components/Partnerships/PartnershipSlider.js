@@ -5,7 +5,6 @@ import "./carousel.css";
 import MSCG from "../../assets/images/mscg.jpg";
 import awesome from "../../assets/images/the-awesome-foundation.png";
 import PPCG from "../../assets/images/PPCG.png";
-import Propel from "../../assets/images/propel.png";
 import Sunrise from "../../assets/images/sunrise.png";
 import JOTP from "../../assets/images/JOTP.jpg";
 import Dunning from "../../assets/images/Dunning.jpg";

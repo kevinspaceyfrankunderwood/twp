@@ -142,13 +142,6 @@ const Footer = () => {
           <TWPDiv width={"100%"}>
             <TWPParagraph
               width={"fit-content"}
-              tabletFontSize={TWPStyleGuide.font.size.smallTiny}
-            >
-              Propel Nonprofits is the 501(c)(3) fiscal sponsor for The Wildflower
-              Project.
-            </TWPParagraph>
-            <TWPParagraph
-              width={"fit-content"}
               tabletFontSize={TWPStyleGuide.font.size.tiny}
               padding={"2%"}
             >
