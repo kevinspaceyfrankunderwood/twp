@@ -1,19 +1,28 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import { TWPHeader, TWPDiv, TWPSectionHeader, TWPParagraph, TWPImage, TWPAnchor, media } from '../../styles/GenericStyledComponents'
-import TWPStyleGuide from '../../styles/TWPStyleGuide';
+import {
+  TWPHeader,
+  TWPDiv,
+  TWPSectionHeader,
+  TWPParagraph,
+  TWPImage,
+  TWPAnchor,
+  media
+} from "../../styles/GenericStyledComponents";
+import TWPStyleGuide from "../../styles/TWPStyleGuide";
 
-import Field from '../../assets/images/FlowerField.jpg'
-import squares from '../../assets/images/Squares.png'
-import Bouquet from '../../assets/images/BouquetOranges.png'
-import urban from '../../assets/images/urbanBoys.jpg'
-import sunrise from '../../assets/images/sunriseLiatris.jpg'
+import Field from "../../assets/images/FlowerField.jpg";
+import squares from "../../assets/images/Squares.png";
+import Bouquet from "../../assets/images/BouquetOranges.png";
+import urban from "../../assets/images/urbanBoys.jpg";
+import sunrise from "../../assets/images/sunriseLiatris.jpg";
+import Banner from "../../assets/images/SummerBuzz_Banner.jpg";
 
 const AboveTheFoldWrap = TWPDiv.extend`
   ${media.tablet`
     margin-top: 100px;
   `}
-`
+`;
 
 const TopTwoInfoBoxes = TWPDiv.extend`
   ${media.desktop`
@@ -23,16 +32,16 @@ const TopTwoInfoBoxes = TWPDiv.extend`
     width: 70%;
     margin: 10px 0;
   `}
-  @media(max-width: 500px){
-    width: 90%
+  @media(max-width: 500px) {
+    width: 90%;
   }
-`
+`;
 
 const TopWrapper = TWPDiv.extend`
   ${media.tablet`
     flex-direction: column;
   `}
-`
+`;
 
 const TopTwoTopText = TWPSectionHeader.extend`
   height: 60%;
@@ -42,34 +51,41 @@ const TopTwoTopText = TWPSectionHeader.extend`
   ${media.phone`
     font-size: ${TWPStyleGuide.font.size.small};
   `}
-`
+`;
 
 const TopTwoClipArt = TWPImage.extend`
   max-height: 72px;
-  
+
   ${media.tablet`
     width: 25%
   `}
-`
+`;
 
 const TopTwoNumbers = TWPSectionHeader.extend`
-  @media(max-width: 450px) {
+  @media (max-width: 450px) {
     font-size: 2em;
   }
-`
+`;
 
 const TopTwoBottomLeftNumberText = TWPDiv.extend`
-  @media(max-width: 450px){
+  @media (max-width: 450px) {
     padding: 0 6%;
   }
-`
+`;
 
 export const AboveTheFold = () => {
-    return(
-    <AboveTheFoldWrap 
-      padding={'0'}
-    >
-      <TWPDiv
+  return (
+    <AboveTheFoldWrap padding={"0"}>
+      <TWPDiv>
+        <TWPImage
+          height='unset'
+          width='100%'
+          maxHeight='unset'
+          maxWidth='800px'
+          src={Banner}
+        />
+      </TWPDiv>
+      {/* <TWPDiv
         background={`linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, .8), rgba(255, 255, 255, 0)), url(${sunrise})`}
         backgroundSize={'cover'}
         backgroundPosition={'top'}
@@ -211,10 +227,9 @@ export const AboveTheFold = () => {
             </TWPDiv>
           </TopTwoInfoBoxes>
         </TopWrapper>
-      </TWPDiv>
+      </TWPDiv> */}
     </AboveTheFoldWrap>
   );
-}
-
+};
 
 export default AboveTheFold;

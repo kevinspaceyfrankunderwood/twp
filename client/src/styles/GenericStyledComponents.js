@@ -1,49 +1,49 @@
-import TWPStyleGuide from './TWPStyleGuide.js'
-import styled, {css} from 'styled-components';
+import TWPStyleGuide from "./TWPStyleGuide.js";
+import styled, { css } from "styled-components";
 
 const defaultFont = TWPStyleGuide.font.family.chivo;
 const headerFont = TWPStyleGuide.font.family.monoFur;
 
-const mediaQueryLargeMaxWidth = '992px';
-const mediaQueryMediumMaxWidth = '768px';
-const mediaQuerySmallMaxWidth = '400px';
+const mediaQueryLargeMaxWidth = "992px";
+const mediaQueryMediumMaxWidth = "768px";
+const mediaQuerySmallMaxWidth = "400px";
 
 const sizes = {
   giant: 1170,
   desktop: 992,
   tablet: 768,
   phone: 400
-}
+};
 
 export const media = Object.keys(sizes).reduce((accumulator, label) => {
   // use em in breakpoints to work properly cross-browser and support users
   // changing their browsers font-size: https://zellwk.com/blog/media-query-units/
-  const emSize = sizes[label] / 16
+  const emSize = sizes[label] / 16;
   accumulator[label] = (...args) => css`
     @media (max-width: ${emSize}em) {
       ${css(...args)}
     }
-  `
-  return accumulator
-}, {})
+  `;
+  return accumulator;
+}, {});
 
 export const TWPDiv = styled.div.attrs({
-  display: props => props.display || 'flex',
+  display: props => props.display || "flex",
   position: props => props.position || null,
-  padding: props => props.padding || '0 2%',
-  margin: props => props.margin || '0px',
+  padding: props => props.padding || "0 2%",
+  margin: props => props.margin || "0px",
   flexDirection: props => props.flexDirection || "column",
-  justifyContent: props => props.justifyContent || 'center',
-  alignItems: props => props.alignItems || 'center',
+  justifyContent: props => props.justifyContent || "center",
+  alignItems: props => props.alignItems || "center",
   flexWrap: props => props.flexWrap || null,
-  flex: props => props.flex || 'wrap',
+  flex: props => props.flex || "wrap",
   width: props => props.width || null,
   order: props => props.order || null,
   backgroundColor: props => props.backgroundColor || null,
-  background: props => props.background || null ,
+  background: props => props.background || null,
   backgroundImage: props => props.desktopImage || null,
-  backgroundRepeat: props => props.backgroundRepeat || 'no-repeat',
-  backgroundPosition: props => props.backgroundPosition || 'center center',
+  backgroundRepeat: props => props.backgroundRepeat || "no-repeat",
+  backgroundPosition: props => props.backgroundPosition || "center center",
   backgroundAttachment: props => props.backgroundAttachment || null,
   backgroundSize: props => props.backgroundSize || null,
   border: props => props.border || null,
@@ -52,7 +52,7 @@ export const TWPDiv = styled.div.attrs({
   borderBottom: props => props.borderBottom || null,
   borderTop: props => props.borderTop || null,
   borderRadius: props => props.borderRadius || null,
-  cursor: props => props.cursor || null,
+  cursor: props => props.cursor || null
 })`
   display: ${props => props.display};
   position: ${props => props.position};
@@ -63,7 +63,7 @@ export const TWPDiv = styled.div.attrs({
   flex-wrap: ${props => props.flexWrap};
   flex: ${props => props.flex};
   align-items: ${props => props.alignItems};
-  height: ${props => props.height ? props.height : 'auto'};
+  height: ${props => (props.height ? props.height : "auto")};
   width: ${props => props.width};
   background-color: ${props => props.backgroundColor};
   background: ${props => props.background};
@@ -81,6 +81,8 @@ export const TWPDiv = styled.div.attrs({
   order: ${props => props.order};
   min-width: ${props => props.minWidth};
   box-shadow ${props => props.boxShadow};
+  max-height: ${props => props.maxHeight};
+  max-width: ${props => props.maxWidth};
 
     &:hover {
       background: ${props => props.hoverBackgroundColor};
@@ -105,31 +107,31 @@ export const TWPDiv = styled.div.attrs({
 
     @media (max-width: 400px){
       height: ${props => props.mobileHeight};
-      background-position: ${props => props.mobileBackgroundPosition || 'top center'};
+      background-position: ${props => props.mobileBackgroundPosition || "top center"};
     }
-`
+`;
 
 export const TWPHeader = styled.h1.attrs({
-  width: props => props.width || '100%',
-  textAlign: props => props.textAlign || 'center',
-  margin: props => props.margin || '0px',
+  width: props => props.width || "100%",
+  textAlign: props => props.textAlign || "center",
+  margin: props => props.margin || "0px",
   color: props => props.color || TWPStyleGuide.color.black,
-  padding: props => props.padding || '0 2%',
+  padding: props => props.padding || "0 2%",
   fontFamily: props => props.fontFamily || TWPStyleGuide.font.family.plex,
   fontSize: props => props.fontSize || TWPStyleGuide.font.size.large,
-  fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.threeHundred,
+  fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.threeHundred
 })`
   width: ${props => props.width};
   text-align: ${props => props.textAlign};
   margin: ${props => props.margin};
-  background-color: ${props => props.backgroundColor || null };
+  background-color: ${props => props.backgroundColor || null};
   color: ${props => props.color};
   padding: ${props => props.padding};
   font-family: ${props => props.fontFamily};
   font-size: ${props => props.fontSize};
   font-weight: ${props => props.fontWeight};
 
-  @media (max-width: 992px){
+  @media (max-width: 992px) {
     font-size: ${props => props.tabletFontSize || null};
   }
 
@@ -137,20 +139,20 @@ export const TWPHeader = styled.h1.attrs({
     font-size: ${props => props.smallTabletFontSize || null};
   }
 
-  @media (Max-width: 400px){
+  @media (max-width: 400px) {
     font-size: ${props => props.mobileFontSize || null};
   }
-`
+`;
 
 export const TWPSectionHeader = styled.h2.attrs({
   width: props => props.width || null,
-  textAlign: props => props.textAlign || 'center',
-  margin: props => props.margin || '0px',
+  textAlign: props => props.textAlign || "center",
+  margin: props => props.margin || "0px",
   color: props => props.color || TWPStyleGuide.color.black,
-  padding: props => props.padding || '0 2%',
+  padding: props => props.padding || "0 2%",
   fontFamily: props => props.fontFamily || TWPStyleGuide.font.family.plex,
   fontSize: props => props.fontSize || TWPStyleGuide.font.size.mediumSmall,
-  fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.threeHundred  
+  fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.threeHundred
 })`
   width: ${props => props.width};
   text-align: ${props => props.textAlign};
@@ -162,7 +164,7 @@ export const TWPSectionHeader = styled.h2.attrs({
   font-size: ${props => props.fontSize};
   font-weight: ${props => props.fontWeight};
 
-  @media (max-width: 992px){
+  @media (max-width: 992px) {
     font-size: ${props => props.tabletFontSize || null};
   }
 
@@ -170,22 +172,22 @@ export const TWPSectionHeader = styled.h2.attrs({
     font-size: ${props => props.smallTabletFontSize || null};
   }
 
-  @media (Max-width: 400px){
+  @media (max-width: 400px) {
     font-size: ${props => props.mobileFontSize || null};
   }
 `;
 
 export const TWPParagraph = styled.h3.attrs({
-  width: props => props.width || '100%',
-  margin: props => props.margin || '0px',
+  width: props => props.width || "100%",
+  margin: props => props.margin || "0px",
   color: props => props.color || TWPStyleGuide.color.black,
-  padding: props => props.padding || '0 2%',
+  padding: props => props.padding || "0 2%",
   fontFamily: props => props.fontFamily || TWPStyleGuide.font.family.plex,
   fontSize: props => props.fontSize || TWPStyleGuide.font.size.small,
   fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.threeHundred,
-  textAlign: props => props.textAlign || 'left',
+  textAlign: props => props.textAlign || "left",
   border: props => props.botder || null,
-  whiteSpace: props => props.whiteSpace || 'pre-line',
+  whiteSpace: props => props.whiteSpace || "pre-line"
 })`
   border: ${props => props.border};
   width: ${props => props.width};
@@ -198,38 +200,38 @@ export const TWPParagraph = styled.h3.attrs({
   font-weight: ${props => props.fontWeight};
   text-align: ${props => props.textAlign};
   white-space: ${props => props.whiteSpace};
-  
-  @media (max-width: 992px){
-    font-size: ${props => props.tabletFontSize || null}
+
+  @media (max-width: 992px) {
+    font-size: ${props => props.tabletFontSize || null};
   }
 
   @media (max-width: 768px) {
     font-size: ${props => props.smallTabletFontSize || null};
   }
 
-  @media (max-width: 400px){
+  @media (max-width: 400px) {
     font-size: ${props => props.mobileFontSize || null};
   }
-`
+`;
 
 export const TWPAnchor = styled.a.attrs({
   height: props => props.height,
   width: props => props.width,
-  display: props => props.display || 'flex',
+  display: props => props.display || "flex",
   flexDirection: props => props.flexDirection || "column",
-  justifyContent: props => props.justifyContent || 'center',
-  alignItems: props => props.alignItems || 'center',
+  justifyContent: props => props.justifyContent || "center",
+  alignItems: props => props.alignItems || "center",
   flexWrap: props => props.flexWrap || null,
-  flex: props => props.flex || 'wrap',
+  flex: props => props.flex || "wrap",
   backgroundColor: props => props.backgroundColor,
-  margin: props => props.margin || '0px',
+  margin: props => props.margin || "0px",
   color: props => props.color || TWPStyleGuide.color.black,
   padding: props => props.padding || null,
   fontFamily: props => props.fontFamily || TWPStyleGuide.font.family.plex,
   fontSize: props => props.fontSize || TWPStyleGuide.font.size.small,
-  fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.threeHundred,  
-  textDecoration: props => props.textDecoration || 'none',
-  textAlign: props => props.textAlign || 'center',
+  fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.threeHundred,
+  textDecoration: props => props.textDecoration || "none",
+  textAlign: props => props.textAlign || "center"
 })`
   display: ${props => props.display};
   flex-direction: ${props => props.flexDirection};
@@ -249,23 +251,23 @@ export const TWPAnchor = styled.a.attrs({
   text-align: ${props => props.textAlign};
 
   &:hover {
-    color: ${props => props.hoverColor || 'white'};
+    color: ${props => props.hoverColor || "white"};
     background-color: ${props => props.hoverBackgroundColor};
     cursor: pointer;
   }
-`
+`;
 
 export const TWPAnchorHomeNav = styled.a.attrs({
-  margin: props => props.margin || '0px',
+  margin: props => props.margin || "0px",
   color: props => props.color || TWPStyleGuide.color.black,
   padding: props => props.padding || null,
   fontFamily: props => props.fontFamily || TWPStyleGuide.font.family.plex,
   fontSize: props => props.fontSize || TWPStyleGuide.font.size.small,
-  fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.threeHundred,  
-  textDecoration: props => props.textDecoration || 'none',
-  width: props => props.width || '100%',
-  border: props => props.border || '1px solid white',
-  textAlign: props => props.textAlign || 'center',
+  fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.threeHundred,
+  textDecoration: props => props.textDecoration || "none",
+  width: props => props.width || "100%",
+  border: props => props.border || "1px solid white",
+  textAlign: props => props.textAlign || "center"
 })`
   margin: ${props => props.margin};
   color: ${props => props.color};
@@ -278,33 +280,34 @@ export const TWPAnchorHomeNav = styled.a.attrs({
   border: ${props => props.border};
   text-align: ${props => props.textAlign};
   transition: all ease 0.8s;
-  
+
   &:hover {
     border-radius: 100px;
     box-shadow: inset 560px 0 0 0 ${TWPStyleGuide.color.darkBlue};
-    color: ${TWPStyleGuide.color.white}
+    color: ${TWPStyleGuide.color.white};
   }
-`
+`;
 
 export const TWPCard = styled.a.attrs({
-  display: props => props.display || 'flex',
+  display: props => props.display || "flex",
   border: props => props.border || null,
-  borderRadius: props => props.borderRadius || '5px',
-  padding: props => props.padding || '0 2%',
-  margin: props => props.margin || '0px',
+  borderRadius: props => props.borderRadius || "5px",
+  padding: props => props.padding || "0 2%",
+  margin: props => props.margin || "0px",
   flexDirection: props => props.flexDirection || "column",
-  justifyContent: props => props.justifyContent || 'center',
-  alignItems: props => props.alignItems || 'center',
+  justifyContent: props => props.justifyContent || "center",
+  alignItems: props => props.alignItems || "center",
   flex: props => props.flex || null,
   height: props => props.height || null,
   width: props => props.width || null,
   backgroundColor: props => props.backgroundColor || null,
   backgroundImage: props => props.desktopImage || null,
-  backgroundRepeat: props => props.backgroundRepeat || 'no-repeat',
+  backgroundRepeat: props => props.backgroundRepeat || "no-repeat",
   backgroundAttachment: props => props.backgroundAttachment,
   backgroundPosition: props => props.backgroundPosition,
-  boxShadow: props => props.boxShadow || `0px 1px 10px 1px ${TWPStyleGuide.color.lightGray}`,
-  textDecoration: props => props.textDecoration || 'none',
+  boxShadow: props =>
+    props.boxShadow || `0px 1px 10px 1px ${TWPStyleGuide.color.lightGray}`,
+  textDecoration: props => props.textDecoration || "none"
 })`
   display: ${props => props.display};
   border: ${props => props.border};
@@ -319,26 +322,24 @@ export const TWPCard = styled.a.attrs({
   width: ${props => props.width};
   background-color: ${props => props.backgroundColor};
   background-image: (${props => props.desktopImage});
-  background-repeat: ${props => props.backgroundRepeat}; 
-  background-attachment: ${props => props.backgroundAttachment}; 
+  background-repeat: ${props => props.backgroundRepeat};
+  background-attachment: ${props => props.backgroundAttachment};
   background-position: ${props => props.backgroundPosition};
   box-shadow: ${props => props.boxShadow};
   text-decoration: ${props => props.textDecoration};
 
-    @media (max-width: 768px){
-      height: ${props => props.tabletHeight};
-      background: ${props => props.backgroundColor}, 
-        url(${props => props.mobileBackground}) 
-        ${props => props.backgroundRepeat} 
-        ${props => props.backgroundAttachment} 
-        ${props => props.backgroundPosition}
-    }
+  @media (max-width: 768px) {
+    height: ${props => props.tabletHeight};
+    background: ${props => props.backgroundColor},
+      url(${props => props.mobileBackground}) ${props => props.backgroundRepeat}
+        ${props => props.backgroundAttachment} ${props => props.backgroundPosition};
+  }
 
-    @media (max-width: 400px){
-      height: ${props => props.mobileHeight};
-      background-position: top center;
-    }
-`
+  @media (max-width: 400px) {
+    height: ${props => props.mobileHeight};
+    background-position: top center;
+  }
+`;
 
 export const FooterGridLink = styled.a.attrs({
   border: props => props.border || null,
@@ -346,22 +347,22 @@ export const FooterGridLink = styled.a.attrs({
   borderRight: props => props.borderRight || null,
   borderBottom: props => props.borderBottom || null,
   bordeTop: props => props.borderTop || null,
-  width: props => props.width || '100%',
-  margin: props => props.margin || '0px',
+  width: props => props.width || "100%",
+  margin: props => props.margin || "0px",
   color: props => props.color || TWPStyleGuide.color.white,
-  padding: props => props.padding || '1% 2%',
+  padding: props => props.padding || "1% 2%",
   fontFamily: props => props.fontFamily || TWPStyleGuide.font.family.plex,
   fontSize: props => props.fontSize || TWPStyleGuide.font.size.small,
   fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.threeHundred,
-  textAlign: props => props.textAlign || 'left',
-  textDecoration: props => props.textDecoration || 'none',
+  textAlign: props => props.textAlign || "left",
+  textDecoration: props => props.textDecoration || "none"
 })`
   text-decoration: ${props => props.textDecoration};
   border: ${props => props.border};
   border-top: ${props => props.borderTop};
   border-bottom: ${props => props.borderBottom};
   border-left: ${props => props.borderLeft};
-  border-right: ${props => props.borderRight};  
+  border-right: ${props => props.borderRight};
   width: ${props => props.width};
   margin: ${props => props.margin};
   color: ${props => props.color};
@@ -382,29 +383,29 @@ export const FooterGridLink = styled.a.attrs({
     border-bottom: none;
   }
 
-  @media (max-width: 400px){
-    font-size: ${TWPStyleGuide.font.size.finePrint}
+  @media (max-width: 400px) {
+    font-size: ${TWPStyleGuide.font.size.finePrint};
   }
-`
+`;
 
 export const TWPFooterAnchor = styled.a.attrs({
   height: props => props.height,
   width: props => props.width,
-  display: props => props.display || 'flex',
+  display: props => props.display || "flex",
   flexDirection: props => props.flexDirection || "column",
-  justifyContent: props => props.justifyContent || 'center',
-  alignItems: props => props.alignItems || 'center',
+  justifyContent: props => props.justifyContent || "center",
+  alignItems: props => props.alignItems || "center",
   flexWrap: props => props.flexWrap || null,
-  flex: props => props.flex || 'wrap',
+  flex: props => props.flex || "wrap",
   backgroundColor: props => props.backgroundColor,
-  margin: props => props.margin || '0px',
+  margin: props => props.margin || "0px",
   color: props => props.color || TWPStyleGuide.color.black,
   padding: props => props.padding || null,
   fontFamily: props => props.fontFamily || TWPStyleGuide.font.family.plex,
   fontSize: props => props.fontSize || TWPStyleGuide.font.size.small,
-  fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.threeHundred,  
-  textDecoration: props => props.textDecoration || 'none',
-  textAlign: props => props.textAlign || 'center',
+  fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.threeHundred,
+  textDecoration: props => props.textDecoration || "none",
+  textAlign: props => props.textAlign || "center"
 })`
   display: ${props => props.display};
   flex-direction: ${props => props.flexDirection};
@@ -424,49 +425,48 @@ export const TWPFooterAnchor = styled.a.attrs({
   text-align: ${props => props.textAlign};
 
   &:hover {
-    color: ${props => props.hoverColor || 'white'};
+    color: ${props => props.hoverColor || "white"};
     background-color: ${props => props.hoverBackgroundColor};
     cursor: pointer;
   }
 
-  @media (max-width: 768px){
-    font-size: ${TWPStyleGuide.font.size.small}
+  @media (max-width: 768px) {
+    font-size: ${TWPStyleGuide.font.size.small};
   }
 
-  @media (max-width: 550px){
-    font-size: ${TWPStyleGuide.font.size.smallTiny}
+  @media (max-width: 550px) {
+    font-size: ${TWPStyleGuide.font.size.smallTiny};
   }
 
-  @media (max-width: 400px){
-    font-size: ${TWPStyleGuide.font.size.tiny}
+  @media (max-width: 400px) {
+    font-size: ${TWPStyleGuide.font.size.tiny};
   }
-`
+`;
 
 export const TWPImage = styled.img`
   max-width: ${props => props.maxWidth || null};
   max-height: ${props => props.maxHeight || null};
-  width: ${props => props.width || '100%'};
-  height: ${props => props.height || '100%'};
+  width: ${props => props.width || "100%"};
+  height: ${props => props.height || "100%"};
   margin: ${props => props.margin};
   padding: ${props => props.padding};
-  border-radius: ${props => props.borderRadius ? props.borderRadius : '0px'};
-  box-shadow: ${props => props.boxShadow ? props.boxShadow : null }
-
-  @media (max-width: 992px){
+  border-radius: ${props => (props.borderRadius ? props.borderRadius : "0px")};
+  box-shadow: ${props => (props.boxShadow ? props.boxShadow : null)} @media
+    (max-width: 992px) {
     height: ${props => props.tabletHeight};
     width: ${props => props.tabletWidth};
   }
 
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     height: ${props => props.smallTabletHeight};
     width: ${props => props.smallTabletWidth};
   }
 
-  @media (max-width: 400px){
+  @media (max-width: 400px) {
     height: ${props => props.mobileHeight};
     width: ${props => props.mobileWidth};
   }
-`
+`;
 
 export const TWPButton = styled.button`
   height: ${props => props.height};
@@ -476,25 +476,25 @@ export const TWPButton = styled.button`
   padding: ${props => props.padding};
   margin: ${props => props.margin};
   border-radius: ${props => props.borderRadius};
-  font-size: ${props => props.fontSize}; 
+  font-size: ${props => props.fontSize};
   border: ${props => props.border};
-  
+
   &:hover {
     color: ${props => props.hoverColor};
     cursor: pointer;
     background-color: ${props => props.hoverBackground};
   }
-`
+`;
 export const BLDiv = styled.div.attrs({
-  display: props => props.display || 'flex',
+  display: props => props.display || "flex",
   position: props => props.position || null,
-  padding: props => props.padding || '0 2%',
-  margin: props => props.margin || '0px',
+  padding: props => props.padding || "0 2%",
+  margin: props => props.margin || "0px",
   flexDirection: props => props.flexDirection || "column",
-  justifyContent: props => props.justifyContent || 'center',
-  alignItems: props => props.alignItems || 'center',
+  justifyContent: props => props.justifyContent || "center",
+  alignItems: props => props.alignItems || "center",
   flexWrap: props => props.flexWrap || null,
-  flex: props => props.flex || 'wrap',
+  flex: props => props.flex || "wrap",
   height: props => props.height || null,
   width: props => props.width || null,
   maxWidth: props => props.maxWidth || null,
@@ -502,9 +502,9 @@ export const BLDiv = styled.div.attrs({
   backgroundColor: props => props.backgroundColor || null,
   background: props => props.background,
   backgroundImage: props => props.desktopImage || null,
-  backgroundRepeat: props => props.backgroundRepeat || 'no-repeat',
+  backgroundRepeat: props => props.backgroundRepeat || "no-repeat",
   backgroundAttachment: props => props.backgroundAttachment || null,
-  backgroundPosition: props => props.backgroundPosition || 'center center',
+  backgroundPosition: props => props.backgroundPosition || "center center",
   backgroundSize: props => props.backgroundSize || null,
   border: props => props.border || null,
   borderLeft: props => props.borderLeft || null,
@@ -512,7 +512,7 @@ export const BLDiv = styled.div.attrs({
   borderBottom: props => props.borderBottom || null,
   borderTop: props => props.borderTop || null,
   borderRadius: props => props.borderRadius || null,
-  cursor: props => props.cursor || null,
+  cursor: props => props.cursor || null
 })`
   display: ${props => props.display};
   position: ${props => props.position};
@@ -523,14 +523,14 @@ export const BLDiv = styled.div.attrs({
   flex-wrap: ${props => props.flexWrap};
   flex: ${props => props.flex};
   align-items: ${props => props.alignItems};
-  height: ${props => props.height ? props.height : 'auto'};
+  height: ${props => (props.height ? props.height : "auto")};
   width: ${props => props.width};
   max-width: ${props => props.maxWidth};
   background-color: ${props => props.backgroundColor};
   background: ${props => props.background};
   background-image: url(${props => props.desktopImage});
-  background-repeat: ${props => props.backgroundRepeat}; 
-  background-attachment: ${props => props.backgroundAttachment}; 
+  background-repeat: ${props => props.backgroundRepeat};
+  background-attachment: ${props => props.backgroundAttachment};
   background-position: ${props => props.backgroundPosition};
   background-size: ${props => props.backgroundSize};
   border: ${props => props.border};
@@ -540,45 +540,43 @@ export const BLDiv = styled.div.attrs({
   border-right: ${props => props.borderRight};
   border-radius: ${props => props.borderRadius};
   order: ${props => props.order};
-  
-    &:hover {
-      background: ${props => props.hoverBackgroundColor};
-      background-size: ${props => props.hoverBackgroundSize};
-      cursor: ${props => props.cursor};
-    }
 
-    &:hover * {
-      color: ${props => props.hoverColor};
-    }
+  &:hover {
+    background: ${props => props.hoverBackgroundColor};
+    background-size: ${props => props.hoverBackgroundSize};
+    cursor: ${props => props.cursor};
+  }
 
-    @media (max-width: mediaQueryMediumMaxWidth){
-      height: ${props => props.tabletHeight || props.height};
-      background: ${props => props.backgroundColor}, 
-        url(${props => props.mobileBackground || props.background})
-        ${props => props.backgroundRepeat}
-        ${props => props.backgroundAttachment}
+  &:hover * {
+    color: ${props => props.hoverColor};
+  }
+
+  @media (max-width: mediaQueryMediumMaxWidth) {
+    height: ${props => props.tabletHeight || props.height};
+    background: ${props => props.backgroundColor},
+      url(${props => props.mobileBackground || props.background})
+        ${props => props.backgroundRepeat} ${props => props.backgroundAttachment}
         ${props => props.backgroundPosition};
-      flex-direction: ${props => props.smallTabletFlexDirection || 'column'};
-    }
+    flex-direction: ${props => props.smallTabletFlexDirection || "column"};
+  }
 
-    @media (max-width: mediaQuerySmallMaxWidth){
-      height: ${props => props.mobileHeight || props.height};
-      background-position: top center;
-    }
-
-`
+  @media (max-width: mediaQuerySmallMaxWidth) {
+    height: ${props => props.mobileHeight || props.height};
+    background-position: top center;
+  }
+`;
 
 export const BLHeader = styled.h1.attrs({
   width: props => props.width || null,
-  textAlign: props => props.textAlign || 'center',
-  margin: props => props.margin || '0px',
+  textAlign: props => props.textAlign || "center",
+  margin: props => props.margin || "0px",
   color: props => props.color || TWPStyleGuide.color.bodyText,
-  padding: props => props.padding || '0 2%',
+  padding: props => props.padding || "0 2%",
   fontFamily: props => props.fontFamily || headerFont,
-  
-  fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.fiveHundred,
+
+  fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.fiveHundred
 })`
-  width: ${props => props.width || '100%'};
+  width: ${props => props.width || "100%"};
   text-align: ${props => props.textAlign};
   margin: ${props => props.margin};
   color: ${props => props.color};
@@ -592,20 +590,21 @@ export const BLHeader = styled.h1.attrs({
       cursor: ${props => props.cursorType || null};
   }
 
-  ${media.desktop`font-size: ${props => props.tabletFontSize || TWPStyleGuide.font.size.mediumLarge};`}
-  ${media.tablet`font-size: ${props => props.smallTabletFontSize || null };`}
-  ${media.phone`font-size: ${props => props.mobileFontSize || null };`}
-`
+  ${media.desktop`font-size: ${props =>
+    props.tabletFontSize || TWPStyleGuide.font.size.mediumLarge};`}
+  ${media.tablet`font-size: ${props => props.smallTabletFontSize || null};`}
+  ${media.phone`font-size: ${props => props.mobileFontSize || null};`}
+`;
 
 export const BLSectionHeader = styled.h2.attrs({
   width: props => props.width || null,
-  textAlign: props => props.textAlign || 'center',
-  margin: props => props.margin || '0px',
+  textAlign: props => props.textAlign || "center",
+  margin: props => props.margin || "0px",
   color: props => props.color || TWPStyleGuide.color.black,
-  padding: props => props.padding || '0 2%',
+  padding: props => props.padding || "0 2%",
   fontFamily: props => props.fontFamily || headerFont,
   // fontSize: props => props.fontSize ,
-  fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.fiveHundred  
+  fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.fiveHundred
 })`
   width: ${props => props.width};
   text-align: ${props => props.textAlign};
@@ -621,20 +620,21 @@ export const BLSectionHeader = styled.h2.attrs({
     cursor: ${props => props.cursorType || null};
 }
 
-  ${media.desktop`font-size: ${props => props.tabletFontSize || TWPStyleGuide.font.size.mediumSmall};`}
+  ${media.desktop`font-size: ${props =>
+    props.tabletFontSize || TWPStyleGuide.font.size.mediumSmall};`}
   ${media.tablet`font-size: ${props => props.smallTabletFontSize || null};`}
   ${media.phone`font-size: ${props => props.mobileFontSize || null};`}
 `;
 
 export const BLParagraph = styled.h3.attrs({
   width: props => props.width || null,
-  margin: props => props.margin || '0px',
+  margin: props => props.margin || "0px",
   color: props => props.color || TWPStyleGuide.color.bodyText,
-  padding: props => props.padding || '0 2%',
+  padding: props => props.padding || "0 2%",
   fontSize: props => props.fontSize || TWPStyleGuide.font.size.mediumSmall,
   fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.medium,
-  textAlign: props => props.textAlign || 'left',
-  border: props => props.botder || null,
+  textAlign: props => props.textAlign || "left",
+  border: props => props.botder || null
 })`
   border: ${props => props.border};
   width: ${props => props.width};
@@ -652,29 +652,32 @@ export const BLParagraph = styled.h3.attrs({
     cursor: ${props => props.cursorType || null};
 }
 
-  ${media.desktop`font-size: ${props => props.tabletFontSize || TWPStyleGuide.font.size.small};`}
-  ${media.tablet`font-size: ${props => props.smallTabletFontSize || TWPStyleGuide.font.size.smallTiny};`}
-  ${media.phone`font-size: ${props => props.mobileFontSize || TWPStyleGuide.font.size.tiny};`}
-`
+  ${media.desktop`font-size: ${props =>
+    props.tabletFontSize || TWPStyleGuide.font.size.small};`}
+  ${media.tablet`font-size: ${props =>
+    props.smallTabletFontSize || TWPStyleGuide.font.size.smallTiny};`}
+  ${media.phone`font-size: ${props =>
+    props.mobileFontSize || TWPStyleGuide.font.size.tiny};`}
+`;
 
 export const BLAnchor = styled.a.attrs({
   height: props => props.height,
   width: props => props.width,
-  display: props => props.display || 'flex',
+  display: props => props.display || "flex",
   flexDirection: props => props.flexDirection || "column",
-  justifyContent: props => props.justifyContent || 'center',
-  alignItems: props => props.alignItems || 'center',
+  justifyContent: props => props.justifyContent || "center",
+  alignItems: props => props.alignItems || "center",
   flexWrap: props => props.flexWrap || null,
-  flex: props => props.flex || 'wrap',
+  flex: props => props.flex || "wrap",
   backgroundColor: props => props.backgroundColor,
-  margin: props => props.margin || '0px',
+  margin: props => props.margin || "0px",
   color: props => props.color || TWPStyleGuide.color.black,
   padding: props => props.padding || null,
   fontFamily: props => props.fontFamily || headerFont,
-  fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.fiveHundred,  
-  textDecoration: props => props.textDecoration || 'none',
-  textAlign: props => props.textAlign || 'center',
-  border: props => props.border || null,
+  fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.fiveHundred,
+  textDecoration: props => props.textDecoration || "none",
+  textAlign: props => props.textAlign || "center",
+  border: props => props.border || null
 })`
   display: ${props => props.display};
   flex-direction: ${props => props.flexDirection};
@@ -700,26 +703,29 @@ export const BLAnchor = styled.a.attrs({
     cursor: pointer;
   }
 
-  ${media.desktop`font-size: ${props => props.tabletFontSize || TWPStyleGuide.font.size.mediumLarge};`}
-  ${media.tablet`font-size: ${props => props.smallTabletFontSize || TWPStyleGuide.font.size.medium};`}
-  ${media.phone`font-size: ${props => props.mobileFontSize || TWPStyleGuide.font.size.mediumSmall};`}
+  ${media.desktop`font-size: ${props =>
+    props.tabletFontSize || TWPStyleGuide.font.size.mediumLarge};`}
+  ${media.tablet`font-size: ${props =>
+    props.smallTabletFontSize || TWPStyleGuide.font.size.medium};`}
+  ${media.phone`font-size: ${props =>
+    props.mobileFontSize || TWPStyleGuide.font.size.mediumSmall};`}
 
-`
+`;
 
 export const BLAnchorHomeNav = styled.a.attrs({
-  margin: props => props.margin || '0px',
+  margin: props => props.margin || "0px",
   color: props => props.color || TWPStyleGuide.color.black,
   padding: props => props.padding || null,
   fontFamily: props => props.fontFamily || headerFont,
   fontSize: props => props.fontSize || TWPStyleGuide.font.size.small,
-  fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.fiveHundred,  
-  textDecoration: props => props.textDecoration || 'none',
-  width: props => props.width || '100%',
-  height: props => props.height || '100%',
-  maxWidth: props => props.maxWidth || '100%',
-  maxHeight: props => props.maxHeight || '100%',
-  border: props => props.border || '1px solid white',
-  textAlign: props => props.textAlign || 'center',
+  fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.fiveHundred,
+  textDecoration: props => props.textDecoration || "none",
+  width: props => props.width || "100%",
+  height: props => props.height || "100%",
+  maxWidth: props => props.maxWidth || "100%",
+  maxHeight: props => props.maxHeight || "100%",
+  border: props => props.border || "1px solid white",
+  textAlign: props => props.textAlign || "center"
 })`
   margin: ${props => props.margin};
   color: ${props => props.color};
@@ -735,33 +741,34 @@ export const BLAnchorHomeNav = styled.a.attrs({
   border: ${props => props.border};
   text-align: ${props => props.textAlign};
   transition: all ease 0.8s;
-  
+
   &:hover {
     border-radius: 100px;
     box-shadow: inset 560px 0 0 0 ${TWPStyleGuide.color.darkBlue};
-    color: ${TWPStyleGuide.color.white}
+    color: ${TWPStyleGuide.color.white};
   }
-`
+`;
 
 export const BLCard = styled.a.attrs({
-  display: props => props.display || 'flex',
+  display: props => props.display || "flex",
   border: props => props.border || null,
-  borderRadius: props => props.borderRadius || '5px',
-  padding: props => props.padding || '0 2%',
-  margin: props => props.margin || '0px',
+  borderRadius: props => props.borderRadius || "5px",
+  padding: props => props.padding || "0 2%",
+  margin: props => props.margin || "0px",
   flexDirection: props => props.flexDirection || "column",
-  justifyContent: props => props.justifyContent || 'center',
-  alignItems: props => props.alignItems || 'center',
+  justifyContent: props => props.justifyContent || "center",
+  alignItems: props => props.alignItems || "center",
   flex: props => props.flex || null,
   height: props => props.height || null,
   width: props => props.width || null,
   backgroundColor: props => props.backgroundColor || null,
   backgroundImage: props => props.desktopImage || null,
-  backgroundRepeat: props => props.backgroundRepeat || 'no-repeat',
+  backgroundRepeat: props => props.backgroundRepeat || "no-repeat",
   backgroundAttachment: props => props.backgroundAttachment,
   backgroundPosition: props => props.backgroundPosition,
-  boxShadow: props => props.boxShadow || `0px 1px 10px 1px ${TWPStyleGuide.color.lightGray}`,
-  textDecoration: props => props.textDecoration || 'none',
+  boxShadow: props =>
+    props.boxShadow || `0px 1px 10px 1px ${TWPStyleGuide.color.lightGray}`,
+  textDecoration: props => props.textDecoration || "none"
 })`
   display: ${props => props.display};
   border: ${props => props.border};
@@ -776,8 +783,8 @@ export const BLCard = styled.a.attrs({
   width: ${props => props.width};
   background-color: ${props => props.backgroundColor};
   background-image: (${props => props.desktopImage});
-  background-repeat: ${props => props.backgroundRepeat}; 
-  background-attachment: ${props => props.backgroundAttachment}; 
+  background-repeat: ${props => props.backgroundRepeat};
+  background-attachment: ${props => props.backgroundAttachment};
   background-position: ${props => props.backgroundPosition};
   box-shadow: ${props => props.boxShadow};
   text-decoration: ${props => props.textDecoration};
@@ -794,26 +801,26 @@ export const BLCard = styled.a.attrs({
     height: ${props => props.mobileHeight};
     background-position: top center;
     `}
-`
+`;
 
 export const BLFooterAnchor = styled.a.attrs({
   height: props => props.height,
   width: props => props.width,
-  display: props => props.display || 'flex',
+  display: props => props.display || "flex",
   flexDirection: props => props.flexDirection || "column",
-  justifyContent: props => props.justifyContent || 'center',
-  alignItems: props => props.alignItems || 'center',
+  justifyContent: props => props.justifyContent || "center",
+  alignItems: props => props.alignItems || "center",
   flexWrap: props => props.flexWrap || null,
-  flex: props => props.flex || 'wrap',
+  flex: props => props.flex || "wrap",
   backgroundColor: props => props.backgroundColor,
-  margin: props => props.margin || '0px',
+  margin: props => props.margin || "0px",
   color: props => props.color || TWPStyleGuide.color.black,
   padding: props => props.padding || null,
   fontFamily: props => props.fontFamily || headerFont,
   fontSize: props => props.fontSize || TWPStyleGuide.font.size.small,
-  fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.fiveHundred,  
-  textDecoration: props => props.textDecoration || 'none',
-  textAlign: props => props.textAlign || 'center',
+  fontWeight: props => props.fontWeight || TWPStyleGuide.font.weight.fiveHundred,
+  textDecoration: props => props.textDecoration || "none",
+  textAlign: props => props.textAlign || "center"
 })`
   display: ${props => props.display};
   flex-direction: ${props => props.flexDirection};
@@ -841,22 +848,21 @@ export const BLFooterAnchor = styled.a.attrs({
   ${media.desktop`font-size: ${TWPStyleGuide.font.size.small};`}
   ${media.tablet`font-size: ${TWPStyleGuide.font.size.smallTiny};`}
   ${media.phone`font-size:  ${TWPStyleGuide.font.size.tiny};`}
-`
+`;
 
 export const BLImage = styled.img`
   max-width: ${props => props.maxWidth || null};
   max-height: ${props => props.maxHeight || null};
   min-width: ${props => props.minWidth || null};
   min-height: ${props => props.minHeight || null};
-  width: ${props => props.width || '100%'};
-  height: ${props => props.height || '100%'};
-  border-radius: ${props => props.borderRadius ? props.borderRadius : '0px'};
-  box-shadow: ${props => props.boxShadow ? props.boxShadow : '1px 1px 28px 2px grey' }
-
-  ${media.desktop`height: ${props => props.tabletHeight};`}
-  ${media.tablet`height: ${props => props.smallTabletHeight};`}
-  ${media.phone`height: ${props => props.mobileHeight};`}
-`
+  width: ${props => props.width || "100%"};
+  height: ${props => props.height || "100%"};
+  border-radius: ${props => (props.borderRadius ? props.borderRadius : "0px")};
+  box-shadow: ${props => (props.boxShadow ? props.boxShadow : "1px 1px 28px 2px grey")}
+    ${media.desktop`height: ${props => props.tabletHeight};`}
+    ${media.tablet`height: ${props => props.smallTabletHeight};`}
+    ${media.phone`height: ${props => props.mobileHeight};`};
+`;
 
 export const BLButton = styled.button`
   height: ${props => props.height};
@@ -866,9 +872,9 @@ export const BLButton = styled.button`
   padding: ${props => props.padding};
   margin: ${props => props.margin};
   border: ${props => props.border || null};
-  border-radius: ${props => props.borderRadius || '10px'};
+  border-radius: ${props => props.borderRadius || "10px"};
   border-color: ${props => props.borderColor || null};
-  font-size: ${props => props.fontSize || TWPStyleGuide.font.size.mediumLarge}; 
+  font-size: ${props => props.fontSize || TWPStyleGuide.font.size.mediumLarge};
   font-family: ${props => props.fontFamily || headerFont};
   font-weight: ${props => props.fontWeight};
 
@@ -877,8 +883,7 @@ export const BLButton = styled.button`
     cursor: pointer;
     background-color: ${props => props.hoverBackground || TWPStyleGuide.color.secondary};
   }
-
-`
+`;
 
 export const BigSectionDiv = BLDiv.extend`
   height: 500px;
@@ -891,7 +896,7 @@ export const BigSectionDiv = BLDiv.extend`
   ${media.phone`
     height: 300px;
     `}
-`
+`;
 export const HugeSectionDiv = BLDiv.extend`
   max-height: 650px;
   min-height: 650px;
@@ -901,4 +906,4 @@ export const HugeSectionDiv = BLDiv.extend`
   ${media.desktop`min-height: 600px`}
   ${media.tablet`min-height:  500px `}
   ${media.phone`min-height: 400px`}
-`
+`;
