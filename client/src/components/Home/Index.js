@@ -14,7 +14,7 @@ export const Index = () => {
   return (
     <div>
       <AboveTheFold />
-      <TwoInfoBoxes />
+      {/* <TwoInfoBoxes /> */}
       <EverySeed />
       <Dragonfly />
       <InstagramGoogle />
