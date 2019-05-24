@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "axios": "^0.17.1",
+    "babel-cli": "^6.26.0",
+    "babel-preset-stage-0": "^6.24.1",
     "bootstrap": "^4.0.0",
     "emailjs": "^2.0.0",
     "moment": "^2.22.0",
@@ -19,6 +21,7 @@
     "redux-thunk": "^2.2.0",
     "semantic-ui-css": "^2.2.14",
     "semantic-ui-react": "^0.78.2",
+    "sitemap": "^2.2.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^3.1.6"
   },
@@ -29,7 +32,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sitemap": "./node_modules/.bin/babel-node src/sitemap.js"
   },
   "proxy": "http://localhost:3001"
 }
