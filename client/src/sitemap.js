@@ -2,7 +2,7 @@ const path = require('path')
 const fs = require('fs')
 const sm = require('sitemap')
 
-const OUTPUT_FILE = path.resolve(__dirname, '..', '..', 'public', 'sitemap.xml')
+const OUTPUT_FILE = path.resolve(__dirname, '..', '..', './client/public', 'sitemap.xml')
 
 const sitemap = sm.createSitemap({
   hostname: 'https://thewildflowerprojectmn.org',
