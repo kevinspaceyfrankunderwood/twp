@@ -9,6 +9,7 @@ import Dragonfly from './DragonFly'
 import InstagramGoogle from './InstagramGoogle'
 import { TWPDiv } from '../../styles/GenericStyledComponents'
 import TwoInfoBoxes from './TwoInfoBoxes'
+import TWPStyleGuide from '../../styles/TWPStyleGuide'
 
 export const Index = () => {
   return (
@@ -18,11 +19,11 @@ export const Index = () => {
       <EverySeed />
       <Dragonfly />
       <InstagramGoogle />
-      <TWPDiv>
+      <TWPDiv backgroundColor={TWPStyleGuide.color.black}>
         <iframe
           src='https://www.google.com/maps/d/u/0/embed?mid=1X8vfQjjnxOLWqmTO6JJf4-Tr5uo'
-          width={window.innerWidth}
-          height={window.innerHeight}
+          width={'100%'}
+          height={window.innerHeight * 0.5}
         />
       </TWPDiv>
     </div>
