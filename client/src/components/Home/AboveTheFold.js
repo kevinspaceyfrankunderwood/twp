@@ -86,7 +86,7 @@ export const AboveTheFold = () => {
         />
       </TWPDiv> */}
       <TWPDiv
-        background={`linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, .8), rgba(255, 255, 255, 0)), url(${butterfly})`}
+        background={`linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, .75), rgba(255, 255, 255, 0)), url(${butterfly})`}
         backgroundSize={'cover'}
         backgroundPosition={'top'}
         backgroundAttachment={'fixed'}
