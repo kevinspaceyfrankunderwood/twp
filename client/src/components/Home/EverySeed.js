@@ -48,8 +48,12 @@ export default class EverySeed extends React.Component {
   componentDidMount() {
     axios
       .get('/api/instagram/tenGroup')
-      .then(res => this.setState({ photos: res.data.data }))
+      .then(res => this.setState({ photos: res.data.data }, console.log(res.data.data)))
       .catch(res => console.log(res))
+  }
+
+  componentDidCatch() {
+    console.log('every seed fail')
   }
 
   displayPhotos = () => {
@@ -90,14 +94,18 @@ export default class EverySeed extends React.Component {
   }
 
   render() {
-    return (
-      <TWPDiv justifyContent={'space-evenly'} padding={'0'}>
-        <ResponsiveHeader color={TWPStyleGuide.color.darkOrange} padding={'30px 10px'}>
-          The Wildflower Project's focus is to serve as environmental and community
-          stewards, fulfilling our promise of planting with a purpose.
-        </ResponsiveHeader>
-        {this.state.photos.length && this.displayPhotos()}
-      </TWPDiv>
-    )
+    if (this.state.photos) {
+      return (
+        <TWPDiv justifyContent={'space-evenly'} padding={'0'}>
+          <ResponsiveHeader color={TWPStyleGuide.color.darkOrange} padding={'30px 10px'}>
+            The Wildflower Project's focus is to serve as environmental and community
+            stewards, fulfilling our promise of planting with a purpose.
+          </ResponsiveHeader>
+          {this.state.photos && this.state.photos.length && this.displayPhotos()}
+        </TWPDiv>
+      )
+    } else {
+      return
+    }
   }
 }

@@ -16,7 +16,7 @@ export const Index = () => {
     <div>
       <AboveTheFold />
       <TwoInfoBoxes />
-      <EverySeed />
+      {/* <EverySeed /> */}
       <Dragonfly />
       <InstagramGoogle />
       <TWPDiv backgroundColor={TWPStyleGuide.color.black}>
